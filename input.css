@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+:root {
+  /* General Button  */
+  .btn {
+    @apply px-5 py-2 md:px-14 md:py-3 rounded-3xl font-medium text-center;
+  }
+  /* Button outline */
+  .btn-outline {
+    @apply border border-slate-200 hover:text-blue-700 bg-slate-100 hover:bg-slate-200 duration-700;
+  }
+  /* Button accent */
+  .btn-accent {
+    @apply bg-blue-700 hover:bg-blue-800 duration-700;
+  }
+  /* Mobile menu open */
+  .menu.active {
+    @apply w-full flex;
+  }
+  .profileDropdown.active {
+    @apply flex absolute;
+  }
+}
+
+html,
+body {
+  transition: all 0.4s ease;
+  color: #fff;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 13px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
