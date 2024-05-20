@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLMS Login</title>
+    <title>SLAMS User Login</title>
 
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,10 +15,19 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+
+    <!-- PreLoader -->
+    <div
+      id="preloader"
+      class="preloader fixed top-0 left-0 w-full h-full bg-white bg-opacity-50 z-[200] inset-0 hidden flex-col justify-center items-center"
+    >
+      <img class="loader w-[100px]" src="icons/loading-icon.png" alt="" />
+    </div>
+
     <div class="min-h-screen my-auto flex flex-col justify-between">
       <div class="pt-4 px-2 md:px-[200px]">
         <h3 class="text-slate-400 font-medium text-center md:text-left">
-          SLMS | Student Loan Management and Application System
+          SLAMS | Student Loan Application and Management System
         </h3>
       </div>
       <div class="">
@@ -30,11 +39,11 @@
               <h1
                 class="text-[1.5rem] md:text-[3.5rem] font-semibold text-center md:text-left tracking-tight leading-tight text-slate-500"
               >
-                Student Loan Management and Application System
+                Student Loan Application and Management System
               </h1>
 
               <p class="text-slate-400 pt-8 text-center md:text-left">
-                Apply for student loan! OR Register for an account to start.
+                Proving equal financing to tertiary education students
               </p>
             </div>
           </div>
@@ -87,20 +96,26 @@
                 </label>
               </div>
 
+              <ul class="text-center">
+                <li class="text-blue-700 font-medium ">
+                  <a href="#">Forgot your password?</a>
+                </li>
+              </ul>
               <div
                 class="flex flex-col md:flex-row justify-center items-center gap-4 w-full pt-8"
               >
                 <!--Submit button-->
                 <button
                   type="submit"
-                  class="btn btn-accent inline-block w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+                  class="btn-load btn btn-accent inline-block w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
                 >
                   Login
                 </button>
                 <a
                   href="user_register.html"
-                  class="btn btn-outline inline-block w-full text-slate-400 hover:cursor-pointer"
-                  >Register</a
+                  class="btn-load btn btn-outline inline-block w-full text-slate-400 hover:cursor-pointer"
+                  >Register
+                </a
                 >
               </div>
             </form>
@@ -114,19 +129,19 @@
           <h3
             class="text-[1rem] tracking-widest text-center text-slate-400 font-medium"
           >
-            SLMS
+            SLAMS
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Useful Links
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            &copy; 2024 Student Loan Application and Management System
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Loan application system
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            SLAMS
           </h3>
         </div>
       </footer>
     </div>
+
+    <!--SCRIPTS-->
+    <script src="js/user_login.js"></script>
   </body>
-
-  <!--SCRIPTS-->
-
 </html>

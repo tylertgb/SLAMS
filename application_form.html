@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLMS application form</title>
+    <title>SLAMS application form</title>
 
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,104 +12,105 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
       rel="stylesheet"
     />
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="stylesheet" href="css/main.css" />
     <script src="js/jquery.min.js"></script>
   </head>
   <body class="bg-slate-50">
+    <!-- PreLoader -->
+    <div
+      id="preloader"
+      class="preloader fixed top-0 left-0 w-full h-full bg-white bg-opacity-50 z-[200] inset-0 hidden flex-col justify-center items-center"
+    >
+      <img class="loader w-[100px]" src="icons/loading-icon.png" alt="" />
+    </div>
+
     <div class="min-h-screen mx-auto flex flex-col justify-between">
+      <!-- SIDEBAR -->
       <div
-        class="siderbar z-50 fixed top-0 left-0 h-full w-[290px] flex justify-start items-start transition-all duration-500 ease"
+        class="siderbar fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease"
       >
+        <!-- Sidebar Icons bar -->
         <nav
-          class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
+          class="siderbar z-50 bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
         >
           <div class="flex flex-col items-center px-4 pt-4">
             <div
-              class="bugger group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full self-center cursor-pointer transition-all duration-500 ease"
-            ></div>
+              class="bugger group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
+            >
+              <i class="bugger ri-menu-line text-[1.5rem] text-blue-700"></i>
+            </div>
 
-            <div class="menu-icon flex flex-col gap-[27px] pt-16">
+            <div class="menu-icon flex flex-col gap-[18px] pt-20">
               <ul class="menu_item list-none">
                 <li class="item">
-                  <a href="#" class="link flex">
-                    <i class="bx bx-home-alt"></i>
-                    <span class="text-slate-600 font-medium">A</span>
+                  <a href="#" class="link">
+                    <i
+                      class="ri-home-8-line text-blue-700 font-medium text-[1.5rem]"
+                    ></i>
                   </a>
                 </li>
               </ul>
               <ul class="menu_item list-none">
                 <li class="item">
-                  <a href="#" class="link flex">
-                    <i class="bx bx-home-alt"></i>
-                    <span class="text-slate-600 font-medium">B</span>
+                  <a href="#" class="link">
+                    <i
+                      class="ri-layout-grid-2-fill text-blue-700 font-medium text-[1.5rem]"
+                    ></i>
                   </a>
                 </li>
               </ul>
             </div>
 
             <div class="flex flex-col justify-center items-center">
-              <div class="menu-icon flex flex-col gap-[27px] pt-9">
+              <div class="menu-icon flex flex-col gap-[20px] pt-10">
                 <ul class="menu_item list-none">
                   <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">A</span>
+                    <a href="#" class="link">
+                      <i
+                        class="ri-smartphone-line text-blue-700 font-medium text-[1.5rem]"
+                      ></i>
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">B</span>
+                    <a href="#" class="link">
+                      <i
+                        class="ri-wallet-3-line text-blue-700 font-medium text-[1.5rem]"
+                      ></i>
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">C</span>
+                    <a href="#" class="link">
+                      <i
+                        class="ri-file-list-2-line text-blue-700 font-medium text-[1.5rem]"
+                      ></i>
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">D</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">E</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">F</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">G</span>
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li class="item">
-                    <a href="#" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-medium">H</span>
+                    <a href="#" class="link">
+                      <i
+                        class="ri-equalizer-line text-blue-700 font-medium text-[1.5rem]"
+                      ></i>
                     </a>
                   </li>
                 </ul>
@@ -117,14 +118,20 @@
             </div>
           </div>
         </nav>
+        <!--End Sidebar Icons bar -->
+        <!-- Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
         <nav
-          class="menu bg-white h-full hidden md:flex w-full transition-all duration-500 ease"
+          class="menu z-50 bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
         >
-          <div class="menu-list pt-4 transition-all duration-700 ease">
-            <div class="flex items-center gap-4">
+          <div
+            class="menu-list pt-4 transition-all duration-700 ease w-full pr-10"
+          >
+            <div class="flex items-center gap-4 w-full">
               <div
-                class="h-10 w-10 bg-slate-100 border border-blue-700 rounded-full"
-              ></div>
+                class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1"
+              >
+                <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+              </div>
               <h1
                 class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500"
               >
@@ -132,13 +139,21 @@
               </h1>
             </div>
 
-            <div id="primary-menu" class="flex flex-col gap-4">
-              <ul class="menu_item w-full list-none text-center pt-14">
+            <div id="primary-menu" class="flex flex-col gap-4 pt-20 w-full">
+              <ul class="menu_item w-ful list-none text-center">
                 <li
-                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#home" class="link flex">
+                    <span class="text-slate-600 font-normal">Home</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item w-full list-none text-center">
+                <li
+                  class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                 >
                   <a href="#dashboard" class="link flex">
-                    <i class="bx bx-home-alt"></i>
                     <span class="text-slate-600 font-normal">Dashboard</span>
                   </a>
                 </li>
@@ -146,103 +161,47 @@
             </div>
 
             <div class="flex flex-col justify-start items-start">
-              <div id="menu" class="flex flex-col gap-4 pt-7">
+              <div id="menu" class="flex flex-col gap-[15px] pt-10 w-full">
                 <ul class="menu_item list-none">
                   <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                    class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
-                    <a href="#personalinformation" class="link flex">
-                      <i class="bx bx-home-alt"></i>
+                    <a href="#" class="link flex">
                       <span class="text-slate-600 font-normal"
-                        >Personal Information</span
+                        >Repay My Loan</span
                       >
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                    class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
                     <a href="#contactinformation" class="link flex">
-                      <i class="bx bx-home-alt"></i>
                       <span class="text-slate-600 font-normal"
-                        >Contact Information</span
+                        >List of Applications</span
                       >
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                    class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
                     <a href="#academicinformation" class="link flex">
-                      <i class="bx bx-home-alt"></i>
                       <span class="text-slate-600 font-normal"
-                        >Academic Information</span
+                        >Check my Statement</span
                       >
                     </a>
                   </li>
                 </ul>
                 <ul class="menu_item list-none">
                   <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                    class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
                     <a href="#financialinformation" class="link flex">
-                      <i class="bx bx-home-alt"></i>
                       <span class="text-slate-600 font-normal"
-                        >Financial Information</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
-                  >
-                    <a href="#loandetails" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-normal"
-                        >Loan Details</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
-                  >
-                    <a href="#dependencystatus" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-normal"
-                        >Dependency Status</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
-                  >
-                    <a href="#citizenship" class="link flex">
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-normal"
-                        >Citizenship/Residency Status</span
-                      >
-                    </a>
-                  </li>
-                </ul>
-                <ul class="menu_item list-none">
-                  <li
-                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
-                  >
-                    <a
-                      id="lastmenu"
-                      href="#additionaldocumentation"
-                      class="link flex"
-                    >
-                      <i class="bx bx-home-alt"></i>
-                      <span class="text-slate-600 font-normal"
-                        >Additional Documentation</span
+                        >Amend my Detail</span
                       >
                     </a>
                   </li>
@@ -251,45 +210,99 @@
             </div>
           </div>
         </nav>
+        <!--End Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
       </div>
-      <div
+      <!--END SIDEBAR -->
+      <!-- Main top navigation bar -->
+      <nav
         class="bg-white py-4 px-2 md:pl-[420px] md:pr-[150px] flex flex-col md:flex-row justify-between items-center"
       >
-        <h1 class="text-[1rem] md:text-[1.5rem] font-medium text-slate-500">
+        <h1
+          class="text-[1rem] md:text-[1.5rem] font-medium text-slate-500 hidden md:flex"
+        >
           Student Loan Application System
         </h1>
-        <div id="profile-box" class="profile-box">
-          <a href="#profileDropdown" class="flex items-center gap-3">
+        <div class="flex items-center gap-3">
+          <div class="notification-box relative">
             <div
-              class="h-8 w-8 bg-slate-100 border border-blue-700 rounded-full"
-            ></div>
-            <h1 class="text-[1.1rem] font-normal text-slate-400">
-              Bright Gobka
-            </h1>
-          </a>
-
-          <!-- Dropdown Profile -->
-          <div id="profileDropdown" class="profileDropdown hidden top-16 overflow-hidden">
-            <div class="w-[200px] overflow-hidden p-4 bg-slate-100 rounded-3xl">
+              id="notification-box "
+              class="h-8 w-8 bg-slate-100 rounded-full flex justify-center cursor-pointer"
+            >
+              <span class="absolute -top-2 -right-1 text-red-600">
+                <i class="ri-circle-fill text-[10px]"></i>
+              </span>
+              <a href="#" class="link">
+                <i
+                  class="ri-notification-4-line text-blue-700 font-medium text-[1.5rem]"
+                ></i>
+              </a>
+            </div>
+            <!-- Notification Dropdown -->
+            <div
+              id="notificationDropdown"
+              class="notificationDropdown hidden absolute top-14 -left-32 overflow-hidden"
+            >
               <div
-                class="flex flex-col justify-start items-start border-b mb-4"
+                class="w-[300px] overflow-hidden p-4 bg-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
               >
-                <p class="text-[1.1rem] text-slate-400 font-normal">
-                  20210404130
-                </p>
-                <span class="text-[1.1rem] text-slate-400 font-normal py-1">
-                  <a href="#">Reset Password</a>
+                <div
+                  class="flex flex-col justify-start items-start border-b mb-4"
+                >
+                  <ul>
+                    <li class="text-[12px] text-blue-700 font-normal py-1">
+                      <a href="#">You have 1 new notification</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div id="profile-box" class="profile-box flex items-center gap-3">
+            <a href="#profileDropdown" class="flex items-center gap-3">
+              <div
+                class="h-8 w-8 bg-slate-100 rounded-full flex justify-center items-center"
+              >
+                <i
+                  class="ri-user-3-fill text-blue-700 font-medium text-[1.3rem]"
+                ></i>
+              </div>
+              <h1 class="text-[1.1rem] font-normal text-slate-400">
+                Bright Gobka
+              </h1>
+              <i class="ri-arrow-down-s-fill text-slate-400 text-xl"></i>
+            </a>
+            <!-- Dropdown Profile -->
+            <div
+              id="profileDropdown"
+              class="profileDropdown hidden top-16 overflow-hidden"
+            >
+              <div
+                class="w-[200px] overflow-hidden p-4 bg-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
+              >
+                <div
+                  class="flex flex-col justify-start items-start border-b mb-4"
+                >
+                  <p class="text-[1.1rem] text-blue-700 font-normal">
+                    20210404130
+                  </p>
+                  <p class="text-[1.1rem] text-blue-700 font-normal">
+                    GHA-71346349-5
+                  </p>
+                  <span class="text-[1.1rem] text-slate-400 font-normal py-1">
+                    <a href="#">Reset Password</a>
+                  </span>
+                </div>
+                <span class="text-[1.1rem] text-slate-400 font-normal">
+                  <a href="#">Logout</a>
                 </span>
               </div>
-              <span class="text-[1.1rem] text-slate-400 font-normal">
-                <a href="#">Logout</a>
-              </span>
             </div>
           </div>
         </div>
-      </div>
+      </nav>
+      <!--End Main top navigation bar -->
 
-      <!--Welcome Dashboard -->
+      <!--Home Dashboard -->
       <main class="">
         <div
           id="home"
@@ -297,7 +310,7 @@
         >
           <div
             id="submitanAppBtn"
-            class="flex justify-between items-center gap-10"
+            class="flex flex-col md:flex-row justify-between items-center gap-10"
           >
             <p
               class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
@@ -306,7 +319,7 @@
             </p>
             <a
               href="#applicationForm"
-              class="btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
+              class="btn-load btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
               ><span class="w-full text-[1rem] font-medium text-white"
                 >Submit an Application</span
               ></a
@@ -363,51 +376,91 @@
               <div
                 class="flex flex-col md:flex-row justify-between items-center gap-4"
               >
-                <a href="#" class="btn-accent p-8 item w-full rounded-3xl">
-                  <span class="text-white font-medium text-[1.2rem]"
-                    >Repay my loan</span
-                  >
+                <a
+                  href="#"
+                  class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                >
+                  <div class="flex items-center gap-3 pb-4">
+                    <i
+                      class="ri-smartphone-line text-white font-medium text-[2rem]"
+                    ></i>
+                    <span class="text-white font-medium text-[1.1rem]"
+                      >Repay my loan</span
+                    >
+                  </div>
+                  <p class="text-white font-medium text-[11px]">
+                    Pay your loan via Cash, Bank or Mobile Money (MOMO)
+                  </p>
                 </a>
-                <a href="#" class="btn-accent p-8 item w-full rounded-3xl">
-                  <span class="text-white font-medium text-[1.2rem]"
-                    >Amendments</span
-                  >
+                <a
+                  href="#"
+                  class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                >
+                  <div class="flex items-center gap-3 pb-4">
+                    <i
+                      class="ri-equalizer-line text-white font-medium text-[2rem]"
+                    ></i>
+                    <span class="text-white font-medium text-[1.1rem]"
+                      >Amendments</span
+                    >
+                  </div>
+                  <p class="text-white font-medium text-[11px]">
+                    Request for changes to your details
+                  </p>
                 </a>
-              </div>
-              <div
-                class="flex flex-col md:flex-row justify-between items-center gap-4"
-              >
-                <a href="#" class="btn-accent p-8 item w-full rounded-3xl">
-                  <span class="text-white font-medium text-[1.2rem]"
-                    >Applications</span
-                  >
+                <a
+                  href="#"
+                  class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                >
+                  <div class="flex items-center gap-3 pb-4">
+                    <i
+                      class="ri-wallet-3-line text-white font-medium text-[2rem]"
+                    ></i>
+                    <span class="text-white font-medium text-[1.1rem]"
+                      >Applications</span
+                    >
+                  </div>
+                  <p class="text-white font-medium text-[11px]">
+                    Access all your application list
+                  </p>
                 </a>
-                <a href="#" class="btn-accent p-8 item w-full rounded-3xl">
-                  <span class="text-white font-medium text-[1.2rem]"
-                    >Statement</span
-                  >
+                <a
+                  href="#"
+                  class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                >
+                  <div class="flex items-center gap-3 pb-4">
+                    <i
+                      class="ri-file-list-2-line text-white font-medium text-[2rem]"
+                    ></i>
+                    <span class="text-white font-medium text-[1.1rem]"
+                      >Statement</span
+                    >
+                  </div>
+                  <p class="text-white font-medium text-[11px]">
+                    Access both summary and loan statement
+                  </p>
                 </a>
               </div>
             </div>
           </div>
         </div>
       </main>
-      <!-- End Welcome Dashboard -->
+      <!-- End Home Dashboard -->
 
       <!-- Form Contents -->
       <div id="applicationForm" class="applicationForm hidden">
         <div
           class="max-w-[80%] mx-auto flex flex-col justify-center items-center py-10"
         >
-        <div class="mb-8 flex justify-start border w-full md:pl-[280px]">
-          <a
+          <div class="mb-8 flex justify-start w-full md:pl-[280px]">
+            <a
               href="#home"
               class="btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl"
               ><span class="w-full text-[1rem] font-medium text-white"
                 >Return Home</span
               ></a
             >
-        </div>
+          </div>
 
           <div class="gap-6 w-full md:pl-[280px]">
             <!-- Personal Information form -->
@@ -1145,7 +1198,9 @@
           id="dashboard"
           class="hidden dashboard max-w-[80%] mx-auto md:pl-[280px] py-14 md:py-0"
         >
-          <div class="flex justify-between items-center gap-10">
+          <div
+            class="flex flex-col-reverse md:flex-row justify-between items-center gap-8"
+          >
             <p
               class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
             >
@@ -1153,13 +1208,14 @@
             </p>
             <a
               href="#home"
-              class="btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
-              ><span class="w-full text-[1rem] font-medium text-white"
+              class="btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+              ><i class="ri-home-8-line text-white font-medium text-[1rem]"></i>
+              <span class="w-full text-[1rem] font-medium text-white"
                 >Return Home</span
               ></a
             >
             <span
-              class="bg-blue-700 px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
+              class="bg-green-600 px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
             >
               <p class="text-[1rem] font-medium text-white">Status</p>
             </span>
@@ -1327,90 +1383,19 @@
           <h3
             class="text-[1rem] tracking-widest text-center text-slate-400 font-medium"
           >
-            SLMS
+            SLAMS
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Useful Links
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            &copy; 2024 Student Loan Application and Management System
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Loan application system
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            SLAMS
           </h3>
         </div>
       </footer>
     </div>
 
     <script src="js/application_form.js"></script>
-    <script>
-      const profile = document.querySelector("#profile-box a");
-      const profileDropdown = document.querySelector("#profileDropdown");
-
-      openProfile();
-      function openProfile() {
-        profile.addEventListener("click", () => {
-          console.log("Profile open");
-          profileDropdown.classList.toggle("active");
-        });
-      }
-
-      var visibleDiv = 0;
-
-      function showDiv() {
-        $(".form").hide();
-        $(".form:eq(" + visibleDiv + ")").show();
-
-        if (visibleDiv === $(".form").length - 1) {
-          $("#nextButton").hide();
-          $("#submitButton").show();
-        } else {
-          $("#nextButton").show();
-          $("#submitButton").hide();
-        }
-
-        if (visibleDiv === 0) {
-          $("#prevButton").hide();
-        } else {
-          $("#prevButton").show();
-        }
-      }
-
-      showDiv();
-
-      $("#nextButton").click(function () {
-        if (visibleDiv < $(".form").length - 1) {
-          visibleDiv++;
-          showDiv();
-        }
-      });
-
-      $("#prevButton").click(function () {
-        if (visibleDiv > 0) {
-          visibleDiv--;
-          showDiv();
-        }
-      });
-
-      $(document).ready(function () {
-        $("#menu a").click(function (e) {
-          e.preventDefault(); // Prevent the default anchor behavior
-
-          var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
-          $(".form").hide(); // Hide all divs
-          $(targetDiv).show(); // Show the targeted div
-        });
-      });
-
-      $(document).ready(function () {
-        $("#dashboard a, #primary-menu a, #submitanAppBtn a").click(function (
-          e
-        ) {
-          e.preventDefault(); // Prevent the default anchor behavior
-
-          var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
-          $(".dashboard, .applicationForm").hide(); // Hide all divs
-          $(".home").hide(); // Hide all divs
-          $(targetDiv).show(); // Show the targeted div
-        });
-      });
-    </script>
+    <script></script>
   </body>
 </html>

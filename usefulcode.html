@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- Sidebar -->
+    <div
+      class="siderbar z-50 fixed top-0 left-0 h-full w-[290px] flex justify-start items-start transition-all duration-500 ease"
+    >
+      <nav
+        class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
+      >
+        <div class="flex flex-col items-center px-4 pt-4">
+          <div
+            class="bugger group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full self-center cursor-pointer transition-all duration-500 ease"
+          ></div>
+
+          <div class="menu-icon flex flex-col gap-[27px] pt-16">
+            <ul class="menu_item list-none">
+              <li class="item">
+                <a href="#" class="link flex">
+                  <i class="bx bx-home-alt"></i>
+                  <span class="text-slate-600 font-medium">A</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="menu_item list-none">
+              <li class="item">
+                <a href="#" class="link flex">
+                  <i class="bx bx-home-alt"></i>
+                  <span class="text-slate-600 font-medium">B</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex flex-col justify-center items-center">
+            <div class="menu-icon flex flex-col gap-[27px] pt-9">
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">A</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">B</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">C</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">D</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">E</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">F</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li class="item">
+                  <a href="#" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-medium">G</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <nav
+        class="menu bg-white h-full hidden md:flex w-full transition-all duration-500 ease"
+      >
+        <div class="menu-list pt-4 transition-all duration-700 ease">
+          <div class="flex items-center gap-4">
+            <div
+              class="h-10 w-10 bg-slate-100 border border-blue-700 rounded-full"
+            ></div>
+            <h1
+              class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500"
+            >
+              SLAMS
+            </h1>
+          </div>
+
+          <div id="primary-menu" class="flex flex-col gap-4">
+            <ul class="menu_item w-full list-none text-center pt-14">
+              <li
+                class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+              >
+                <a href="#dashboard" class="link flex">
+                  <i class="bx bx-home-alt"></i>
+                  <span class="text-slate-600 font-normal">Dashboard</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="flex flex-col justify-start items-start">
+            <div id="menu" class="flex flex-col gap-4 pt-7">
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#personalinformation" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Personal Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#contactinformation" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Contact Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#academicinformation" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Academic Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#financialinformation" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Financial Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#loandetails" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal">Loan Details</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#dependencystatus" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Dependency Status</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#citizenship" class="link flex">
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Citizenship/Residency Status</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="menu_item list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a
+                    id="lastmenu"
+                    href="#additionaldocumentation"
+                    class="link flex"
+                  >
+                    <i class="bx bx-home-alt"></i>
+                    <span class="text-slate-600 font-normal"
+                      >Additional Documentation</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </body>
+</html>

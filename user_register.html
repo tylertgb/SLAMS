@@ -15,6 +15,14 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
+    <!-- PreLoader -->
+    <div
+      id="preloader"
+      class="preloader fixed top-0 left-0 w-full h-full bg-white bg-opacity-50 z-[200] inset-0 hidden flex-col justify-center items-center"
+    >
+      <img class="loader w-[100px]" src="icons/loading-icon.png" alt="" />
+    </div>
+
     <div class="min-h-screen my-auto flex flex-col justify-between gap-20">
       <div class="pt-4 px-2 md:px-[200px]">
         <h3 class="text-slate-400 font-medium text-center md:text-left">
@@ -209,35 +217,43 @@
 
             <!-- Buttons -->
             <!--Submit button-->
-            <button
-              type="submit"
-              class="btn btn-accent inline-block w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
-            >
-              Register
-            </button>
+            <div class="flex flex-col md:flex-row justify-end items-center gap-5">
+              <button
+                type="submit"
+                class="btn-load btn btn-accent text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+              >
+                Register
+              </button>
+              <ul class="text-center">
+                <li class="text-blue-700 font-medium">
+                  <a href="user_login.html">Have an account?</a>
+                </li>
+              </ul>
+            </div>
           </form>
         </div>
       </div>
-      <footer class="bg-slate-100">
+
+      <footer class="bg-white">
         <div
           class="flex flex-col md:flex-row justify-between items-center gap-8 px-[200px] py-4"
         >
           <h3
             class="text-[1rem] tracking-widest text-center text-slate-400 font-medium"
           >
-            SLMS
+            SLAMS
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Useful Links
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            &copy; 2024 Student Loan Application and Management System
           </h3>
-          <h3 class="text-[1rem] text-center text-slate-400 font-medium">
-            Loan application system
+          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+            SLAMS
           </h3>
         </div>
       </footer>
     </div>
 
     <!--SCRIPTS-->
-
+    <script src="js/user_register.js"></script>
   </body>
 </html>

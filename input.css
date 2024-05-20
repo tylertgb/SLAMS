@@ -19,21 +19,38 @@
   }
   /* Mobile menu open */
   .menu.active {
-    @apply w-full flex;
+    @apply flex z-50;
   }
   .profileDropdown.active {
     @apply flex absolute;
+  }
+  .notificationDropdown.active {
+    @apply flex absolute;
+  }
+  .preloader.active {
+    @apply flex;
   }
 }
 
 html,
 body {
   transition: all 0.4s ease;
-  color: #fff;
   font-family: Poppins;
   font-style: normal;
   font-size: 13px;
   box-sizing: border-box;
   scroll-behavior: smooth;
   scroll-snap-type: mandatory;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation: spin 1.5s linear infinite;
 }
