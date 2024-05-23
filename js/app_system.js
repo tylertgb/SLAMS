@@ -84,13 +84,18 @@ $("#prevButton").click(function () {
 
 //Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
 $(document).ready(function () {
-  $("#dashboard a, #primary-menu a, #submitanAppBtn a").click(function (e) {
+  $(
+    "#dashboard a, #amendbackhome a, #submitanAppBtn a, #primary-menu a, #menu a, #homeLinks a"
+  ).click(function (e) {
     e.preventDefault(); // Prevent the default anchor behavior
 
     var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
     $(".dashboard, .applicationForm").hide(); // Hide all divs
-    $(".home").hide(); // Hide all divs
-    $(targetDiv).show(); // Show the targeted div
+    $(".home, .amendments").hide(); // Hide all divs
+    //Show targetDiv after 5seconds
+    setTimeout(function () {
+      $(targetDiv).show(); // Show the targeted div
+    }, 2000); // Simulate content loading delay
   });
 });
 //End Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
@@ -98,13 +103,20 @@ $(document).ready(function () {
 //Website Pre-loader
 const preloader = document.querySelector(".preloader");
 const buttons = document.querySelectorAll(".btn-load");
+const contentLoad = document.querySelectorAll(".content-load");
+
+document.addEventListener("DOMContentLoaded", function () {
+  preloader.classList.add("active");
+  setTimeout(function () {
+    preloader.classList.remove("active");
+  }, 2000); // Simulate content loading delay
+});
 
 buttons.forEach((button) => {
   button.addEventListener("click", function () {
-    console.log("Loaded ");
     preloader.classList.add("active");
     setTimeout(function () {
       preloader.classList.remove("active");
-    }, 5000); // Simulate content loading delay
+    }, 2000); // Simulate content loading delay
   });
 });

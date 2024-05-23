@@ -11,7 +11,7 @@
   }
   /* Button outline */
   .btn-outline {
-    @apply border border-slate-200 hover:text-blue-700 bg-slate-100 hover:bg-slate-200 duration-700;
+    @apply border border-slate-200 hover:text-blue-700 bg-slate-200 hover:bg-slate-300 duration-700;
   }
   /* Button accent */
   .btn-accent {
@@ -19,7 +19,7 @@
   }
   /* Mobile menu open */
   .menu.active {
-    @apply flex z-50;
+    @apply flex w-[240px];
   }
   .profileDropdown.active {
     @apply flex absolute;
