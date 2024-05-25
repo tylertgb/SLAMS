@@ -1,13 +1,25 @@
-//SideBar toggling
-openSiderbar();
-function openSiderbar() {
-  const bugger = document.querySelector(".bugger");
-  const menu = document.querySelector(".menu");
-  bugger.addEventListener("click", () => {
-    menu.classList.toggle("active");
-  });
-}
-//End SideBar toggling
+document.addEventListener('DOMContentLoaded', function() {
+  //SideBar toggling
+  openSiderbar();
+  function openSiderbar() {
+    const bugger = document.querySelector(".bugger");
+    const menu = document.querySelector(".menu");
+    bugger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+  //End SideBar toggling
+  //SideBar toggling
+  openAmendSiderbar();
+  function openAmendSiderbar() {
+    const bugger = document.querySelector(".amendBugger");
+    const menu = document.querySelector(".amendMenu");
+    bugger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  }
+  //End SideBar toggling
+}); //
 
 //Notification toggling
 opennotification();
@@ -84,8 +96,7 @@ $("#prevButton").click(function () {
 
 //Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
 $(document).ready(function () {
-  $("#dashboard a, #amendbackhome a, #submitanAppBtn a, #primary-menu a, #menu a, #homeTabLinks a"
-  ).click(function (e) {
+  $("#dashboard a, #amendbackhome a, #submitanAppBtn a, #primary-menu a, #menu a, #homeTabLinks a").click(function (e) {
     e.preventDefault(); // Prevent the default anchor behavior
 
     var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
@@ -167,63 +178,39 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+/*****************************************************************************************
+ * Functionality to show each respective target div when click on the link anchor, and also 
+change the Title and Description of Amendment: Also show the Save and Submit Button **/
+$(document).ready(function() {
+  // When an amendment link is clicked
+  $("#amendmentsList a, .amendments-menu a").click(function(e) {
+    e.preventDefault(); // Prevent the default anchor behavior
+    
+    var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
+    $(".amend-form").hide(); // Hide all amendment forms and buttons
+    $(targetDiv).show(); // Show the targeted div
+    $('.amendBtns').show(); // Hide
 
+    $('#amendmentsList').hide(); // Hide the amendments list
 
+    // Update the text of amendTitle and amendDescription
+    $(".amendTitle").text("Change of Details");
+    $(".amendDescription").text("Make changes to your details here");
+  });
 
+  // When the back home button is clicked
+  $(".amendbackhomeBtn").click(function(e) {
+    e.preventDefault(); // Prevent the default anchor behavior
+    
+    $(".amend-form, .amendBtns").hide(); // Hide all amendment forms and buttons
+    $('#amendmentsList').show(); // Show the amendments list
 
+    // // Revert the text of amendTitle and amendDescription
+    // $(".amendTitle").text("Amendments"); // Replace with the original title
+    // $(".amendDescription").text(" Choose the Amendment Type from the list below"); // Replace with the original description
+  });
+});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// // Function to toggle menu visibility
-// toggleSidebars();
-// function toggleSidebars() {
-//   const amendMyDetailsButton = document.querySelector('.amendmydetails-btn')
-//   // Event listener for amend details button
-//   amendMyDetailsButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     changeSidebars();
-//   });
-//   homeamendMyDetailsButton = document.querySelector('.home-amendmydetails-btn')
-//   // Event listener for amend details button
-//   homeamendMyDetailsButton.addEventListener('click', (event) => {
-//     event.preventDefault();
-//     changeSidebars();
-//   });
-// }
-
-// function changeSidebars(){
-//   const originalSibar = document.querySelector('.sidebar');
-//   const amendSidebar = document.querySelector('.amend-sidebar');
-//   originalSibar.classList.toggle('inactive');
-//   amendSidebar.classList.toggle('active');
-// }
-// function reverseSidebar(){
-//   const originalSibar = document.querySelector('.sidebar');
-//   const amendSidebar = document.querySelector('.amend-sidebar');
-//   originalSibar.classList.toggle('active');
-//   amendSidebar.classList.toggle('inactive');
-// }
-
-
-// // Event listener for home button
-// document.getElementById('amendbackhomeBtn').addEventListener('click', function(event) {
-//   event.preventDefault();
-//   reverseSidebar();
-// });
+/*****************************************************************************************
+ *End Functionality to show each respective target div when click on the link anchor, and also 
+change the Title and Description of Amendment: Also show the Save and Submit Button **/

@@ -21,6 +21,9 @@
   .menu.active {
     @apply flex w-[240px];
   }
+  .amendMenu.active {
+    @apply flex w-[240px];
+  }
   .profileDropdown.active {
     @apply flex absolute;
   }
@@ -41,6 +44,9 @@
   }
   .amend-sidebar.inactive{
     @apply hidden;
+  }
+  .amend-form.active{
+    @apply block;
   }
 }
 

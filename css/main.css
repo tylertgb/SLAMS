@@ -771,10 +771,6 @@ video {
   max-width: 80%;
 }
 
-.max-w-\[90\%\] {
-  max-width: 90%;
-}
-
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1053,6 +1049,10 @@ video {
   padding-bottom: 2rem;
 }
 
+.pl-1 {
+  padding-left: 0.25rem;
+}
+
 .pl-6 {
   padding-left: 1.5rem;
 }
@@ -1147,6 +1147,11 @@ video {
 
 .text-\[2rem\] {
   font-size: 2rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-xl {
@@ -1324,6 +1329,12 @@ video {
   .menu.active {
     width: 240px;
   }
+  .amendMenu.active {
+    display: flex;
+  }
+  .amendMenu.active {
+    width: 240px;
+  }
   .profileDropdown.active {
     position: absolute;
   }
@@ -1350,6 +1361,9 @@ video {
   }
   .amend-sidebar.inactive {
     display: none;
+  }
+  .amend-form.active {
+    display: block;
   }
 }
 

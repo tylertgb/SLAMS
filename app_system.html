@@ -249,9 +249,9 @@
         >
           <div class="flex flex-col items-center px-4 pt-4">
             <div
-              class="bugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
+              class="amendBugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
             >
-              <i class="bugger ri-menu-line text-[1.5rem] text-blue-700"></i>
+              <i class="amendBugger ri-menu-line text-[1.5rem] text-blue-700"></i>
             </div>
 
             <div class="flex flex-col justify-center items-center">
@@ -272,7 +272,7 @@
         <!--End Sidebar Icons bar -->
         <!-- Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
         <nav
-          class="menu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
+          class="amendMenu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
         >
           <div
             class="menu-list pt-4 transition-all duration-700 ease w-full pr-10"
@@ -1167,7 +1167,7 @@
                             for="exampleInput12"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Academic Transcript or Results Slip
+                            Academic Transcript or Results Slip <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!----------------------------------------
@@ -1610,7 +1610,7 @@
                 ------------------------------------->
 
                 <!-------------------------------- 
-                  Additional Documentation form 
+                  Additional Documents form 
                 -------------------------------->
                 <div
                   id="additionaldocumentation"
@@ -1659,7 +1659,7 @@
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
                             Proof of Enrollment (e.g. Admission Letter, Student
-                            ID Card)
+                            ID Card) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!-----------------------------------------------------------------
@@ -1691,7 +1691,7 @@
                             for="exampleInput12"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Proof of Identity (e.g., National ID Card, Passport)
+                            Proof of Identity (e.g., National ID Card, Passport) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!---------------------------------------------------------
@@ -1723,7 +1723,7 @@
                             for="exampleInput12"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            E-zwitch Card (Front and Back)
+                            E-zwitch Card (Front and Back) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!----------------------------------------------
@@ -1755,7 +1755,7 @@
                             for="exampleInput12"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Any Other Supporting Documents
+                            Any Other Supporting Documents <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!--------------------------------
@@ -1772,7 +1772,7 @@
                   --------->
                 </div>
                 <!------------------------------
-                  End Additional Documentation 
+                  End Additional Documents 
                 -------------------------------->
               </div>
 
@@ -2134,12 +2134,12 @@
                 class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
               >
                 <p
-                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                  class="amendTitle text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
                 >
                   Amendments
                 </p>
                 <h3
-                  class="text-[13px] text-slate-400 font-medium text-center md:text-left"
+                  class="amendDescription text-[13px] text-slate-400 font-medium text-center md:text-left"
                 >
                   Choose the Amendment Type from the list below
                 </h3>
@@ -2258,24 +2258,9 @@
           Amendment of User Data Form Contents 
         ----------------------------------------->
         <main>
-          <div id="amendmentForm" class="amendmentForm hidden">
+          <div id="amendmentForm" class="amendmentForm">
             <div
-              class="max-w-[90%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center gap-6"
-            >
-              <div
-                class="amend-header flex flex-col-reverse md:flex-row justify-between items-center w-full"
-              >
-                <p
-                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
-                >
-                  Make Changes to your details
-                </p>
-                <h3
-                  class="text-[11px] text-slate-400 font-medium text-center md:text-left"
-                >
-                  SLAMS | Student Loan Application System
-                </h3>
-              </div>
+              class="max-w-[80%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center gap-6">
 
               <div class="w-full mt-8 flex flex-col gap-6">
                 <!--------------------------- 
@@ -2416,7 +2401,7 @@
                 ---------------------------->
                 <div
                   id="amend-contactinformation"
-                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -2548,7 +2533,7 @@
                 ----------------------------->
                 <div
                   id="amend-academicinformation"
-                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -2575,7 +2560,7 @@
                             type="text"
                             required
                             class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="student-ID"
+                            id="change-student-ID"
                             placeholder="Student ID"
                           />
                           <label
@@ -2597,7 +2582,7 @@
                             type="text"
                             required
                             class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="programme-of-study"
+                            id="change-programme-of-study"
                             placeholder="Programme of Study"
                           />
                           <label
@@ -2627,7 +2612,7 @@
                             type="text"
                             required
                             class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="year-of-study"
+                            id="change-year-of-study"
                             placeholder="Year of Study"
                           />
                           <label
@@ -2649,7 +2634,7 @@
                             type="text"
                             required
                             class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="year-of-completion"
+                            id="change-year-of-completion"
                             placeholder="Year of Completion"
                           />
                           <label
@@ -2674,13 +2659,13 @@
                             type="file"
                             required
                             class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="file"
+                            id="change-file"
                             placeholder="Academic Transcript or Results Slip"
                           />
                           <div
                             class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
                           >
-                            <p id="fileStatus1">
+                            <p id="change-fileStatus">
                               Upload or select a file or drop it here!
                             </p>
                           </div>
@@ -2688,7 +2673,7 @@
                             for="exampleInput12"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Academic Transcript or Results Slip
+                            Academic Transcript or Results Slip <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!----------------------------------------
@@ -2714,7 +2699,7 @@
                 ------------------------------>
                 <div
                   id="amend-financialinformation"
-                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -2868,7 +2853,7 @@
                 --------------------->
                 <div
                   id="amend-loandetails"
-                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -2956,7 +2941,7 @@
                 -------------------------->
                 <div
                   id="amend-dependencystatus"
-                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -3045,7 +3030,7 @@
                 -------------------------------------->
                 <div
                   id="amend-citizenship"
-                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -3131,11 +3116,11 @@
                 ------------------------------------->
 
                 <!-------------------------------- 
-                  Additional Documentation form 
+                  Additional Documents form 
                 -------------------------------->
                 <div
                   id="amend-additionaldocuments"
-                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                  class="amend-form hidden w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
                 >
                   <p
                     class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
@@ -3165,7 +3150,7 @@
                             type="file"
                             required
                             class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="proof-of-enrollment"
+                            id="change-proof-of-enrollment"
                             placeholder="Proof of Enrollment (e.g., Admission Letter, Student ID Card)"
                           />
                           <div
@@ -3176,11 +3161,11 @@
                             </p>
                           </div>
                           <label
-                            for="exampleInput12"
+                            for="change-proof-of-enrollment"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
                             Proof of Enrollment (e.g. Admission Letter, Student
-                            ID Card)
+                            ID Card) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!-----------------------------------------------------------------
@@ -3198,7 +3183,7 @@
                             type="file"
                             required
                             class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="proof-of-identity"
+                            id="change-proof-of-identity"
                             placeholder="Proof of Identity (e.g., National ID Card, Passport)"
                           />
                           <div
@@ -3209,10 +3194,10 @@
                             </p>
                           </div>
                           <label
-                            for="exampleInput12"
+                            for="change-proof-of-identity"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Proof of Identity (e.g., National ID Card, Passport)
+                            Proof of Identity (e.g., National ID Card, Passport) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!---------------------------------------------------------
@@ -3230,7 +3215,7 @@
                             type="file"
                             required
                             class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="e-zwitch-card"
+                            id="change-e-zwitch-card"
                             placeholder="Bank Account Information (for disbursement of funds)"
                           />
                           <div
@@ -3241,10 +3226,10 @@
                             </p>
                           </div>
                           <label
-                            for="exampleInput12"
+                            for="change-e-zwitch-card"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            E-zwitch Card (Front and Back)
+                            E-zwitch Card (Front and Back) <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!----------------------------------------------
@@ -3262,7 +3247,7 @@
                             type="file"
                             required
                             class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                            id="other-documents"
+                            id="change-other-documents"
                             placeholder="Any Other Supporting Documents"
                           />
                           <div
@@ -3273,10 +3258,10 @@
                             </p>
                           </div>
                           <label
-                            for="exampleInput12"
+                            for="change-other-documents"
                             class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                           >
-                            Any Other Supporting Documents
+                            Any Other Supporting Documents <i class="ri-file-upload-line pl-1 text-lg"></i>
                           </label>
                         </div>
                         <!--------------------------------
@@ -3293,30 +3278,30 @@
                   --------->
                 </div>
                 <!------------------------------
-                  End Additional Documentation 
+                  End Additional Documents
                 -------------------------------->
               </div>
 
               <!---------- 
                 Buttons 
               ------------->
-              <div class="amend-btns mx-auto w-full">
+              <div id="amendBtns" class="amendBtns hidden mx-auto w-full">
                 <!-------------------------
-                    Previous & Next button
+                    Save & Submit button
                 ------------------------->
                 <div class="flex justify-center items-center gap-4 pt-7">
                   <!----------------
-                    Previous button
+                    Save button
                   ------------------>
                   <button
                     type="submit"
-                    id="SaveButton"
-                    class="btn btn-accent w-full inline-block text-white hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+                    id="saveButton"
+                    class="btn-load btn btn-accent w-full inline-block text-white hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
                   >
                     Save
                   </button>
                   <!--------------------
-                    End Previous button
+                    End Save button
                   ---------------------->
 
                   <!-----------------
@@ -3334,7 +3319,7 @@
                   ----------------->
                 </div>
                 <!-------------------------
-                  End Previous & Next button
+                  End Save & Submit button
                 ------------------------->
               </div>
               <!---------- 
