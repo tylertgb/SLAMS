@@ -54,7 +54,7 @@
         SIDEBAR 
       ------------>
       <div
-        class="siderbar z-[100] fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease"
+        class="sidebar z-[100] fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease"
       >
         <!-- Sidebar Icons bar -->
         <nav
@@ -90,7 +90,7 @@
 
             <div class="flex flex-col justify-center items-center">
               <div class="menu-icon flex flex-col gap-[20px] pt-10">
-                <ul class="menu_item list-none">
+                <ul class="normal-menu list-none">
                   <li class="item">
                     <a href="#" class="link">
                       <i
@@ -99,7 +99,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="normal-menu list-none">
                   <li class="item">
                     <a href="#" class="link">
                       <i
@@ -108,7 +108,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="normal-menu list-none">
                   <li class="item">
                     <a href="#" class="link">
                       <i
@@ -117,7 +117,7 @@
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="list-none">
                   <li class="item">
                     <a href="#" class="link">
                       <i
@@ -154,9 +154,10 @@
             <!-- Logo -->
 
             <div id="primary-menu" class="flex flex-col gap-4 pt-20 w-full">
-              <ul class="menu_item w-ful list-none text-center">
+              <ul class="menu_item w-full list-none text-center">
                 <li
-                  class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                id="homeButton"
+                  class="btn-load homeButton group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                 >
                   <a href="#home" class="link flex">
                     <span class="text-slate-600 font-normal">Home</span>
@@ -175,45 +176,48 @@
             </div>
 
             <div class="flex flex-col justify-start items-start">
+              <!------------------- 
+                Normal Menu items
+              --------------------->
               <div id="menu" class="flex flex-col gap-[15px] pt-10 w-full">
-                <ul class="menu_item list-none">
+                <ul class="w-full list-none">
                   <li
                     class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
-                    <a href="#repayment" class="link flex">
+                    <a href="#repaymyloan" class="link flex">
                       <span class="text-slate-600 font-normal"
                         >Repay My Loan</span
                       >
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="w-full list-none">
                   <li
                     class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
-                    <a href="#applicationList" class="link flex">
+                    <a href="#applicationlist" class="link flex">
                       <span class="text-slate-600 font-normal"
                         >List of Applications</span
                       >
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="w-full list-none">
                   <li
                     class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
-                    <a href="#statement" class="link flex">
+                    <a href="#statements" class="link flex">
                       <span class="text-slate-600 font-normal"
                         >Check my Statement</span
                       >
                     </a>
                   </li>
                 </ul>
-                <ul class="menu_item list-none">
+                <ul class="w-full list-none">
                   <li
-                    class="btn-load group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                    class="btn-load amendmydetails-btn group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
                   >
-                    <a href="#amendments" class="link flex">
+                    <a href="#amendments" class="link flex amendmydetails-btn">
                       <span class="text-slate-600 font-normal"
                         >Amend my Details</span
                       >
@@ -221,6 +225,10 @@
                   </li>
                 </ul>
               </div>
+              <!------------------- 
+                End Normal Menu items
+              --------------------->
+
             </div>
           </div>
         </nav>
@@ -229,6 +237,186 @@
       <!------------
         END SIDEBAR 
       --------------->
+      <!--------------------
+        AMENDMENTS SIDEBAR 
+      ---------------------->
+      <div
+        class="amend-sidebar z-[100] fixed top-0 left-0 h-full hidden justify-start items-start transition-all duration-500 ease"
+      >
+        <!-- Sidebar Icons bar -->
+        <nav
+          class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
+        >
+          <div class="flex flex-col items-center px-4 pt-4">
+            <div
+              class="bugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
+            >
+              <i class="bugger ri-menu-line text-[1.5rem] text-blue-700"></i>
+            </div>
+
+            <div class="flex flex-col justify-center items-center">
+              <div class="menu-icon flex flex-col gap-[20px] pt-10">
+                <ul class="list-none">
+                  <li class="item">
+                    <a href="#" class="link">
+                      <i
+                        class="ri-equalizer-line text-blue-700 font-medium text-[1.5rem]"
+                      ></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <!--End Sidebar Icons bar -->
+        <!-- Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
+        <nav
+          class="menu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
+        >
+          <div
+            class="menu-list pt-4 transition-all duration-700 ease w-full pr-10"
+          >
+            <!-- Logo -->
+            <div class="flex items-center gap-4 w-full">
+              <div
+                class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1"
+              >
+                <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+              </div>
+              <h1
+                class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500"
+              >
+                SLAMS
+              </h1>
+            </div>
+            <!-- Logo -->
+
+            <div class="flex flex-col justify-start items-start">
+
+              <!------------------- 
+                Normal Menu items
+              --------------------->
+              <div id="amend-menu" class="flex flex-col gap-[15px] pt-10 w-full">
+                <ul class="menu_item list-none">
+                  <li
+                    class="text-white font-semibold pointer-events-none bg-blue-700 rounded-tr-3xl rounded-br-3xl p-2"
+                  >
+                    <a href="#amendments" class="">
+                      <span class=""
+                        >Amend my Details</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!------------------- 
+                End Normal Menu items
+              --------------------->
+
+              <!---------------------------------
+                Amendment Information List items 
+              ------------------------------------>
+              <div id="amendments-menu" class="amendments-menu flex flex-col gap-2 pt-7 w-full">
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-personalinformation" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Personal Information</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-contactinformation" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Contact Information</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-academicinformation" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Academic Information</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-financialinformation" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Financial Information</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-loandetails" class="link flex">
+                      <span class="text-slate-600 font-normal">Loan Details</span>
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-dependencystatus" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Dependency Status</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                  >
+                    <a href="#amend-citizenship" class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Citizenship/Residency Status</span
+                      >
+                    </a>
+                  </li>
+                </ul>
+                <ul class="menu_item list-none">
+                  <li
+                    class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                    <a
+                      id="lastmenu"
+                      href="#amend-additionaldocuments"
+                      class="link flex">
+                      <span class="text-slate-600 font-normal"
+                        >Additional Documents</span>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <!---------------------------------------
+                End Amendment Information List items 
+              ---------------------------------------->
+            </div>
+          </div>
+        </nav>
+        <!--End Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
+      </div>
+      <!------------------------
+        END AMENDMENTS SIDEBAR 
+      -------------------------->
 
       <!---------------------------
          Main top navigation bar 
@@ -260,19 +448,24 @@
               Student Loan Application System
             </h1>
             <div class="flex items-center gap-3">
+              <!-- Notification Box and Drodown Notification List -->
               <div class="notification-box relative">
                 <div
                   id="notification-box "
                   class="h-8 w-8 bg-slate-100 rounded-full flex justify-center cursor-pointer"
                 >
+                  <!-- Active notification here -->
                   <span class="absolute -top-2 -right-1 text-red-600">
                     <i class="ri-circle-fill text-[10px]"></i>
                   </span>
+                  <!-- Active notification here -->
+                  <!-- Notification Bel icon -->
                   <a href="#" class="link">
                     <i
                       class="ri-notification-4-line text-blue-700 font-medium text-[1.5rem]"
                     ></i>
                   </a>
+                  <!-- End Notification Bel icon -->
                 </div>
                 <!-- Notification Dropdown -->
                 <div
@@ -285,15 +478,20 @@
                     <div
                       class="flex flex-col justify-start items-start border-b mb-4"
                     >
+                      <!-- Notification list here -->
                       <ul>
                         <li class="text-[12px] text-blue-700 font-normal py-1">
                           <a href="#">You have 1 new notification</a>
                         </li>
                       </ul>
+                      <!-- End Notification list here -->
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- End Notification Box and Drodown Notification List -->
+
+              <!-- Profile Box and Its Dropdown -->
               <div id="profile-box" class="flex items-center gap-3">
                 <div class="profile-box relative">
                   <a href="#" class="flex items-center gap-3">
@@ -320,25 +518,28 @@
                       <div
                         class="flex flex-col justify-start items-start border-b mb-4"
                       >
+                        <!-- Student ID -->
                         <p class="text-[1.1rem] text-blue-700 font-normal">
                           20210404130
                         </p>
-                        <p class="text-[1.1rem] text-blue-700 font-normal">
-                          GHA-71346349-5
-                        </p>
+                        <!-- End Student ID -->
                         <span
                           class="text-[1.1rem] text-slate-400 font-normal py-1"
                         >
                           <a href="#">Reset Password</a>
                         </span>
                       </div>
+                      <!-- Logout of your account -->
                       <span class="text-[1.1rem] text-slate-400 font-normal">
                         <a href="user_login.html">Logout</a>
                       </span>
+                      <!-- End Logout of your account -->
                     </div>
                   </div>
                 </div>
               </div>
+              <!-- End Profile Box and Its Dropdown -->
+
             </div>
           </div>
         </div>
@@ -369,13 +570,18 @@
               >
                 Hello Welcome!
               </p>
+
+              <!-----------------------
+                Submit an Application
+              ------------------------->
               <a
                 href="#applicationForm"
                 class="btn-load btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
                 ><span class="w-full text-[1rem] font-medium text-white"
-                  >Submit an Application</span
-                ></a
-              >
+                  >Submit an Application</span></a>
+              <!-------------------------
+                End Submit an Application
+              --------------------------->
 
               <h3
                 class="text-[11px] text-slate-400 font-medium text-center md:text-left"
@@ -385,26 +591,40 @@
             </div>
             <div class="mt-8">
               <div class="flex flex-col gap-4">
-                <div
-                  class="flex flex-col md:flex-row justify-between items-center gap-4"
-                >
+                <!------------------------------------------
+                  Full Name, Student ID, Programme, Level 
+                ------------------------------------------->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
                   <div class="item w-full bg-white rounded-3xl">
                     <div class="p-8">
                       <div
                         class="flex flex-col justify-start items-start gap-2"
                       >
+                      <!------------
+                        Full Name
+                      -------------->
                         <h3
-                          id="name"
+                          id="fullName"
                           class="text-blue-700 font-medium text-[1.2rem]"
                         >
                           Bright Gobka
                         </h3>
+                        <!------------
+                        End Full Name
+                        -------------->
+
+                        <!--------------
+                          Student ID 
+                        --------------->
                         <h3
                           id="studentID"
                           class="text-blue-700 font-medium text-[1.2rem]"
                         >
                           20210404130
                         </h3>
+                        <!----------------
+                          End Student ID 
+                        ----------------->
                       </div>
                     </div>
                   </div>
@@ -422,19 +642,23 @@
                         <h3
                           id="Level"
                           class="text-blue-700 font-medium text-[1.2rem]"
-                        >
-                          Level: 400
+                        >Level: <span id="level">400</span>
                         </h3>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                id="homeLinks"
-                  class="flex flex-col md:flex-row justify-between items-center gap-4"
-                >
+                <!--------------------------------------------
+                  End Full Name, Student ID, Programme, Level 
+                --------------------------------------------->
+
+                <!---------------------------------------------------------------------
+                  Home TabLinks (Repayment, Amendments, Application List, Statement) 
+                ------------------------------------------------------------------------>
+                <div id="homeTabLinks" class="flex flex-col md:flex-row justify-between items-center gap-4">
+
                   <a
-                    href="#"
+                    href="#repaymyloan"
                     class="btn-load btn-accent p-4 item w-full rounded-3xl"
                   >
                     <div class="flex items-center gap-3 pb-4">
@@ -451,7 +675,7 @@
                   </a>
                   <a
                     href="#amendments"
-                    class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                    class="home-amendmydetails-btn btn-load btn-accent p-4 item w-full rounded-3xl"
                   >
                     <div class="flex items-center gap-3 pb-4">
                       <i
@@ -466,7 +690,7 @@
                     </p>
                   </a>
                   <a
-                    href="#"
+                    href="#applicationlist"
                     class="btn-load btn-accent p-4 item w-full rounded-3xl"
                   >
                     <div class="flex items-center gap-3 pb-4">
@@ -482,7 +706,7 @@
                     </p>
                   </a>
                   <a
-                    href="#"
+                    href="#statements"
                     class="btn-load btn-accent p-4 item w-full rounded-3xl"
                   >
                     <div class="flex items-center gap-3 pb-4">
@@ -498,6 +722,9 @@
                     </p>
                   </a>
                 </div>
+                <!---------------------------------------------------------------------
+                  End Home TabLinks (Repayment, Amendments, Application List, Statement) 
+                ------------------------------------------------------------------------>
               </div>
             </div>
           </div>
@@ -1917,8 +2144,9 @@
                   Choose the Amendment Type from the list below
                 </h3>
                 <a
+                  id="amendbackhomeBtn"
                   href="#home"
-                  class="btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                  class="amendbackhomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
                   ><i
                     class="ri-home-8-line text-white font-medium text-[1rem]"
                   ></i>
@@ -1938,7 +2166,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#personalinformation" class="">
+                      <a href="#amend-personalinformation" class="">
                         <span class="">Personal Information</span>
                       </a>
                       <span
@@ -1948,7 +2176,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#contactinformation" class="">
+                      <a href="#amend-contactinformation" class="">
                         <span class="">Contact Information</span>
                       </a>
                       <span
@@ -1958,7 +2186,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#academicinformation" class="">
+                      <a href="#amend-academicinformation" class="">
                         <span class="">Academic Information</span>
                       </a>
                       <span
@@ -1968,7 +2196,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#financialinformation" class="">
+                      <a href="#amend-financialinformation" class="">
                         <span class="">Financial Information</span>
                       </a>
                       <span
@@ -1978,7 +2206,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#loandetails" class="">
+                      <a href="#amend-loandetails" class="">
                         <span class="">Loan Details</span>
                       </a>
                       <span
@@ -1988,7 +2216,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#dependencystatus" class="">
+                      <a href="#amend-dependencystatus" class="">
                         <span class="">Dependency Status</span>
                       </a>
                       <span
@@ -1998,7 +2226,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#citizenship" class="">
+                      <a href="#amend-citizenship" class="">
                         <span class="">Citizenship/Residency Status</span>
                       </a>
                       <span
@@ -2008,7 +2236,7 @@
                     <li
                       class="relative w-fit group text-slate-500 hover:text-blue-700 duration-500 ease"
                     >
-                      <a href="#additionaldocuments" class="">
+                      <a href="#amend-additionaldocuments" class="">
                         <span class="">Additional Documentats</span>
                       </a>
                       <span
@@ -2025,6 +2253,1260 @@
         <!--------------------
           End Amendments Tab
         ---------------------->
+
+        <!--------------------------------------
+          Amendment of User Data Form Contents 
+        ----------------------------------------->
+        <main>
+          <div id="amendmentForm" class="amendmentForm hidden">
+            <div
+              class="max-w-[90%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center gap-6"
+            >
+              <div
+                class="amend-header flex flex-col-reverse md:flex-row justify-between items-center w-full"
+              >
+                <p
+                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                >
+                  Make Changes to your details
+                </p>
+                <h3
+                  class="text-[11px] text-slate-400 font-medium text-center md:text-left"
+                >
+                  SLAMS | Student Loan Application System
+                </h3>
+              </div>
+
+              <div class="w-full mt-8 flex flex-col gap-6">
+                <!--------------------------- 
+                  Personal Information form 
+                ----------------------------->
+                <div
+                  id="amend-personalinformation"
+                  class="amend-form hidden transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Personal Information
+                  </p>
+
+                  <!---------
+                    Form
+                  ---------->
+                  <form class="">
+                    <div
+                      class="flex flex-col md:flex-row justify-between items-start gap-5"
+                    >
+                      <!--------------
+                        Column 1
+                      ----------------->
+                      <div class="column1 w-full">
+                        <!-----------
+                          Full Name
+                        --------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="amend-fullName"
+                            placeholder="Full Name"
+                          />
+                          <label
+                            for="amend-fullName"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Full Name
+                          </label>
+                        </div>
+                        <!-----------
+                          End Full Name
+                        --------------->
+
+                        <!---------------
+                          Date of Birth
+                        ---------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="exampleInput8"
+                            placeholder="Date of Birth"
+                          />
+                          <label
+                            for="exampleInput8"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Date of Birth
+                          </label>
+                        </div>
+                        <!---------------
+                          End Date of Birth
+                        ---------------->
+                      </div>
+                      <!--------------
+                        End Column 1
+                      ----------------->
+                      
+                      <!--------------
+                        Column 2
+                      ----------------->
+                      <div class="column2 w-full">
+                        <!----------------------
+                          Gender - Male/Female
+                        ----------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="exampleInput11"
+                            placeholder="Gender"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Gender
+                          </label>
+                        </div>
+                        <!------------------------
+                          End Gender - Male/Female
+                        --------------------------->
+
+                        <!-------------------------------------
+                          National Identification Number input
+                        ---------------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:text-[10px] transition-all duration-200 ease-out"
+                            id="exampleInput9"
+                            placeholder="e.g., Ghana Card, Passport, Voter ID"
+                          />
+                          <label
+                            for="exampleInput9"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 -top-3 bg-white px-1 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            National Identification Number
+                          </label>
+                        </div>
+                        <!-----------------------------------------
+                          End National Identification Number input
+                        ------------------------------------------->
+                      </div>
+                      <!--------------
+                        End Column 2
+                      ----------------->
+                    </div>
+                  </form>
+                  <!---------
+                    Form
+                  ---------->
+                </div>
+                <!--------------------------
+                  End Personal Information
+                ---------------------------->
+
+                <!--------------------------
+                  Contact Information form 
+                ---------------------------->
+                <div
+                  id="amend-contactinformation"
+                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Contact Information
+                  </p>
+                  <!---------
+                    Form
+                  ---------->
+                  <form class="">
+                    <div
+                      class="flex flex-col md:flex-row justify-between items-start gap-5"
+                    >
+                      <!----------
+                        Column 1
+                      ------------->
+                      <div class="column1 w-full">
+                        <!-------------------------------
+                          Address (Residential Address)
+                        --------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="residential-address"
+                            placeholder="Address (Residential Address)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Address (Residential Address)
+                          </label>
+                        </div>
+                        <!-------------------------------
+                          End Address (Residential Address)
+                        --------------------------------->
+
+                        <!--------------------
+                          Phone Number input
+                        ---------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="phone-number"
+                            placeholder="Phone Number"
+                          />
+                          <label
+                            for="exampleInput9"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Phone Number
+                          </label>
+                        </div>
+                        <!--------------------
+                          End Phone Number input
+                        ---------------------->
+                      </div>
+                      <!----------
+                        End Column 1
+                      ------------->
+
+                      <!---------
+                        Column 2 
+                      ----------->
+                      <div class="column2 w-full">
+                        <!-------------------------
+                          Additional phone Number
+                        --------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="secondphone-number"
+                            placeholder="Additional Phone Number"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Additional Phone Number
+                          </label>
+                        </div>
+                        <!----------------------------
+                          End Additional phone Number
+                        ----------------------------->
+
+                        <!-------
+                          Email
+                        --------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="email"
+                            placeholder="Enter your email"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Email
+                          </label>
+                        </div>
+                        <!-------
+                          End Email
+                        --------->
+                      </div>
+                      <!---------
+                        End Column 2 
+                      ----------->
+                    </div>
+                  </form>
+                  <!---------
+                    End Form
+                  ---------->
+                </div>
+                <!------------------------- 
+                  End Contact Information 
+                --------------------------->
+
+                <!---------------------------
+                  Academic Information form
+                ----------------------------->
+                <div
+                  id="amend-academicinformation"
+                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Academic Information
+                  </p>
+                  <!------
+                    Form 
+                  -------->
+                  <form class="">
+
+                    <div
+                      class="flex flex-col md:flex-row justify-between items-start gap-5"
+                    >
+                      <!---------
+                        Column 1 
+                      ---------->
+                      <div class="column1 w-full">
+                        <!-----------------
+                          Student ID input
+                        -------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="student-ID"
+                            placeholder="Student ID"
+                          />
+                          <label
+                            for="student-ID"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Student ID
+                          </label>
+                        </div>
+                        <!-----------------
+                          End Student ID input
+                        -------------------->
+
+                        <!-----------------
+                          Program of Study
+                        -------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="programme-of-study"
+                            placeholder="Programme of Study"
+                          />
+                          <label
+                            for="programme-of-study"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Programme of Study
+                          </label>
+                        </div>
+                        <!-----------------
+                          End Program of Study
+                        -------------------->
+                      </div>
+                      <!-------------
+                        End Column 1 
+                      ---------------->
+                      
+                      <!---------
+                        Column 2 
+                      ---------->
+                      <div class="column2 w-full">
+                        <!---------------
+                          Year of Study
+                        ----------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="year-of-study"
+                            placeholder="Year of Study"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Year of Study
+                          </label>
+                        </div>
+                        <!---------------
+                          End Year of Study
+                        ----------------->
+
+                        <!--------------------
+                          Year of Completion
+                        ---------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="year-of-completion"
+                            placeholder="Year of Completion"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Year of Completion
+                          </label>
+                        </div>
+                        <!-----------------------
+                          End Year of Completion
+                        -------------------------->
+
+                        <!-------------------------------------
+                          Academic Transcript or Results Slip
+                        --------------------------------------->
+                        <div
+                          class="file-input bg-slate-100 rounded-3xl relative mb-6"
+                          for="file"
+                        >
+                          <input
+                            type="file"
+                            required
+                            class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="file"
+                            placeholder="Academic Transcript or Results Slip"
+                          />
+                          <div
+                            class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
+                          >
+                            <p id="fileStatus1">
+                              Upload or select a file or drop it here!
+                            </p>
+                          </div>
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Academic Transcript or Results Slip
+                          </label>
+                        </div>
+                        <!----------------------------------------
+                          End Academic Transcript or Results Slip
+                        ------------------------------------------>
+                      </div>
+                      <!-------------
+                        End Column 2 
+                      --------------->
+
+                    </div>
+                  </form>
+                  <!------
+                    End Form 
+                  --------->
+                </div>
+                <!--------------------------- 
+                  End Academic Information
+                ----------------------------->
+
+                <!--------------------------- 
+                  Financial Information form
+                ------------------------------>
+                <div
+                  id="amend-financialinformation"
+                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Financial Information
+                  </p>
+
+                  <!-------- 
+                    Form
+                  ---------->
+                  <form class="">
+                    <div
+                      class="flex flex-col md:flex-row justify-between items-start gap-5"
+                    >
+                      <!-------- 
+                        Column 1
+                      ---------->
+                      <div class="column1 w-full">
+                        <!----------------------------
+                          Annual Income (if employed)
+                        ------------------------------>
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="annual-income"
+                            placeholder="Annual Income (if employed)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Annual Income (if employed)
+                          </label>
+                        </div>
+                        <!-------------------------------
+                          End Annual Income (if employed)
+                        --------------------------------->
+
+                        <!-------------------
+                          Employment Status
+                        --------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="employment-status"
+                            placeholder="Employment Status "
+                          />
+                          <label
+                            for="exampleInput8"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Employment Status
+                          </label>
+                        </div>
+                        <!---------------------
+                          End Employment Status
+                        ----------------------->
+
+                        <!--------------------------------------------
+                          Parents' or Guardians' Income (if dependent)
+                        ----------------------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="parent-guardians"
+                            placeholder="Parents' or Guardians' Income (if dependent)"
+                          />
+                          <label
+                            for="exampleInput9"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Parents' or Guardians' Income
+                          </label>
+                        </div>
+                        <!--------------------------------------------
+                          End Parents' or Guardians' Income (if dependent)
+                        ----------------------------------------------->
+                      </div>
+                       <!-------- 
+                        End Column 1
+                      ---------->
+
+                      <div class="column2 w-full">
+                        <!--Source of Income (if applicable)-->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="source-of-income"
+                            placeholder="Source of Income (if applicable)"
+                          />
+                          <label
+                            for="exampleInput11"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Source of Income (if applicable)
+                          </label>
+                        </div>
+                        <!--TIN Number (if applicable)-->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="exampleInput12"
+                            placeholder="TIN (if applicable)"
+                          />
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            TIN Number (if applicable)
+                          </label>
+                        </div>
+                        <!--Family expenses (per-month)-->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="family-expenses"
+                            placeholder="Family expenses (per-month)"
+                          />
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Family expenses (per-month)
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <!-------- 
+                    End Form
+                  ---------->
+                </div>
+                <!---------------------------- 
+                  End Financial Information 
+                ----------------------------->
+
+                <!-------------------- 
+                  Loan Details form 
+                --------------------->
+                <div
+                  id="amend-loandetails"
+                  class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Loan Details
+                  </p>
+                  <!-------
+                    Form
+                  ---------->
+                  <form class="">
+                    <div
+                      class="flex flex-col md:flex-row justify-between items-start gap-5"
+                    >
+                      <!---------
+                        Column 1
+                      ----------->
+                      <div class="column1 w-full">
+                        <!-----------------------
+                          Loan Amount Requested
+                        ------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="loan-amount-requesting"
+                            placeholder="Loan Amount Requested"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Loan Amount Requested
+                          </label>
+                        </div>
+                        <!-----------------------
+                          End Loan Amount Requested
+                        ------------------------->
+                      </div>
+                      <!-------------
+                        End Column 1
+                      ---------------->
+
+                      <!---------
+                        Column 2
+                      ----------->
+                      <div class="column2 w-full">
+                        <!-----------------
+                          Purpose of Loan
+                        ----------------- -->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="loan-purpose"
+                            placeholder="Purpose of Loan "
+                          />
+                          <label
+                            for="exampleInput8"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Purpose of Loan (e.g, Tuition Fees)
+                          </label>
+                        </div>
+                        <!-----------------
+                          End Purpose of Loan
+                        ----------------- -->
+                      </div>
+                      <!---------
+                        End Column 2
+                      ----------->
+                    </div>
+                  </form>
+                  <!-------
+                    End Form
+                  ---------->
+                </div>
+                <!------------------
+                  End Loan Details 
+                ------------------->
+
+                <!-----------------------
+                  Dependency status form 
+                -------------------------->
+                <div
+                  id="amend-dependencystatus"
+                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Dependency Status
+                  </p>
+                  
+                  <!-------
+                    Form
+                  --------->
+                  <form class="">
+                    <div
+                      class="flex flex-col justify-between items-start gap-5"
+                    >
+                      <!---------
+                        Column 1
+                      ----------->
+                      <div class="column1 w-full">
+                        <!---------------------------------------------
+                          Dependency Status (Dependent or Independent)
+                        ----------------------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="peer w-full h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="dependency-status"
+                            placeholder="Dependency Status (Dependent or Independent)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Dependency Status (Dependent or Independent)
+                          </label>
+                        </div>
+                        <!---------------------------------------------
+                          End Dependency Status (Dependent or Independent)
+                        ----------------------------------------------->
+                      </div>
+                      <!-------------
+                        End Column 1
+                      -------------->
+
+                      <!-------------
+                        Column 2
+                      -------------->
+                      <div class="column2 w-full">
+                        <!---------------------------------------------
+                          Information about Dependents (if applicable)
+                        ----------------------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="peer w-full h-20 text-slate-400 text-[1rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="dependency-info"
+                            placeholder="Information about Dependents (if applicable)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Information about Dependents (if applicable)
+                          </label>
+                        </div>
+                        <!---------------------------------------------
+                          End Information about Dependents (if applicable)
+                        ----------------------------------------------->
+                      </div>
+                      <!-------------
+                        End Column 2
+                      -------------->
+                    </div>
+                  </form>
+                  <!-------
+                    End Form
+                  --------->
+                </div>
+                <!-----------------------
+                  End Dependency status
+                ------------------------->
+
+                <!------------------------------------ 
+                  Citizenship/Residency Status form 
+                -------------------------------------->
+                <div
+                  id="amend-citizenship"
+                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Citizenship/Residency Status
+                  </p>
+                  
+                  <!--------
+                    Form 
+                  ---------->
+                  <form class="">
+                    <div
+                      class="flex flex-col justify-between items-start gap-5"
+                    >
+                      <!----------- 
+                        Column 1 
+                      ------------->
+                      <div class="column1 w-full">
+                        <!-----------------------------------------------------------------------------------
+                          Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)
+                        ------------------------------------------------------------------------------------>
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="citizenship-status"
+                            placeholder="Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Citizenship Status (Ghanaian Citizen, Permanent
+                            Resident, International Student)
+                          </label>
+                        </div>
+                        <!-----------------------------------------------------------------------------------
+                          Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)
+                        ------------------------------------------------------------------------------------>
+                      </div>
+                      <!----------- 
+                        End Column 1 
+                      ------------->
+
+                      <!----------- 
+                        Column 2 
+                      ------------->
+                      <div class="column2 w-full">
+                        <!--------------------------------------
+                          Residency Status (Resident of Ghana)
+                        --------------------------------------->
+                        <div class="input-box relative mb-6">
+                          <input
+                            type="text"
+                            required
+                            class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="residency-status"
+                            placeholder="Residency Status (Resident of Ghana)"
+                          />
+                          <label
+                            for="exampleInput7"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Residency Status (Resident of Ghana)
+                          </label>
+                        </div>
+                        <!--------------------------------------
+                          End Residency Status (Resident of Ghana)
+                        --------------------------------------->
+                      </div>
+                      <!------------- 
+                        End Column 2 
+                      --------------->
+                    </div>
+                  </form>
+                  <!--------
+                    End Form 
+                  ---------->
+                </div>
+                <!-----------------------------------
+                  End Citizenship/Residency Status 
+                ------------------------------------->
+
+                <!-------------------------------- 
+                  Additional Documentation form 
+                -------------------------------->
+                <div
+                  id="amend-additionaldocuments"
+                  class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
+                >
+                  <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
+                  >
+                    Additional Documents
+                  </p>
+                  
+                  <!-------
+                    Form 
+                  --------->
+                  <form class="w-full">
+                    <div class="">
+                      <!---------
+                        Column 1
+                      ----------->
+                      <div
+                        class="column1 flex flex-col justify-between items-center"
+                      >
+                        <!---------------------------------------------------------------
+                          Proof of Enrollment (e.g., Admission Letter, Student ID Card) 
+                        ----------------------------------------------------------------->
+                        <div
+                          class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
+                          for="file"
+                        >
+                          <input
+                            type="file"
+                            required
+                            class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="proof-of-enrollment"
+                            placeholder="Proof of Enrollment (e.g., Admission Letter, Student ID Card)"
+                          />
+                          <div
+                            class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
+                          >
+                            <p id="">
+                              Upload or select a file or drop it here!
+                            </p>
+                          </div>
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Proof of Enrollment (e.g. Admission Letter, Student
+                            ID Card)
+                          </label>
+                        </div>
+                        <!-----------------------------------------------------------------
+                          End Proof of Enrollment (e.g., Admission Letter, Student ID Card) 
+                        ------------------------------------------------------------------->
+
+                        <!-----------------------------------------------------
+                          Proof of Identity (e.g., National ID Card, Passport) 
+                        ------------------------------------------------------->
+                        <div
+                          class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
+                          for="file"
+                        >
+                          <input
+                            type="file"
+                            required
+                            class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="proof-of-identity"
+                            placeholder="Proof of Identity (e.g., National ID Card, Passport)"
+                          />
+                          <div
+                            class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
+                          >
+                            <p id="">
+                              Upload or select a file or drop it here!
+                            </p>
+                          </div>
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Proof of Identity (e.g., National ID Card, Passport)
+                          </label>
+                        </div>
+                        <!---------------------------------------------------------
+                          End Proof of Identity (e.g., National ID Card, Passport) 
+                        ----------------------------------------------------------->
+
+                        <!-------------------------------------------
+                          E-zwitch Card (for disbursement of funds)
+                        --------------------------------------------->
+                        <div
+                          class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
+                          for="file"
+                        >
+                          <input
+                            type="file"
+                            required
+                            class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="e-zwitch-card"
+                            placeholder="Bank Account Information (for disbursement of funds)"
+                          />
+                          <div
+                            class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
+                          >
+                            <p id="">
+                              Upload or select a file or drop it here!
+                            </p>
+                          </div>
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            E-zwitch Card (Front and Back)
+                          </label>
+                        </div>
+                        <!----------------------------------------------
+                          End E-zwitch Card (for disbursement of funds)
+                        ------------------------------------------------>
+                        
+                        <!--------------------------------
+                          Any Other Supporting Documents
+                        ---------------------------------->
+                        <div
+                          class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
+                          for="file"
+                        >
+                          <input
+                            type="file"
+                            required
+                            class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                            id="other-documents"
+                            placeholder="Any Other Supporting Documents"
+                          />
+                          <div
+                            class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
+                          >
+                            <p id="">
+                              Upload or select a file or drop it here!
+                            </p>
+                          </div>
+                          <label
+                            for="exampleInput12"
+                            class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                          >
+                            Any Other Supporting Documents
+                          </label>
+                        </div>
+                        <!--------------------------------
+                          End Any Other Supporting Documents
+                        ---------------------------------->
+                      </div>
+                      <!---------
+                        End Column 1
+                      ----------->
+                    </div>
+                  </form>
+                  <!-------
+                    End Form 
+                  --------->
+                </div>
+                <!------------------------------
+                  End Additional Documentation 
+                -------------------------------->
+              </div>
+
+              <!---------- 
+                Buttons 
+              ------------->
+              <div class="amend-btns mx-auto w-full">
+                <!-------------------------
+                    Previous & Next button
+                ------------------------->
+                <div class="flex justify-center items-center gap-4 pt-7">
+                  <!----------------
+                    Previous button
+                  ------------------>
+                  <button
+                    type="submit"
+                    id="SaveButton"
+                    class="btn btn-accent w-full inline-block text-white hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+                  >
+                    Save
+                  </button>
+                  <!--------------------
+                    End Previous button
+                  ---------------------->
+
+                  <!-----------------
+                    Submit button
+                  ----------------->
+                  <button
+                    type="submit"
+                    id="re-submitButton"
+                    class="btn-load btn btn-accent w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+                  >
+                    Submit
+                  </button>
+                  <!-----------------
+                    End Submit button
+                  ----------------->
+                </div>
+                <!-------------------------
+                  End Previous & Next button
+                ------------------------->
+              </div>
+              <!---------- 
+                End Buttons 
+              ------------->
+            </div>
+          </div>
+        </main>
+        <!------------------------------------------
+          End Amendment of User Data Form Contents  
+        -------------------------------------------->
+
+        <!----------------
+          Repay my Loan Tab 
+        ------------------>
+        <main>
+          <div id="repaymyloan" class="repaymyloan hidden">
+            <div
+              class="max-w-[80%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center"
+            >
+              <div
+                id="repayment-backhome"
+                class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
+              >
+                <p
+                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                >
+                  Repay My Loan
+                </p>
+                <h3
+                  class="text-[13px] text-slate-400 font-medium text-center md:text-left"
+                >
+                  Choose Your Prefered Payment Method below
+                </h3>
+                <a
+                  href="#home"
+                  class="btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                  ><i
+                    class="ri-home-8-line text-white font-medium text-[1rem]"
+                  ></i>
+                  <span class="w-full text-[1rem] font-medium text-white"
+                    >Return Home</span
+                  ></a
+                >
+              </div>
+
+              <!-- Repay my loan -->
+              <div
+                id="repaymyloan-content"
+                class="bg-white p-6 rounded-3xl w-full mt-8"
+              >
+                <div id="" class="repaymyloan-container">
+                  <ul class="flex flex-col gap-4 list-none text-red-600">
+                    <h1>Not Available yet!</h1>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Repay my loan -->
+            </div>
+          </div>
+        </main>
+        <!----------------------
+          End Repay my Loan Tab
+        ------------------------>
+
+        <!--------------------
+          Application List Tab 
+        ----------------------->
+        <main>
+          <div id="applicationlist" class="applicationlist hidden">
+            <div
+              class="max-w-[80%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center"
+            >
+              <div
+                id="applicationlist-backhome"
+                class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
+              >
+                <p
+                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                >
+                  Application List
+                </p>
+                <h3
+                  class="text-[13px] text-slate-400 font-medium text-center md:text-left"
+                >
+                  All your application listed below
+                </h3>
+                <a
+                  href="#home"
+                  class="btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                  ><i
+                    class="ri-home-8-line text-white font-medium text-[1rem]"
+                  ></i>
+                  <span class="w-full text-[1rem] font-medium text-white"
+                    >Return Home</span
+                  ></a
+                >
+              </div>
+
+              <!-- Application List here -->
+              <div
+                id="applicationlist-content"
+                class="bg-white p-6 rounded-3xl w-full mt-8"
+              >
+                <div id="" class="applicationlist-container">
+                  <ul class="flex flex-col gap-4 list-none text-red-600">
+                    <h1>Not Available yet!</h1>
+                  </ul>
+                </div>
+              </div>
+              <!-- End Repay my loan -->
+            </div>
+          </div>
+        </main>
+        <!--------------------------
+          End Application List Tab
+        --------------------------->
+
+        <!--------------------
+          Loan Statement Tab 
+        ----------------------->
+        <main>
+          <div id="statements" class="statements hidden">
+            <div
+              class="max-w-[80%] mx-auto md:pl-[280px] py-14 md:py-0 flex flex-col justify-center items-center"
+            >
+              <div
+                id="statements-backhome"
+                class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
+              >
+                <p
+                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                >
+                 Statements
+                </p>
+                <h3
+                  class="text-[13px] text-slate-400 font-medium text-center md:text-left"
+                >
+                  All your loan statement listed below
+                </h3>
+                <a
+                  href="#home"
+                  class="btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                  ><i
+                    class="ri-home-8-line text-white font-medium text-[1rem]"
+                  ></i>
+                  <span class="w-full text-[1rem] font-medium text-white"
+                    >Return Home</span
+                  ></a
+                >
+              </div>
+
+              <!-- Statements here -->
+              <div
+                id="statements-content"
+                class="bg-white p-6 rounded-3xl w-full mt-8"
+              >
+                <div id="" class="statements-container">
+                  <ul class="flex flex-col gap-4 list-none text-red-600">
+                    <h1>Not Available yet!</h1>
+                  </ul>
+                </div>
+              </div>
+              <!-- End statements -->
+            </div>
+          </div>
+        </main>
+        <!--------------------------
+          End Loan Statement Tab
+        --------------------------->
+
+
       </div>
       <!---------------------------
         End Application Components 

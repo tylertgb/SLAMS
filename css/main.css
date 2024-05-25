@@ -771,6 +771,10 @@ video {
   max-width: 80%;
 }
 
+.max-w-\[90\%\] {
+  max-width: 90%;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
@@ -1334,6 +1338,18 @@ video {
   }
   .preloader.active {
     display: flex;
+  }
+  .sidebar.inactive {
+    display: none;
+  }
+  .amend-sidebar.active {
+    display: flex;
+  }
+  .sidebar.active {
+    display: flex;
+  }
+  .amend-sidebar.inactive {
+    display: none;
   }
 }
 

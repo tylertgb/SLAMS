@@ -84,14 +84,13 @@ $("#prevButton").click(function () {
 
 //Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
 $(document).ready(function () {
-  $(
-    "#dashboard a, #amendbackhome a, #submitanAppBtn a, #primary-menu a, #menu a, #homeLinks a"
+  $("#dashboard a, #amendbackhome a, #submitanAppBtn a, #primary-menu a, #menu a, #homeTabLinks a"
   ).click(function (e) {
     e.preventDefault(); // Prevent the default anchor behavior
 
     var targetDiv = $(this).attr("href"); // Get the href attribute which is the ID of the target div
-    $(".dashboard, .applicationForm").hide(); // Hide all divs
-    $(".home, .amendments").hide(); // Hide all divs
+    $(".dashboard, .applicationForm, .applicationlist").hide(); // Hide all divs
+    $(".home, .amendments, .repaymyloan, .statements").hide(); // Hide all divs
     //Show targetDiv after 5seconds
     setTimeout(function () {
       $(targetDiv).show(); // Show the targeted div
@@ -99,6 +98,8 @@ $(document).ready(function () {
   });
 });
 //End Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
+// $(this).closest('.amendments').hide(); // Hide the parent div of the clicked link
+
 
 //Website Pre-loader
 const preloader = document.querySelector(".preloader");
@@ -120,3 +121,109 @@ buttons.forEach((button) => {
     }, 2000); // Simulate content loading delay
   });
 });
+
+
+//Sidebars toggle or changing functionality (Original Sidebar & Amendment Sidebar)
+document.addEventListener('DOMContentLoaded', function() {
+  // Cache the DOM elements
+  const amendMyDetailsButton = document.querySelector('.amendmydetails-btn');
+  const homeAmendMyDetailsButton = document.querySelector('.home-amendmydetails-btn');
+  const amendBackHomeButton = document.getElementById('amendbackhomeBtn');
+  const originalSidebar = document.querySelector('.sidebar');
+  const amendSidebar = document.querySelector('.amend-sidebar');
+
+  // Function to show the amend sidebar and hide the original sidebar
+  function showAmendSidebar(event) {
+    event.preventDefault();
+    originalSidebar.classList.add('inactive');
+    originalSidebar.classList.remove('active');
+    amendSidebar.classList.add('active');
+    amendSidebar.classList.remove('inactive');
+  }
+
+  // Function to show the original sidebar and hide the amend sidebar
+  function showOriginalSidebar(event) {
+    event.preventDefault();
+    originalSidebar.classList.add('active');
+    originalSidebar.classList.remove('inactive');
+    amendSidebar.classList.add('inactive');
+    amendSidebar.classList.remove('active');
+  }
+
+  // Add event listeners
+  if (amendMyDetailsButton) {
+    amendMyDetailsButton.addEventListener('click', showAmendSidebar);
+  }
+  
+  if (homeAmendMyDetailsButton) {
+    homeAmendMyDetailsButton.addEventListener('click', showAmendSidebar);
+  }
+  
+  if (amendBackHomeButton) {
+    amendBackHomeButton.addEventListener('click', showOriginalSidebar);
+  }
+});
+//End Sidebars toggle or changing functionality (Original Sidebar & Amendment Sidebar)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Function to toggle menu visibility
+// toggleSidebars();
+// function toggleSidebars() {
+//   const amendMyDetailsButton = document.querySelector('.amendmydetails-btn')
+//   // Event listener for amend details button
+//   amendMyDetailsButton.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     changeSidebars();
+//   });
+//   homeamendMyDetailsButton = document.querySelector('.home-amendmydetails-btn')
+//   // Event listener for amend details button
+//   homeamendMyDetailsButton.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     changeSidebars();
+//   });
+// }
+
+// function changeSidebars(){
+//   const originalSibar = document.querySelector('.sidebar');
+//   const amendSidebar = document.querySelector('.amend-sidebar');
+//   originalSibar.classList.toggle('inactive');
+//   amendSidebar.classList.toggle('active');
+// }
+// function reverseSidebar(){
+//   const originalSibar = document.querySelector('.sidebar');
+//   const amendSidebar = document.querySelector('.amend-sidebar');
+//   originalSibar.classList.toggle('active');
+//   amendSidebar.classList.toggle('inactive');
+// }
+
+
+// // Event listener for home button
+// document.getElementById('amendbackhomeBtn').addEventListener('click', function(event) {
+//   event.preventDefault();
+//   reverseSidebar();
+// });

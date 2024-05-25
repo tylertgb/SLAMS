@@ -30,6 +30,18 @@
   .preloader.active {
     @apply flex;
   }
+  .sidebar.inactive{
+    @apply hidden;
+  }
+  .amend-sidebar.active{
+    @apply flex;
+  }
+  .sidebar.active{
+    @apply flex;
+  }
+  .amend-sidebar.inactive{
+    @apply hidden;
+  }
 }
 
 html,
