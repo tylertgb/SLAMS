@@ -48,6 +48,9 @@
   .amend-form.active{
     @apply block;
   }
+  .menu_item.active{
+    @apply bg-slate-300;
+  }
 }
 
 html,

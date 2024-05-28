@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLAMS Student Dashboard</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-slate-100">
+
+    <main class="w-full">
+        <!------------- 
+            Dashboard 
+        ------------->
+        <div class="student_dashboard py-10 w-full">
+            <div id="dashboard" class="student-dashboard mx-auto py-14 md:py-0">
+                <div
+                    class="flex flex-col-reverse md:flex-row justify-between items-center gap-8">
+                    <p
+                    class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+                    >
+                    Dashboard
+                    </p>
+                    <a
+                    href="home.html"
+                    class="returnHomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                    ><i
+                        class="ri-home-8-line text-white font-medium text-[1rem]"
+                    ></i>
+                    <span class="w-full text-[1rem] font-medium text-white"
+                        >Return Home</span
+                    ></a
+                    >
+                    <span
+                    class="bg-green-600 px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
+                    >
+                    <p class="text-[1rem] font-medium text-white">Status</p>
+                    </span>
+                    <h3
+                    class="text-[11px] text-slate-400 font-medium text-center md:text-left"
+                    >
+                    SLAMS | Student Loan Application System
+                    </h3>
+                </div>
+                <div class="mt-8">
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <!-----------------------
+                        Total Disbursed Amount
+                    ------------------------>
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            GHC
+                            </h3>
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            0.00
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            Total Disbursed Amount
+                        </h3>
+                        </div>
+                    </div>
+                    <!-----------------------
+                        End Total Disbursed Amount
+                    ------------------------>
+    
+                    <!------------------------ 
+                        My Last Disbursed Amount
+                    -------------------------->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            GHC
+                            </h3>
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            0.00
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            My Last Disbursed Amount
+                        </h3>
+                        </div>
+                    </div>
+                    <!------------------------ 
+                        End My Last Disbursed Amount
+                    -------------------------->
+    
+                    <!-----------------------
+                        My Outstanding Amount
+                    ------------------------->
+                    <div class="item w-full bg-red-600 rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-white font-medium text-[1.5rem]">
+                            GHC
+                            </h3>
+                            <h3 class="text-white font-medium text-[1.5rem]">
+                            0.00
+                            </h3>
+                        </div>
+                        <h3 class="text-white font-medium">
+                            My Outstanding Amount
+                        </h3>
+                        </div>
+                    </div>
+                    <!-------------------------
+                        End My Outstanding Amount
+                    --------------------------->
+    
+                    <!------------------------
+                        First Disbursement Date
+                    --------------------------->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            15th January, 2024
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            First Disbursement Date
+                        </h3>
+                        </div>
+                    </div>
+                    <!----------------------------
+                        End First Disbursement Date
+                    ------------------------------>
+    
+                    <!-----------------------
+                        Last Disbursement Date
+                    ------------------------->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            15th January, 2024
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            Last Disbursement Date
+                        </h3>
+                        </div>
+                    </div>
+                    <!----------------------------
+                        End Last Disbursement Date
+                    ----------------------------->
+    
+                    <!-----------------------
+                        Repayment Start Date
+                    ------------------------->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            15th January, 2024
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            Repayment Start Date
+                        </h3>
+                        </div>
+                    </div>
+                    <!-------------------------
+                        End Repayment Start Date
+                    --------------------------->
+    
+                    <!----------------------------
+                        Expected Repayment End Date
+                    ------------------------------>
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            15th January, 2024
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">
+                            Expected Repayment End Date
+                        </h3>
+                        </div>
+                    </div>
+                    <!--------------------------------
+                        End Expected Repayment End Date
+                    ----------------------------------->
+
+                    <!-----------------------
+                        Date Completion
+                    ------------------------->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-8">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                            15th January, 2024
+                            </h3>
+                        </div>
+                        <h3 class="text-slate-400 font-medium">Date Completed</h3>
+                        </div>
+                    </div>
+                    <!-----------------------
+                        End Date Completion
+                    ------------------------->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!----------------
+            End Dashboard 
+        ----------------->
+    </main>
+
+        <script src="js/app_system.js"></script>
+    <!--SCRIPTS-->
+  </body>
+</html>

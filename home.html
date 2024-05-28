@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLAMS Home</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"/>
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body class="bg-slate-100">
+
+        <!------------------
+          Home Dashboard 
+        --------------------->
+        <main class="content-load w-full">
+          <div
+            id="home"
+            class="home mx-auto py-14 md:py-0"
+          >
+            <div
+              id="submitanAppBtn"
+              class="flex flex-col md:flex-row justify-between items-center gap-10"
+            >
+              <p
+                class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+              >
+                Hello Welcome!
+              </p>
+
+              <!-----------------------
+                Submit an Application
+              ------------------------->
+              <a
+                href="apply.html"
+                class="btn-load btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
+                ><span class="w-full text-[1rem] font-medium text-white"
+                  >Submit an Application</span></a>
+              <!-------------------------
+                End Submit an Application
+              --------------------------->
+
+              <h3
+                class="text-[11px] text-slate-400 font-medium text-center md:text-left"
+              >
+                SLAMS | Student Loan Application System
+              </h3>
+            </div>
+            <div class="mt-8">
+              <div class="flex flex-col gap-4">
+                <!------------------------------------------
+                  Full Name, Student ID, Programme, Level 
+                ------------------------------------------->
+                <div class="flex flex-col md:flex-row justify-between items-center gap-4">
+                  <div class="item w-full bg-white rounded-3xl">
+                    <div class="p-8">
+                      <div
+                        class="flex flex-col justify-start items-start gap-2"
+                      >
+                      <!------------
+                        Full Name
+                      -------------->
+                        <h3
+                          id="fullName"
+                          class="text-blue-700 font-medium text-[1.2rem]"
+                        >
+                          Bright Gobka
+                        </h3>
+                        <!------------
+                        End Full Name
+                        -------------->
+
+                        <!--------------
+                          Student ID 
+                        --------------->
+                        <h3
+                          id="studentID"
+                          class="text-blue-700 font-medium text-[1.2rem]"
+                        >
+                          20210404130
+                        </h3>
+                        <!----------------
+                          End Student ID 
+                        ----------------->
+                      </div>
+                    </div>
+                  </div>
+                  <div class="item w-full bg-white rounded-3xl">
+                    <div class="p-8">
+                      <div
+                        class="flex flex-col justify-start items-start gap-2"
+                      >
+                        <h3
+                          id="programme"
+                          class="text-blue-700 font-medium text-[1.2rem]"
+                        >
+                          Bsc. Computer Science
+                        </h3>
+                        <h3
+                          id="Level"
+                          class="text-blue-700 font-medium text-[1.2rem]"
+                        >Level: <span id="level">400</span>
+                        </h3>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--------------------------------------------
+                  End Full Name, Student ID, Programme, Level 
+                --------------------------------------------->
+
+                <!---------------------------------------------------------------------
+                  Home TabLinks (Repayment, Amendments, Application List, Statement) 
+                ------------------------------------------------------------------------>
+                <div id="homeTabLinks" class="flex flex-col md:flex-row justify-between items-center gap-4">
+
+                  <a
+                    href="repayment.html"
+                    class="btn-load btn-accent p-4 item w-full rounded-3xl">
+                    <div class="flex items-center gap-3 pb-4">
+                      <i
+                        class="ri-smartphone-line text-white font-medium text-[2rem]"
+                      ></i>
+                      <span class="text-white font-medium text-[1.1rem]"
+                        >Repayment</span
+                      >
+                    </div>
+                    <p class="text-white font-medium text-[11px]">
+                      Pay your loan via Cash, Bank or Mobile Money (MOMO)
+                    </p>
+                  </a>
+                  <a
+                    href="profile.html"
+                    class="home-amendmydetails-btn btn-load btn-accent p-4 item w-full rounded-3xl"
+                  >
+                    <div class="flex items-center gap-3 pb-4">
+                      <i
+                        class="ri-equalizer-line text-white font-medium text-[2rem]"
+                      ></i>
+                      <span class="text-white font-medium text-[1.1rem]"
+                        >Profile</span
+                      >
+                    </div>
+                    <p class="text-white font-medium text-[11px]">
+                      Access your profile information
+                    </p>
+                  </a>
+                  <a
+                    href="applications.html"
+                    class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                  >
+                    <div class="flex items-center gap-3 pb-4">
+                      <i
+                        class="ri-wallet-3-line text-white font-medium text-[2rem]"
+                      ></i>
+                      <span class="text-white font-medium text-[1.1rem]"
+                        >Applications</span
+                      >
+                    </div>
+                    <p class="text-white font-medium text-[11px]">
+                      Access all your application list
+                    </p>
+                  </a>
+                  <a
+                    href="statement.html"
+                    class="btn-load btn-accent p-4 item w-full rounded-3xl"
+                  >
+                    <div class="flex items-center gap-3 pb-4">
+                      <i
+                        class="ri-file-list-2-line text-white font-medium text-[2rem]"
+                      ></i>
+                      <span class="text-white font-medium text-[1.1rem]"
+                        >Statement</span
+                      >
+                    </div>
+                    <p class="text-white font-medium text-[11px]">
+                      Access both summary and loan statement
+                    </p>
+                  </a>
+                </div>
+                <!---------------------------------------------------------------------
+                  End Home TabLinks (Repayment, Amendments, Application List, Statement) 
+                ------------------------------------------------------------------------>
+              </div>
+            </div>
+          </div>
+        </main>
+        <!-----------------------
+          End Home Dashboard 
+        ------------------------->
+    <script src="js/home.js"></script>
+    <script src="js/system.js"></script>
+  </body>
+</html>
