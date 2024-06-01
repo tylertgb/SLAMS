@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLAS Dashboard</title>
+    <title>SLAS Student Dashboard</title>
 
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -131,26 +131,26 @@
             <div id="secondary-menu" class="flex flex-col gap-[15px] pt-10 w-full">
               <ul class="w-full list-none text-center">
                 <li
-                  class="btn-load menu_item font-medium text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                  <a href="home.html" class="link flex">Dashboard</a>
+                  class="btn-load menu_item font-normal text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                  <a href="student_home.html" class="link flex">Dashboard</a>
                 </li>
               </ul>
               <ul class="w-full list-none">
                 <li
-                  class="profile btn-load menu_item font-medium text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                  <a href="profile.html" class="link flex amendmydetails-btn">Profile</a>
+                  class="profile btn-load menu_item font-normal text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                  <a href="student_profile.html" class="link flex amendmydetails-btn">Profile</a>
                 </li>
               </ul>
               <ul class="w-full list-none">
                 <li
-                  class="btn-load menu_item font-medium text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                  <a href="applicationhistory.html" class="link flex">Applications History</a>
+                  class="btn-load menu_item font-normal text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                  <a href="student_application_history.html" class="link flex">Application History</a>
                 </li>
               </ul>
               <ul class="w-full list-none">
                 <li
-                  class="btn-load menu_item font-medium text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                  <a href="statement.html" class="link flex">My Statement</a>
+                  class="btn-load menu_item font-normal text-slate-600 bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                  <a href="student_statement.html" class="link flex">My Statement</a>
                 </li>
               </ul>
             </div>
@@ -188,7 +188,7 @@
                 <li class="item">
                   <a href="#" class="link">
                     <i
-                      class="ri-equalizer-line text-blue-700 font-medium text-[1.5rem]"
+                      class="ri-account-circle-line text-blue-700 font-medium text-[1.5rem]"
                     ></i>
                   </a>
                 </li>
@@ -198,7 +198,7 @@
         </div>
       </nav>
       <!--End Sidebar Icons bar -->
-      <!-- Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
+      <!-- Profile List information (Personal Info, Contact Info, Academic info, etc) -->
       <nav
         class="amendMenu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
       >
@@ -230,7 +230,7 @@
                 <li
                   class="text-white font-semibold pointer-events-none bg-blue-700 rounded-tr-3xl rounded-br-3xl p-2"
                 >
-                  <a href="#amendments" class="">
+                  <a href="#" class="">
                     <span class=""
                       >Profile</span
                     >
@@ -243,7 +243,7 @@
             --------------------->
 
             <!---------------------------------
-              Amendment Information List items 
+              Profile Information List items 
             ------------------------------------>
             <div id="amendments-menu" class="amendments-menu flex flex-col gap-2 pt-7 w-full">
               <ul class="list-none">
@@ -312,17 +312,6 @@
               </ul>
               <ul class="list-none">
                 <li
-                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
-                >
-                  <a href="#amend-citizenship" class="link flex">
-                    <span class="text-slate-600 font-normal"
-                      >Citizenship/Residency Status</span
-                    >
-                  </a>
-                </li>
-              </ul>
-              <ul class="list-none">
-                <li
                   class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
                   <a
                     id="lastmenu"
@@ -335,21 +324,21 @@
               </ul>
             </div>
             <!---------------------------------------
-              End Amendment Information List items 
+              End Profile Information List items 
             ---------------------------------------->
           </div>
         </div>
       </nav>
-      <!--End Sidebar menu list (Dashboard, Home, Repay my Loan etc) -->
+      <!--End rofile List information (Personal Info, Contact Info, Academic info, etc -->
     </div>
     <!------------------------
-      END AMENDMENTS SIDEBAR 
+      END PPROFILE SIDEBAR 
     -------------------------->
 
     <!------------------------------------------------------------
       System App, SideBar, Main top navbar, Components & Footer
     ------------------------------------------------------------->
-    <main class="min-h-screen mx-auto flex flex-col justify-between md:pl-[300px]">
+    <main class="min-h-screen mx-auto w-full md:pl-[300px]">
 
       <!---------------------------
          Main top navigation bar 
@@ -423,11 +412,9 @@
                 <div class="profile-box relative">
                   <a href="#" class="flex items-center gap-3">
                     <div
-                      class="h-8 w-8 bg-slate-100 rounded-full flex justify-center items-center"
-                    >
+                      class="h-8 w-8 bg-slate-100 rounded-full flex justify-center items-center">
                       <i
-                        class="ri-user-3-fill text-blue-700 font-medium text-[1.3rem]"
-                      ></i>
+                        class="ri-user-3-fill text-blue-700 font-medium text-[1.3rem]"></i>
                     </div>
                     <h1 class="text-[1.1rem] font-normal text-slate-400">
                       Bright Gobka
@@ -437,28 +424,24 @@
                   <!-- Dropdown Profile -->
                   <div
                     id="profileDropdown"
-                    class="profileDropdown hidden absolute top-14 overflow-hidden"
-                  >
+                    class="profileDropdown hidden absolute top-14 overflow-hidden">
                     <div
-                      class="w-[200px] overflow-hidden p-4 bg-white rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
-                    >
+                      class="w-[200px] overflow-hidden p-4 bg-white rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl">
                       <div
-                        class="flex flex-col justify-start items-start border-b mb-4"
-                      >
+                        class="flex flex-col justify-start items-start border-b mb-4">
                         <!-- Student ID -->
                         <p class="text-[1.1rem] text-blue-700 font-normal">
                           20210404130
                         </p>
                         <!-- End Student ID -->
                         <span
-                          class="text-[1.1rem] text-slate-400 font-normal py-1"
-                        >
+                          class="text-[1.1rem] text-slate-400 font-normal py-1">
                           <a href="#">Reset Password</a>
                         </span>
                       </div>
                       <!-- Logout of your account -->
                       <span class="text-[1.1rem] text-slate-400 font-normal">
-                        <a href="user_login.html">Logout</a>
+                        <a href="student_login.html">Logout</a>
                       </span>
                       <!-- End Logout of your account -->
                     </div>
@@ -476,36 +459,39 @@
       ------------------------------->
 
       <!-- CONTENTS of other PAGES with .html are loaded and displayed within the id="content" below -->
-      <div id="content" class="mx-auto p-14 flex flex-col justify-center items-start">
+      <div id="content" class="mx-auto p-14 flex flex-col justify-start items-center">
       </div>
       <!-- End CONTENTS of other PAGES are loaded and displayed within the id="content" below -->
 
-      <footer class="bg-white">
-        <div
-          class="flex flex-col md:flex-row justify-between items-center gap-8 px-[200px] py-3"
-        >
-          <!-- Logo -->
-          <div class="flex items-center gap-4">
-            <div
-              class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1"
-            >
-              <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
-            </div>
-            <h1 class="text-[1.3rem] font-medium text-slate-500">SLAMS</h1>
-          </div>
-          <!-- Logo -->
-          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
-            &copy; 2024 Student Loan Application and Management System
-          </h3>
-          <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
-            Computer Science Department
-          </h3>
-        </div>
-      </footer>
+
     </main>
     <!---------------------------------------------------------------
       End System App, SideBar, Main top navbar, Components & Footer
     ----------------------------------------------------------------->
-    <script src="js/studentdashboard.js"></script>
+
+    <footer class="bg-white">
+      <div
+        class="flex flex-col md:flex-row justify-between items-center gap-8 px-[200px] py-3"
+      >
+        <!-- Logo -->
+        <div class="flex items-center gap-4">
+          <div
+            class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1"
+          >
+            <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+          </div>
+          <h1 class="text-[1.3rem] font-medium text-slate-500">SLAMS</h1>
+        </div>
+        <!-- Logo -->
+        <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+          &copy; 2024 Student Loan Application and Management System
+        </h3>
+        <h3 class="text-[0.7rem] text-center text-slate-400 font-medium">
+          Computer Science Department
+        </h3>
+      </div>
+    </footer>
+  
+    <script src="js/student_dashboard.js"></script>
   </body>
 </html>

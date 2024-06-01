@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SLAMS Profile</title>
+    <title>SLAS Profile</title>
 
     <!--Google fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -32,9 +32,9 @@
   <body class="bg-slate-100">
 
     <main class="w-full">
-        <div class="profile py-10 w-full">
+        <div class="profile pb-5 w-full">
             <!----------------
-            Amendments Tab 
+            Profile Tab 
             ------------------>
             <div class="mx-auto flex flex-col justify-center items-center">
                 <div
@@ -62,11 +62,11 @@
                 </div>
             </div>
             <!--------------------
-            End Amendments Tab
+            End Profile Tab
             ---------------------->
 
             <!--------------------------------------
-            Amendment of User Data Form Contents 
+            Profile of User Data Form Contents 
             ----------------------------------------->
             <div id="amendmentForm" class="amendmentForm">
                 <div
@@ -509,11 +509,9 @@
                     ------------------------------>
                     <div
                     id="amend-financialinformation"
-                    class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl"
-                    >
+                    class="amend-form transition-all duration-500 ease bg-white p-6 rounded-3xl">
                     <p
-                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
-                    >
+                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left">
                         Financial Information
                     </p>
 
@@ -712,11 +710,9 @@
                     -------------------------->
                     <div
                     id="amend-dependencystatus"
-                    class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
-                    >
+                    class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl">
                     <p
-                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
-                    >
+                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left">
                         Dependency Status
                     </p>
                     
@@ -895,6 +891,7 @@
                     <!------------------------------
                     End Additional Documents
                     -------------------------------->
+
                     <!-------------------------------- 
                     Additional Documents form 
                     -------------------------------->
@@ -946,19 +943,32 @@
                 <div id="amendBtns" class="amendBtns mx-auto w-full">
                     <div class="flex justify-center items-center gap-4 pt-7">
 
-                    <!-----------------
-                        Submit button
-                    ----------------->
-                    <button
-                        type="submit"
-                        id="re-submitButton"
-                        class="btn-load btn btn-accent w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
-                    >
-                        Submit
-                    </button>
-                    <!-----------------
-                        End Submit button
-                    ----------------->
+                        <!-----------------
+                            Submit button
+                        ----------------->
+                        <button
+                            type="submit"
+                            id="re-submitButton"
+                            class="btn-load btn btn-accent w-full text-white transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-primary-accent-300 focus:shadow-primary-2"
+                        >
+                            Submit
+                        </button>
+                        <!-----------------
+                            End Submit button
+                        ----------------->
+                        <!-----------------
+                            Submit button
+                        ----------------->
+                        <button
+                            type="submit"
+                            id="clearButton"
+                            class="btn btn-outline w-full text-slate-400 border transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2"
+                        >
+                            Clear
+                        </button>
+                        <!-----------------
+                            End Submit button
+                        ----------------->
                     </div>
                 </div>
                 <!---------- 
@@ -974,6 +984,6 @@
     </main>
 
     <!--SCRIPTS-->
-    <script src="js/system.js"></script>
+    <script src="js/student_dashboard.js"></script>
   </body>
 </html>

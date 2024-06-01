@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       attachDynamicListeners();
 
       // Check if the loaded page is profile.html and handle sidebar visibility
-      if (url === 'profile.html') {
+      if (url === 'student_profile.html') {
           showAmendSidebar(); // Show amend sidebar when navigating to profile.html
       }
   }
@@ -101,17 +101,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to attach event listeners to dynamic content
   function attachDynamicListeners() {
-      const submitAppButton = document.getElementById('submitanAppBtn');
-      if (submitAppButton) {
-          const appLink = submitAppButton.querySelector('a');
-          if (appLink) {
-              appLink.addEventListener('click', async (e) => {
-                  e.preventDefault();
-                  const url = appLink.getAttribute('href');
-                  await setCurrentPage(url);
-              });
-          }
-      }
 
       const homeTabLinks = document.getElementById('homeTabLinks');
       if (homeTabLinks) {
@@ -130,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
       returnHomeButtons.forEach(button => {
           button.addEventListener('click', async (e) => {
               e.preventDefault();
-              await setCurrentPage('home.html');
+              await setCurrentPage('student_home.html');
               showOriginalSidebar(); // Show original sidebar when returning home
           });
       });
@@ -161,11 +150,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Set default page
-  setCurrentPage('home.html');
+  setCurrentPage('student_home.html');
 });
-
-
-
 
 //End Showing and displaying respective contents or div when clicked on (Application form, Dashboard, Home, Submit application)
 // $(this).closest('.amendments').hide(); // Hide the parent div of the clicked link
