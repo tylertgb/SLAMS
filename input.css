@@ -49,9 +49,22 @@
     @apply block;
   }
   .menu_item.active{
-    @apply bg-slate-300;
+    @apply bg-blue-700 text-white;
+  }
+  .notification-tab > .active {
+    @apply text-blue-700 border-b-blue-700 hover:text-blue-700;
+  }
+  .order-tab > .active {
+      @apply bg-blue-700 text-white hover:text-white;
+  }
+  .main.active {
+      @apply md:w-full md:ml-0;
   }
 }
+
+
+
+
 
 html,
 body {

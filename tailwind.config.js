@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./**.html", "./js**.js"],
+  content: [
+    "./**/*.html",       // All HTML files in the root directory and its subdirectories
+    "./admin/**/*.html", // All HTML files in the admin directory and its subdirectories
+    "./student/**/*.html", // All HTML files in the student directory and its subdirectories
+    "./**/*.js",          // All JavaScript files in the root directory and its subdirectories
+  ],
   theme: {
     screens: {
       sm: "480px",
@@ -15,13 +20,8 @@ module.exports = {
       fontFamily: {
         primary: "Poppins",
       },
-      animation: {
-        "infinite-scroll": "infinite-scroll 25s linear infinite",
-      },
-      backgroundImage: {
-        sectionbg: "url(../../img/others/lines-Illustration-00pacity.png)",
-      },
     },
   },
   plugins: [],
 };
+

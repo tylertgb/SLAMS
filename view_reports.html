@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLMS View Reports</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-slate-100">
+
+
+    <main class="w-full">
+      <div id="view-report" class="w-full">
+        <!--  View Reports -->
+            <div class="bg-white p-6 rounded-3xl">
+                <div class="flex justify-between mb-4 items-start">
+                    <div class="font-medium text-[1.5rem] text-slate-400">View All Reports</div>
+                    <button class="btn btn-accent text-white">Print</button>
+                </div>
+                <div class="overflow-x-auto mb-8">
+                    <!--View Reports Table -->
+                    <table class="w-full min-w-[540px]" data-tab-for="applications" data-page="approved">
+                        <thead>
+                            <tr class="text-center capitalize">
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tl-3xl rounded-bl-3xl">#</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl No.</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl Date</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Student ID</th>
+                                <th class="text-[12px] tracking-wide font-medium text-gray-400 bg-slate-100 py-2 px-4">Full Name</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Loan Amount</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Status</th>
+                                <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tr-3xl rounded-br-3xl">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y text-center">
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">1</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Approved</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">2</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Approved</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">3</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Approved</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">4</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Error</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-red-600 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">5</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Error</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-red-600 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">5</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Disbursed</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                            <tr>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">5</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                </td>
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <span class="text-[13px] font-medium text-gray-400">Disbursed</span>
+                                </td>
+                                <!-- Action Buttons -->
+                                <td class="py-2 px-4 border-b border-b-gray-50">
+                                    <div class="flex items-center justify-center gap-2 text-slate-600">
+                                        <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                    </div>
+                                </td>
+                                <!--End Action Buttons -->
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- End View Reports Table  -->
+                </div>
+            </div>
+        </div>
+        <!-- End View Reports -->
+    </main>
+
+    <!--SCRIPTS-->
+    <script src="js/admindashboard.js"></script>
+  </body>
+</html>

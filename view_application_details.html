@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLAMS View Application Details</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body class="bg-slate-100">
+
+
+    <main class="w-full">
+      <div id="approvedApplications" class="approvedApplications w-full">
+        <!-- Manage Lone View and Take Action on Applications -->
+        <div class="bg-white p-6 rounded-3xl">
+            <div class="flex justify-between mb-4 items-start">
+                <h1 class="font-medium text-[1.5rem] text-slate-400">View Loan Application Details</h1>
+            </div>
+            <!--
+            NOTE!: THE PRIMARY OBJECTIVE OR THE GOAL OF THIS PROJECT IS TO IMPLEMENT AND ERROR FILTERING FUNCTIONALITY TO 
+            QUERY APPLICANT DATA OR DETAILS FOR ERRORS IN THE DATA, (I THINK IF ANY FUNCTIONALITY SHOULD BE IMPLEMENT IS HERE IN REVIEW PART).
+            SO THAT IF THERE'RE ERRORS IN THE DATA WE CAN TAKE ACTION BY SELECTION "ERROR" AND WRITE A "REMARK" TO UPDATE THE APPLICANT TO 
+            PROVIDE AND RE-SUBMIT THE HIS/HER APPLICATION. (HERE COULD BE THE ERROR LOG)-->
+
+            <!-- Detail Data of Applicant are captured here when submitted -->
+            <div class="mx-auto">
+                <h1 class="application-number text-blue-700 font-semibold text-center text-[1.5rem] mb-4">Application Number: <span>234</span></h1>
+                <!-- Personal Information -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Personal Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 ">
+                        <div class="text-[1.1rem] border p-4"><strong>Full Name:</strong> John Doe</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Gender:</strong> Male</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Date of Birth:</strong> 1998-05-20</div>
+                        <div class="text-[1.1rem] border p-4"><strong>National ID:</strong> A123456789</div>
+                    </div>
+                </div>
+        
+                <!-- Contact Information -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Contact Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4"><strong>Address:</strong> 123 Main Street, Cityville</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Phone Number:</strong> +1234567890</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Email:</strong> john.doe@example.com</div>
+                    </div>
+                </div>
+        
+                <!-- Academic Information -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Academic Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4"><strong>Student ID:</strong> 20201234567</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Programme of Study:</strong> Computer Science</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Level of Study:</strong> 300</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Year of Enrollment:</strong> 2020</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Year of Completion:</strong> 2025</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Transcript or Result Slip:</strong> <a href="#" class="text-blue-500">View Document</a></div>
+                    </div>
+                </div>
+        
+                <!-- Financial Information -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Financial Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4"><strong>Annual Income:</strong> $15,000</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Parent or Guardians Income:</strong> $25,000</div>
+                        <div class="text-[1.1rem] border p-4"><strong>TIN Number:</strong> TIN123456</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Family Expenses:</strong> $10,000</div>
+                    </div>
+                </div>
+        
+                <!-- Loan Details -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Loan Details</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4"><strong>Loan Amount Requested:</strong> $5,000</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Purpose of Loan:</strong> Tuition Fees</div>
+                    </div>
+                </div>
+        
+                <!-- Dependency Status -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Dependency Status</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4">Independent</div>
+                        <div class="text-[1.1rem] border p-4"><strong>Information about Dependent:</strong> None</div>
+                    </div>
+                </div>
+                <!-- Additional Documents -->
+                <div class="mb-6">
+                    <h2 class="text-xl font-semibold p-4">Additional Documents</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2">
+                        <div class="text-[1.1rem] border p-4"><strong>Proof of Enrollment</strong> <a href="#" class="text-blue-500">View Document</a></div>
+                        <div class="text-[1.1rem] border p-4"><strong>E-zwitch Card</strong> <a href="#" class="text-blue-500">View Document</a></div>
+                    </div>
+                </div>
+
+                <!-- Progress Status -->
+                <div class="mb-6 rounded-md">
+                    <div class="grid grid-cols-1 md:grid-cols-3">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Expected Repayment:</strong> 2 years</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date of Application:</strong> 12-04-2024</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Expected Loan Amount:</strong> None</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Disbursed Loan Amount:</strong> None</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Final Status:</strong> Not Yet</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Admin Remark:</strong> None</div>
+                    </div>
+                </div>
+
+                <!-- Tracking History -->
+                <div class="mb-6 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2 text-center text-blue-700">Tracking History</h2>
+                    <!-- Aproval Tracking History -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 bg-slate-100">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Remark: </strong>Application is Approved</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Status: </strong> Approved</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date: </strong> 05-05-2024</div>
+                    </div>
+
+                    <!-- Disbursement Tracking History -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 bg-slate-100">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Remark: </strong>NA</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Status: </strong> Disbursed</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date: </strong> 13-05-2024</div>
+                    </div>
+                </div>
+
+                <!-- Disbursed Amount Information -->
+                <div class="mb-6 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2 text-center text-blue-700">Disbursed Amount Information</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 bg-slate-100">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Amount of Loan Disbursed: </strong>GH₵ 2,676</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date of Disbursement: </strong> 23-04-2024</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Expected Loan Amount:</strong> GH₵ 4,176</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Expected Repayment Period: </strong> 2 years</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Interest Rate: </strong> 10%</div>
+                    </div>
+                </div>
+
+                <!-- Repayment History -->
+                <div class="mb-6 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2 text-center text-blue-700">Loan Repayment History</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-4 bg-slate-100">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Remark: </strong>Payment Successfull</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Status </strong> Paid</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Amount Paid In: </strong>GH₵ <span>2342</span> </div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date: </strong> 05-05-2024</div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 bg-slate-100">
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Remark: </strong>Payment Successfull</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Status </strong> Repayment Completed</div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Amount Paid In: </strong>GH₵ <span>4342</span> </div>
+                        <div class="text-[1.1rem] text-orange-500 border p-4"><strong>Date: </strong> 13-09-2024</div>
+                    </div>
+                </div>
+        
+                <!-- Essay Reasons for the need (The Essay Part would not be Visible or Shown After Application 
+                    has been Viewed or Revied OR Action is been taken throughOut the Remaining Process) -->
+                <div class="mb-6 border border-gray-300 p-4 rounded-md">
+                    <h2 class="text-xl font-semibold mb-4 border-b border-gray-300 pb-2">Reasons for the need (Essay)</h2>
+                    <div class="text-justify">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic asperiores sed ipsum dicta expedita dolorum 
+                        atque esse necessitatibus eum? Sint placeat labore impedit voluptatem officiis error, sequi distinctio 
+                        incidunt iusto ducimus voluptates ab at iure eius! A ut inventore delectus numquam nam excepturi temporibus 
+                        voluptas ullam repellendus cupiditate? Inventore repudiandae dolorem eos, ab exercitationem totam. 
+                        <br>
+                        <br>
+                        At tempore beatae quae quasi natus nostrum placeat eos consectetur, tempora quo minima itaque, qui 
+                        eveniet dignissimos laudantium? Facere ea, vel voluptatem porro tempora sequi exercitationem provident 
+                        illum magnam in voluptate eligendi vero? Doloremque, quas exercitationem minima aut sit quo laboriosam 
+                        fugit odit voluptatibus est voluptas nesciunt corrupti molestiae quaerat a. Harum architecto dignissimos 
+                        cum quae id, perferendis, repellat commodi officiis in consectetur aliquam incidunt suscipit animi 
+                        debitis? Itaque veniam fuga consectetur odio fugit qui corrupti sint, quia similique blanditiis a officia 
+                        <br>
+                        <br>
+                        adipisci nobis vero optio voluptatum quas nesciunt aperiam, voluptates provident? Quibusdam temporibus 
+                        quisquam recusandae quam, error inventore laudantium aspernatur facilis aut, praesentium esse quod sequi, 
+                        harum quasi vel unde delectus tempore assumenda nihil quidem enim rerum qui cupiditate. Hic odit soluta ducimus 
+                        eum ex neque officiis illo eligendi quaerat incidunt fuga vero similique iste deleniti velit molestiae 
+                        sapiente aperiam pariatur iure et unde labore, id dignissimos tenetur? Repellendus illo similique itaque 
+                    </div>
+                </div>
+            </div>
+
+            <!-- Taking Actions on loan Application here -->
+            <div>
+                <!-- Action Buttons -->            
+                <div class="text-center"> 
+                    <button onclick="openModal(true)" class="btn btn-accent text-white">
+                        Take Action
+                    </button>
+                </div>
+
+                <!-- Overlay with Action Form (Action 1, Action 2, Action 3)-->
+                <div id="modal_overlay" class="hidden fixed inset-0 bg-black bg-opacity-30 h-screen w-full flex justify-center items-start md:items-center pt-10 md:pt-0">
+                    <!-- modal -->
+                    <div id="modal" class="opacity-0 transform -translate-y-full scale-150 relative p-8 bg-white rounded-3xl shadow-lg transition-opacity transition-transform duration-300">
+                        <!-- button close -->
+                        <button onclick="openModal(false)" class="absolute -top-3 -right-3 text-center bg-slate-200 hover:bg-slate-300 text-slate-500 text-xl w-8 h-8 rounded-full">
+                            x
+                        </button>
+            
+                        <!-- header -->
+                        <div class="pb-4 pl-3">
+                            <h2 class="text-[1.1rem] font-semibold text-slate-500">Take Action</h2>
+                        </div>
+            
+                        <!-- Action 1 on View loan application details part 
+                            (Action 1 is Visible and shown When Viewing Application details to take action)
+                            And it's Hidden or not shown After "Approval" of Application, in that case it'll not be shown 
+                            in the Disbursement Part (New Request for Disbursement)
+                        -->
+                        <div id="action-1" class="w-full border border-slate-200 p-3">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Remark</h3>
+                                    <input type="text" class="w-[230px] p-4 border">
+                                </div>
+                                <!-- body -->
+                                <div class="w-full border border-slate-200 pl-3">
+                                    <div class="flex justify-between items-center gap-3">
+                                        <h3 class="text-slate-500 font-medium">Status</h3>
+                                        <select name="status" id="status" class="w-[230px] bg-white border-l text-slate-500 px-5 py-3">
+                                            <option value="0">Approved</option>
+                                            <option value="1">Pending Review</option>
+                                            <option value="2">Error</option>
+                                            <option value="3">Rejected</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Action 1 on View loan application details part -->
+
+                        <!-- Action 2 (Fun Disbursement) Action 2 is Hidden at Application view part its only Shown
+                        or Visible at the Disbursement Part(New Request for Disbursement)-->
+                        <div id="action-2" class="w-full hidden border border-slate-200 p-3">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Disbursment Amount</h3>
+                                    <input type="text" class="w-[230px] p-4 border">
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Interest Rate</h3>
+                                    <input type="text" class="w-[230px] p-4 border">
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Expected Repayment</h3>
+                                    <input type="text" class="w-[230px] p-4 border">
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Remark</h3>
+                                    <input type="text" class="w-[230px] p-4 border">
+                                </div>
+                                <div class="w-full border border-slate-200 pl-3 flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium">Status</h3>
+                                    <select name="status" id="status" class="w-[230px] bg-white border-l text-slate-500 px-5 py-3">
+                                        <option value="0">Disbursed</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- End Action 2 (Fun Disbursement) -->
+
+                        <!-- Action 3 (Repayment Action) This Action 3 is only Shown in the (New Payment) at Repayment
+                            So you can take Action Base on the Payment Whether (Paid, Repayment Completed, etc ) -->
+                        <div id="action-3" class="w-full hidden border border-slate-200 p-3">
+                            <div class="flex flex-col gap-3">
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Disbursment Amount</h3>
+                                    <div class="w-[230px] p-4 border text-slate-500">4234</div>
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Expected Repayment</h3>
+                                    <div class="w-[230px] p-4 border text-slate-500">4234</div>
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Amount Paid In</h3>
+                                    <div class="w-[230px] p-4 border text-slate-500">423</div>
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Interest Rate</h3>
+                                    <div class="w-[230px] p-4 border text-slate-500">10%</div>
+                                </div>
+                                <div class="flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium border p-4 w-full">Remark</h3>
+                                    <input type="text" class="w-[230px] p-4 border text-slate-500">
+                                </div>
+                                <div class="w-full border border-slate-200 pl-3 flex justify-between items-center gap-3">
+                                    <h3 class="text-slate-500 font-medium">Status</h3>
+                                    <select name="status" id="status" class="w-[230px] bg-white border-l text-slate-500 px-5 py-3">
+                                        <option value="0">Paid</option>
+                                        <option value="0">Repayment Completed</option>
+                                        <option value="0">Repayment Due</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <!-- footer -->
+                        <div class="mt-8 px-4 py-3 border-gray-200 w-full flex justify-end items-center gap-3">
+                            <!-- Save Button to save the Action taken -->
+                            <button class="btn btn-accent text-white font-normal">Save</button>
+                            <!-- Close Button to close the Popup Modal -->
+                            <button onclick="openModal(false)" class="btn btn-outline text-slate-600 font-normal">Close</button>
+                        </div>
+                    </div>
+                </div>
+                 <!--End  Overlay with Action Form (Action 1, Action 2, Action 3)-->
+            </div>
+            <!-- End Taking Actions on loan Application here -->
+        </div>
+        <!-- End Manage Lone View and Take Action on Applications -->
+      </div>
+    </main>
+
+   
+    <!--SCRIPTS-->
+    <script src="js/admindashboard.js"></script>
+    <script>
+            // Taking action Popup Modal overlay functioning
+            const modalOverlay = document.getElementById('modal_overlay');
+            const modal = document.getElementById('modal');
+
+            function openModal(value) {
+                if (value) {
+                    modalOverlay.classList.remove('hidden');
+                    setTimeout(() => {
+                        modal.classList.remove('opacity-0', '-translate-y-full', 'scale-150');
+                    }, 100);
+                } else {
+                    modal.classList.add('-translate-y-full');
+                    setTimeout(() => {
+                        modal.classList.add('opacity-0', 'scale-150');
+                    }, 100);
+                    setTimeout(() => {
+                        modalOverlay.classList.add('hidden');
+                    }, 300);
+                }
+            }
+            // End Taking action Popup Modal overlay functioning
+    </script>
+  </body>
+</html>

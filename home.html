@@ -37,28 +37,22 @@
         <main class="content-load w-full">
           <div
             id="home"
-            class="home mx-auto py-14 md:py-0"
-          >
+            class="home mx-auto py-14 md:py-0" >
             <div
-              id="submitanAppBtn"
-              class="flex flex-col md:flex-row justify-between items-center gap-10"
-            >
+              class="flex flex-col md:flex-row justify-between items-center gap-10">
               <p
-                class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
-              >
+                class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left">
                 Hello Welcome!
               </p>
 
               <!-----------------------
-                Submit an Application
+                Application Status
               ------------------------->
-              <a
-                href="apply.html"
-                class="btn-load btn-accent px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center"
-                ><span class="w-full text-[1rem] font-medium text-white"
-                  >Submit an Application</span></a>
+              <div class="bg-orange-100 px-5 py-2 md:px-14 md:py-2 rounded-3xl text-center" >
+                <span class="w-full text-[1rem] font-medium text-orange-400">Your application is Approved!</span>
+              </div>
               <!-------------------------
-                End Submit an Application
+                End Application Status
               --------------------------->
 
               <h3
@@ -133,71 +127,91 @@
                 <!---------------------------------------------------------------------
                   Home TabLinks (Repayment, Amendments, Application List, Statement) 
                 ------------------------------------------------------------------------>
-                <div id="homeTabLinks" class="flex flex-col md:flex-row justify-between items-center gap-4">
+                <div id="homeTabLinks" class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                  
+                  <!-----------------------
+                      Total Disbursed Amount
+                  ------------------------>
+                  <div class="item w-full bg-white rounded-3xl">
+                      <div class="p-8 flex flex-col gap-4">
+                      <div class="flex items-center gap-2">
+                          <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                          GHC
+                          </h3>
+                          <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                          0.00
+                          </h3>
+                      </div>
+                      <h3 class="text-slate-400 font-medium">
+                          Total Disbursed Amount
+                      </h3>
+                      </div>
+                  </div>
+                  <!-----------------------
+                      End Total Disbursed Amount
+                  ------------------------>
+  
+                  <!------------------------ 
+                      My Last Disbursed Amount
+                  -------------------------->
+                  <div class="item w-full bg-white rounded-3xl">
+                      <div class="p-8 flex flex-col gap-4">
+                      <div class="flex items-center gap-2">
+                          <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                          GHC
+                          </h3>
+                          <h3 class="text-blue-700 font-medium text-[1.5rem]">
+                          0.00
+                          </h3>
+                      </div>
+                      <h3 class="text-slate-400 font-medium">
+                          My Last Disbursed Amount
+                      </h3>
+                      </div>
+                  </div>
+                  <!------------------------ 
+                      End My Last Disbursed Amount
+                  -------------------------->
+  
+                  <!-----------------------
+                      My Outstanding Amount
+                  ------------------------->
+                  <div class="item w-full bg-red-600 rounded-3xl">
+                      <div class="p-8 flex flex-col gap-4">
+                        <div class="flex items-center gap-2">
+                            <h3 class="text-white font-medium text-[1.5rem]">
+                            GHC
+                            </h3>
+                            <h3 class="text-white font-medium text-[1.5rem]">
+                            0.00
+                            </h3>
+                        </div>
+                        <h3 class="text-white font-medium">
+                            My Outstanding Amount
+                        </h3>
+                      </div>
+                  </div>
+                  <!-------------------------
+                      End My Outstanding Amount
+                  --------------------------->
 
-                  <a
-                    href="repayment.html"
-                    class="btn-load btn-accent p-4 item w-full rounded-3xl">
-                    <div class="flex items-center gap-3 pb-4">
-                      <i
-                        class="ri-smartphone-line text-white font-medium text-[2rem]"
-                      ></i>
-                      <span class="text-white font-medium text-[1.1rem]"
-                        >Repayment</span
-                      >
+                  <!-------------------------
+                    
+                  --------------------------->
+                  <a href="repayment.html" class="btn-load btn-accent w-full rounded-3xl overflow-hidden">
+                    <div class="p-8 flex flex-col gap-4">
+                      <div class="flex items-center gap-3">
+                        <i class="ri-smartphone-line text-white font-medium text-[2rem]"></i>
+                        <span class="text-white font-medium text-[1.5rem]">Repayment</span>
+                      </div>
+                      <p class="text-white font-medium ">
+                        Via Bank or Mobile Money
+                      </p>
                     </div>
-                    <p class="text-white font-medium text-[11px]">
-                      Pay your loan via Cash, Bank or Mobile Money (MOMO)
-                    </p>
                   </a>
-                  <a
-                    href="profile.html"
-                    class="home-amendmydetails-btn btn-load btn-accent p-4 item w-full rounded-3xl"
-                  >
-                    <div class="flex items-center gap-3 pb-4">
-                      <i
-                        class="ri-equalizer-line text-white font-medium text-[2rem]"
-                      ></i>
-                      <span class="text-white font-medium text-[1.1rem]"
-                        >Profile</span
-                      >
-                    </div>
-                    <p class="text-white font-medium text-[11px]">
-                      Access your profile information
-                    </p>
-                  </a>
-                  <a
-                    href="applications.html"
-                    class="btn-load btn-accent p-4 item w-full rounded-3xl"
-                  >
-                    <div class="flex items-center gap-3 pb-4">
-                      <i
-                        class="ri-wallet-3-line text-white font-medium text-[2rem]"
-                      ></i>
-                      <span class="text-white font-medium text-[1.1rem]"
-                        >Applications</span
-                      >
-                    </div>
-                    <p class="text-white font-medium text-[11px]">
-                      Access all your application list
-                    </p>
-                  </a>
-                  <a
-                    href="statement.html"
-                    class="btn-load btn-accent p-4 item w-full rounded-3xl"
-                  >
-                    <div class="flex items-center gap-3 pb-4">
-                      <i
-                        class="ri-file-list-2-line text-white font-medium text-[2rem]"
-                      ></i>
-                      <span class="text-white font-medium text-[1.1rem]"
-                        >Statement</span
-                      >
-                    </div>
-                    <p class="text-white font-medium text-[11px]">
-                      Access both summary and loan statement
-                    </p>
-                  </a>
+                  <!-------------------------
+                    End  Repayment of Loan
+                  --------------------------->
                 </div>
                 <!---------------------------------------------------------------------
                   End Home TabLinks (Repayment, Amendments, Application List, Statement) 
@@ -209,7 +223,6 @@
         <!-----------------------
           End Home Dashboard 
         ------------------------->
-    <script src="js/home.js"></script>
     <script src="js/system.js"></script>
   </body>
 </html>

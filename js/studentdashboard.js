@@ -68,7 +68,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // Function to set the current page
   async function setCurrentPage(url) {
-      contentDiv.innerHTML = '<p>Loading...</p>'; // Optional loading message
       const content = await loadPage(url);
       contentDiv.innerHTML = content;
 

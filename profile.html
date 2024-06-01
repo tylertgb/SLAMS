@@ -41,14 +41,13 @@
                     id="amendbackhome"
                     class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full">
                     <p
-                    class="amendTitle text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
-                    >
-                    Profile Information
+                    class="amendTitle text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left">
+                    Application Form
                     </p>
                     <h3
                     class="amendDescription text-[13px] text-slate-400 font-medium text-center md:text-left"
                     >
-                    Choose the Amendment Type from the list below
+                    Speed Up The Loan Process
                     </h3>
                     <a
                     id="returnHomeBtn"
@@ -59,10 +58,7 @@
                     ></i>
                     <span class="w-full text-[1rem] font-medium text-white"
                         >Return Home</span
-                    ></a
-                    >
-                
-                
+                    ></a>       
                 </div>
             </div>
             <!--------------------
@@ -285,28 +281,6 @@
                             Column 2 
                         ----------->
                         <div class="column2 w-full">
-                            <!-------------------------
-                            Additional phone Number
-                            --------------------------->
-                            <div class="input-box relative mb-6">
-                            <input
-                                type="text"
-                                required
-                                class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="secondphone-number"
-                                placeholder="Additional Phone Number"
-                            />
-                            <label
-                                for="exampleInput11"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Additional Phone Number
-                            </label>
-                            </div>
-                            <!----------------------------
-                            End Additional phone Number
-                            ----------------------------->
-
                             <!-------
                             Email
                             --------->
@@ -409,6 +383,28 @@
                             <!-----------------
                             End Program of Study
                             -------------------->
+
+                            <!---------------
+                            Level of Study
+                            ----------------->
+                            <div class="input-box relative mb-6">
+                                <input
+                                    type="text"
+                                    required
+                                    class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                                    id="change-level-of-study"
+                                    placeholder="Level of Study"
+                                />
+                                <label
+                                    for="exampleInput11"
+                                    class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
+                                >
+                                    Level of Study (e.g, 100, 200..)
+                                </label>
+                                </div>
+                                <!---------------
+                                End Year of Study
+                                ----------------->
                         </div>
                         <!-------------
                             End Column 1 
@@ -419,26 +415,26 @@
                         ---------->
                         <div class="column2 w-full">
                             <!---------------
-                            Year of Study
+                            Year of enrollment
                             ----------------->
                             <div class="input-box relative mb-6">
                             <input
                                 type="text"
                                 required
                                 class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="change-year-of-study"
-                                placeholder="Year of Study"
+                                id="change-year-of-enroll"
+                                placeholder="Year of enrollment"
                             />
                             <label
                                 for="exampleInput11"
                                 class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
                             >
-                                Year of Study
+                                Year of Enrollment
                             </label>
                             </div>
-                            <!---------------
-                            End Year of Study
-                            ----------------->
+                            <!---------------------
+                            End Year of enrollment
+                            ----------------------->
 
                             <!--------------------
                             Year of Completion
@@ -554,28 +550,6 @@
                             End Annual Income (if employed)
                             --------------------------------->
 
-                            <!-------------------
-                            Employment Status
-                            --------------------->
-                            <div class="input-box relative mb-6">
-                            <input
-                                type="text"
-                                required
-                                class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="employment-status"
-                                placeholder="Employment Status "
-                            />
-                            <label
-                                for="exampleInput8"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Employment Status
-                            </label>
-                            </div>
-                            <!---------------------
-                            End Employment Status
-                            ----------------------->
-
                             <!--------------------------------------------
                             Parents' or Guardians' Income (if dependent)
                             ----------------------------------------------->
@@ -603,23 +577,6 @@
                         ---------->
 
                         <div class="column2 w-full">
-                            <!--Source of Income (if applicable)-->
-                            <div class="input-box relative mb-6">
-                            <input
-                                type="text"
-                                required
-                                class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="source-of-income"
-                                placeholder="Source of Income (if applicable)"
-                            />
-                            <label
-                                for="exampleInput11"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Source of Income (if applicable)
-                            </label>
-                            </div>
-                            <!--TIN Number (if applicable)-->
                             <div class="input-box relative mb-6">
                             <input
                                 type="text"
@@ -839,106 +796,14 @@
                     End Dependency status
                     ------------------------->
 
-                    <!------------------------------------ 
-                    Citizenship/Residency Status form 
-                    -------------------------------------->
-                    <div
-                    id="amend-citizenship"
-                    class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
-                    >
-                    <p
-                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
-                    >
-                        Citizenship/Residency Status
-                    </p>
-                    
-                    <!--------
-                        Form 
-                    ---------->
-                    <form class="">
-                        <div
-                        class="flex flex-col justify-between items-start gap-5"
-                        >
-                        <!----------- 
-                            Column 1 
-                        ------------->
-                        <div class="column1 w-full">
-                            <!-----------------------------------------------------------------------------------
-                            Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)
-                            ------------------------------------------------------------------------------------>
-                            <div class="input-box relative mb-6">
-                            <input
-                                type="text"
-                                required
-                                class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="citizenship-status"
-                                placeholder="Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)"
-                            />
-                            <label
-                                for="exampleInput7"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Citizenship Status (Ghanaian Citizen, Permanent
-                                Resident, International Student)
-                            </label>
-                            </div>
-                            <!-----------------------------------------------------------------------------------
-                            Citizenship Status (Ghanaian Citizen, Permanent Resident, International Student)
-                            ------------------------------------------------------------------------------------>
-                        </div>
-                        <!----------- 
-                            End Column 1 
-                        ------------->
-
-                        <!----------- 
-                            Column 2 
-                        ------------->
-                        <div class="column2 w-full">
-                            <!--------------------------------------
-                            Residency Status (Resident of Ghana)
-                            --------------------------------------->
-                            <div class="input-box relative mb-6">
-                            <input
-                                type="text"
-                                required
-                                class="w-full peer h-12 text-slate-400 text-[1.2rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border valid:border-2 valid:border-blue-700 border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="residency-status"
-                                placeholder="Residency Status (Resident of Ghana)"
-                            />
-                            <label
-                                for="exampleInput7"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-white peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Residency Status (Resident of Ghana)
-                            </label>
-                            </div>
-                            <!--------------------------------------
-                            End Residency Status (Resident of Ghana)
-                            --------------------------------------->
-                        </div>
-                        <!------------- 
-                            End Column 2 
-                        --------------->
-                        </div>
-                    </form>
-                    <!--------
-                        End Form 
-                    ---------->
-                    </div>
-                    <!-----------------------------------
-                    End Citizenship/Residency Status 
-                    ------------------------------------->
-
                     <!-------------------------------- 
                     Additional Documents form 
                     -------------------------------->
                     <div
                     id="amend-additionaldocuments"
-                    class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl"
-                    >
+                    class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl">
                     <p
-                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left"
-                    >
+                        class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left">
                         Additional Documents
                     </p>
                     
@@ -986,38 +851,6 @@
                             End Proof of Enrollment (e.g., Admission Letter, Student ID Card) 
                             ------------------------------------------------------------------->
 
-                            <!-----------------------------------------------------
-                            Proof of Identity (e.g., National ID Card, Passport) 
-                            ------------------------------------------------------->
-                            <div
-                            class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
-                            for="file"
-                            >
-                            <input
-                                type="file"
-                                required
-                                class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="change-proof-of-identity"
-                                placeholder="Proof of Identity (e.g., National ID Card, Passport)"
-                            />
-                            <div
-                                class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
-                            >
-                                <p id="">
-                                Upload or select a file or drop it here!
-                                </p>
-                            </div>
-                            <label
-                                for="change-proof-of-identity"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Proof of Identity (e.g., National ID Card, Passport) <i class="ri-file-upload-line pl-1 text-lg"></i>
-                            </label>
-                            </div>
-                            <!---------------------------------------------------------
-                            End Proof of Identity (e.g., National ID Card, Passport) 
-                            ----------------------------------------------------------->
-
                             <!-------------------------------------------
                             E-zwitch Card (for disbursement of funds)
                             --------------------------------------------->
@@ -1049,38 +882,6 @@
                             <!----------------------------------------------
                             End E-zwitch Card (for disbursement of funds)
                             ------------------------------------------------>
-                            
-                            <!--------------------------------
-                            Any Other Supporting Documents
-                            ---------------------------------->
-                            <div
-                            class="file-input w-full bg-slate-100 rounded-3xl relative mb-6"
-                            for="file"
-                            >
-                            <input
-                                type="file"
-                                required
-                                class="w-full peer h-20 text-slate-400 text-[1.2rem] opacity-0 rounded-3xl outline-none focus:border-2 focus:border-blue-700 valid:border-2 valid:border-blue-700 border border-slate-200 px-7 placeholder:opacity-0 transition-all duration-200 ease-out"
-                                id="change-other-documents"
-                                placeholder="Any Other Supporting Documents"
-                            />
-                            <div
-                                class="absolute top-10 pl-6 pointer-events-none border-dashed-2 text-slate-400 border-blue-400"
-                            >
-                                <p id="">
-                                Upload or select a file or drop it here!
-                                </p>
-                            </div>
-                            <label
-                                for="change-other-documents"
-                                class="absolute peer-valid:-top-3 peer-valid:bg-slate-100 peer-valid:text-blue-700 peer-valid:text-[1rem] peer-valid:px-1 left-6 top-2.5 pointer-events-none text-slate-400 text-[1.1rem] peer-focus:-top-3 peer-focus:bg-white peer-focus:px-1 peer-focus:text-[1rem] peer-focus:text-blue-700 duration-200 ease-out"
-                            >
-                                Any Other Supporting Documents <i class="ri-file-upload-line pl-1 text-lg"></i>
-                            </label>
-                            </div>
-                            <!--------------------------------
-                            End Any Other Supporting Documents
-                            ---------------------------------->
                         </div>
                         <!---------
                             End Column 1
@@ -1090,6 +891,49 @@
                     <!-------
                         End Form 
                     --------->
+                    </div>
+                    <!------------------------------
+                    End Additional Documents
+                    -------------------------------->
+                    <!-------------------------------- 
+                    Additional Documents form 
+                    -------------------------------->
+                    <div id="amend-essay" class="amend-form w-full transition-all duration-500 ease bg-white p-6 rounded-3xl">
+                        <p
+                            class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 pb-6 text-center md:text-left">
+                            Essay
+                        </p>
+                    
+                        <!-------
+                            Form 
+                        --------->
+                        <form class="w-full">
+                            <!-----------
+                            Column 1
+                            -------------->
+                            <div class="column2 w-full">
+                                <p class="text-[1.1rem] text-slate-500 pb-6 text-center md:text-left">
+                                Write a short essay telling us the reason you're applying for the loan
+                                </p>
+
+                                <!--Essay textarea-->
+                                <div class="relative mb-6">
+                                    <textarea
+                                    class="peer min-h-[500px] w-full peer text-slate-400 text-[1.1rem] rounded-3xl outline-none focus:border-2 focus:border-blue-700 border border-slate-200 p-7 placeholder:opacity-0 transition-all duration-200 ease-out"
+                                    id="essay"
+                                    rows="3"
+                                    placeholder="An essay about the reason for the loan request."
+                                    ></textarea>
+                                </div>
+    
+                            </div>
+                            <!---------------
+                            End Column 1
+                            ------------------>
+                        </form>
+                        <!-------
+                            End Form 
+                        --------->
                     </div>
                     <!------------------------------
                     End Additional Documents
