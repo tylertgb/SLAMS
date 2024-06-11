@@ -30,61 +30,71 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-slate-100">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
 
-            <!--------------------------
-            End Loan Statement Tab
-            --------------------------->
-            <main class="w-full">
-                <div id="statements" class="statements w-full">
-                  <div
-                      class="mx-auto py-14 md:py-0 flex flex-col justify-center items-center"
-                  >
-                      <div
-                      id="statements-backhome"
-                      class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
-                      >
-                      <p
-                          class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
-                      >
-                      Statements
-                      </p>
-                      <h3
-                          class="text-[13px] text-slate-400 font-medium text-center md:text-left"
-                      >
-                          All your Loan Statement and Summary listed below
-                      </h3>
-                      <a
-                          href="home.html"
-                          class="returnHomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
-                          ><i
-                          class="ri-home-8-line text-white font-medium text-[1rem]"
-                          ></i>
-                          <span class="w-full text-[1rem] font-medium text-white"
-                          >Return Home</span
-                          ></a
-                      >
-                      </div>
-      
-                      <!-- Statements here -->
-                      <div
-                      id="statements-content"
-                      class="bg-white p-6 rounded-3xl w-full mt-8"
-                      >
-                      <div id="" class="statements-container">
-                          <ul class="flex flex-col gap-4 list-none text-red-600">
-                          <h1>Not Available yet!</h1>
-                          </ul>
-                      </div>
-                      </div>
-                      <!-- End statements -->
-                  </div>
-                </div>
-            </main>
-            <!--------------------------
-            End Loan Statement Tab
-            --------------------------->
+    </div>
+
+    <!--------------------------
+    End Loan Statement Tab
+    --------------------------->
+    <main class="w-full min-h-screen mx-auto p-14  md:pl-[340px]">
+        <div id="statements" class="statements w-full">
+          <div
+              class="mx-auto py-14 md:py-0 flex flex-col justify-center items-center"
+          >
+              <div
+              id="statements-backhome"
+              class="flex flex-col-reverse md:flex-row justify-between items-center gap-4 w-full"
+              >
+              <p
+                  class="form-title text-[1rem] md:text-[2rem] font-medium text-slate-500 text-center md:text-left"
+              >
+              Statements
+              </p>
+              <h3
+                  class="text-[13px] text-slate-400 font-medium text-center md:text-left"
+              >
+                  All your Loan Statement and Summary listed below
+              </h3>
+              <a
+                  href="student_dashboard.html"
+                  class="returnHomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
+                  ><i
+                  class="ri-home-8-line text-white font-medium text-[1rem]"
+                  ></i>
+                  <span class="w-full text-[1rem] font-medium text-white"
+                  >Return Home</span
+                  ></a
+              >
+              </div>
+
+              <!-- Statements here -->
+              <div
+              id="statements-content"
+              class="bg-white p-6 rounded-3xl w-full mt-8"
+              >
+              <div id="" class="statements-container">
+                  <ul class="flex flex-col gap-4 list-none text-red-600">
+                  <h1>Not Available yet!</h1>
+                  </ul>
+              </div>
+              </div>
+              <!-- End statements -->
+          </div>
+        </div>
+    </main>
+    <!--------------------------
+    End Loan Statement Tab
+    --------------------------->
 
     <!--SCRIPTS-->
-    <script src="js/app_system.js"></script>
+    <script src="js/student_dashboard.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
   </body>
 </html>

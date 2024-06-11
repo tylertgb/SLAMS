@@ -30,8 +30,180 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-slate-100">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
 
-    <main class="w-full">
+    </div>
+
+
+    <!--------------------
+      AMENDMENTS SIDEBAR 
+    ---------------------->
+    <div class="amend-sidebar z-[100] fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease">
+      <!-- Sidebar Icons bar -->
+      <nav
+        class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease">
+        <div class="flex flex-col items-center px-4 pt-4">
+          <div
+            class="amendBugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
+          >
+            <i class="amendBugger ri-menu-line text-[1.5rem] text-blue-700"></i>
+          </div>
+
+          <div class="flex flex-col justify-center items-center">
+            <div class="menu-icon flex flex-col gap-[20px] pt-10">
+              <ul class="list-none">
+                <li class="item">
+                  <a href="#" class="link">
+                    <i
+                      class="ri-account-circle-line text-blue-700 font-medium text-[1.5rem]"
+                    ></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <!--End Sidebar Icons bar -->
+      <!-- Profile List information (Personal Info, Contact Info, Academic info, etc) -->
+      <nav
+        class="amendMenu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease"
+      >
+        <div
+          class="menu-list pt-4 transition-all duration-700 ease w-full pr-10"
+        >
+          <!-- Logo -->
+          <div class="flex items-center gap-4 w-full">
+            <div
+              class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1"
+            >
+              <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+            </div>
+            <h1
+              class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500"
+            >
+              SLAMS
+            </h1>
+          </div>
+          <!-- Logo -->
+
+          <div class="flex flex-col justify-start items-start">
+
+            <!------------------- 
+              Normal Menu items
+            --------------------->
+            <div id="amend-menu" class="flex flex-col gap-[15px] pt-10 w-full">
+              <ul class="list-none">
+                <li
+                  class="text-white font-semibold pointer-events-none bg-blue-700 rounded-tr-3xl rounded-br-3xl p-2"
+                >
+                  <a href="#" class="">
+                    <span class=""
+                      >Profile</span
+                    >
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!------------------- 
+              End Normal Menu items
+            --------------------->
+
+            <!---------------------------------
+              Profile Information List items 
+            ------------------------------------>
+            <div id="amendments-menu" class="amendments-menu flex flex-col gap-2 pt-7 w-full">
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-personalinformation" class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Personal Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-contactinformation" class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Contact Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-academicinformation" class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Academic Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-financialinformation" class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Financial Information</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-loandetails" class="link flex">
+                    <span class="text-slate-600 font-normal">Loan Details</span>
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease"
+                >
+                  <a href="#amend-dependencystatus" class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Dependency Status</span
+                    >
+                  </a>
+                </li>
+              </ul>
+              <ul class="list-none">
+                <li
+                  class="item group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                  <a
+                    id="lastmenu"
+                    href="#amend-additionaldocuments"
+                    class="link flex">
+                    <span class="text-slate-600 font-normal"
+                      >Additional Documents</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!---------------------------------------
+              End Profile Information List items 
+            ---------------------------------------->
+          </div>
+        </div>
+      </nav>
+      <!--End rofile List information (Personal Info, Contact Info, Academic info, etc -->
+    </div>
+    <!------------------------
+      END PPROFILE SIDEBAR 
+    -------------------------->
+
+    <main class="w-full min-h-screen mx-auto p-14  md:pl-[340px]">
         <div class="profile pb-5 w-full">
             <!----------------
             Profile Tab 
@@ -51,7 +223,7 @@
                     </h3>
                     <a
                     id="returnHomeBtn"
-                    href="home.html"
+                    href="student_dashboard.html"
                     class="returnHomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
                     ><i
                         class="ri-home-8-line text-white font-medium text-[1rem]"
@@ -985,5 +1157,11 @@
 
     <!--SCRIPTS-->
     <script src="js/student_dashboard.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
   </body>
 </html>

@@ -30,9 +30,12 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-slate-100">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
 
+    </div>
 
-    <main class="w-full">
+    <main class="w-full min-h-screen mx-auto p-14  md:pl-[340px]">
       <div id="repayment" class="repayment w-full">
           <div
             class="mx-auto py-14 md:py-0 flex flex-col justify-center items-center">
@@ -48,7 +51,7 @@
                 Choose Your Prefered Payment Method below
               </h3>
               <a
-                href="home.html"
+                href="student_dashboard.html"
                 class="returnHomeBtn btn-load btn-accent px-5 py-2 md:px-11 md:py-2 rounded-3xl flex items-center gap-3 text-center"
                 ><i
                   class="ri-home-8-line text-white font-medium text-[1rem]"
@@ -76,6 +79,12 @@
     </main>
 
     <!--SCRIPTS-->
-    <script src="js/app_system.js"></script>
+    <script src="js/student_dashboard.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("navbar.html");
+      });
+    </script>
   </body>
 </html>
