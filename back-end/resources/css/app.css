@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+:root {
+  /* General Button  */
+  .btn {
+    @apply px-5 py-2 md:px-14 md:py-3 rounded-3xl font-medium text-center;
+  }
+  /* Button outline */
+  .btn-outline {
+    @apply border border-slate-200 hover:text-blue-700 bg-slate-200 hover:bg-slate-300 duration-700;
+  }
+  /* Button accent */
+  .btn-accent {
+    @apply bg-blue-700 hover:bg-blue-800 duration-700;
+  }
+  /* Mobile menu open */
+  .menu.active {
+    @apply flex w-[240px];
+  }
+  .amendMenu.active {
+    @apply flex w-[240px];
+  }
+  .profileDropdown.active {
+    @apply flex absolute;
+  }
+  .notificationDropdown.active {
+    @apply flex absolute;
+  }
+  .preloader.active {
+    @apply flex;
+  }
+  .sidebar.inactive{
+    @apply hidden;
+  }
+  .amend-sidebar.active{
+    @apply flex;
+  }
+  .sidebar.active{
+    @apply flex;
+  }
+  .amend-sidebar.inactive{
+    @apply hidden;
+  }
+  .amend-form.active{
+    @apply block;
+  }
+  .menu_item.active{
+    @apply bg-blue-700 text-white;
+  }
+  .notification-tab > .active {
+    @apply text-blue-700 border-b-blue-700 hover:text-blue-700;
+  }
+  .order-tab > .active {
+      @apply bg-blue-700 text-white hover:text-white;
+  }
+  .main.active {
+      @apply md:w-full md:ml-0;
+  }
+}
+
+
+
+
+
+html,
+body {
+  transition: all 0.4s ease;
+  font-family: Poppins;
+  font-style: normal;
+  font-size: 13px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-snap-type: mandatory;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.loader {
+  animation: spin 1.5s linear infinite;
+}
