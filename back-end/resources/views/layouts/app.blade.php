@@ -249,6 +249,6 @@
     </div>
 </footer>
 
-{{--<script src="js/student_dashboard.js"></script>--}}
+{{--<script src="js/script.js"></script>--}}
 </body>
 </html>

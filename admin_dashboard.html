@@ -37,685 +37,349 @@
             End Preloader 
         ----------------->
 
-        <!----------
-            SIDEBAR 
-        ------------>
-        <div class="sidebar z-[100] fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease">
-            <!-- Sidebar Icons bar -->
-            <nav
-            class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
-            >
-            <div class="flex flex-col items-center px-4 pt-4">
-                <div
-                class="bugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
-                >
-                <i class="bugger ri-menu-line text-[1.5rem] text-blue-700"></i>
-                </div>
+        <!--Navigation bar-->
+        <div id="nav-placeholder">
 
-
-                <div class="flex flex-col justify-center items-center">
-                    <div class="menu-icon flex flex-col gap-[18.5px] pt-10">
-                        <ul class="list-none">
-                            <li class="item">
-                                <a href="#" class="link">
-                                <i class="ri-home-8-line text-blue-700 font-medium text-[1.5rem]"></i></a>
-                            </li>
-                        </ul>           
-                        <ul class="list-none">
-                            <li class="item">
-                                <a href="#" class="link">
-                                <i class="ri-instance-line text-blue-700 font-medium text-[1.5rem]"></i>
-                                </a>
-                            </li>
-                        </ul>           
-                        <ul class="list-none">
-                            <li class="item">
-                                <a href="#" class="link">
-                                <i class="ri-secure-payment-line text-blue-700 font-medium text-[1.5rem]"></i>
-                                </a>
-                            </li>
-                        </ul>           
-                        <ul class="list-none">
-                            <li class="item">
-                            <a href="#" class="link">
-                                <i class="ri-account-circle-line text-blue-700 font-medium text-[1.5rem]"></i>
-                            </a>
-                            </li>
-                        </ul>
-                        <ul class="list-none">
-                            <li class="item">
-                            <a href="#" class="link">
-                                <i
-                                class="ri-wallet-3-line text-blue-700 font-medium text-[1.5rem]"
-                                ></i>
-                            </a>
-                            </li>
-                        </ul>
-                        <ul class="list-none">
-                            <li class="item">
-                            <a href="#" class="link">
-                                <i
-                                class="ri-user-settings-line text-blue-700 font-medium text-[1.5rem]"
-                                ></i>
-                            </a>
-                            </li>
-                        </ul>
-                        <ul class="list-none">
-                            <li class="item">
-                            <a href="#" class="link">
-                                <i class="ri-settings-5-line text-blue-700 font-medium text-[1.5rem]"></i>
-                            </a>
-                            </li>
-                        </ul>
-                        <ul class="list-none">
-                            <li class="item">
-                            <a href="#" class="link">
-                                <i
-                                class="ri-question-line text-blue-700 font-medium text-[1.5rem]"
-                                ></i>
-                            </a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            </nav>
-            <!--End Sidebar Icons bar -->
-
-            <!-- Sidebar menu list (Dashboard, Applications, Report etc) -->
-            <nav class="menu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease">
-                <div
-                    class="menu-list pt-4 transition-all duration-700 ease w-full pr-10">
-                    <!-- Logo -->
-                    <div class="flex items-center gap-4 w-full">
-                        <div
-                            class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1">
-                            <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
-                        </div>
-                        <h1
-                            class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500">
-                            SLMS
-                        </h1>
-                    </div>
-                    <!-- Logo -->
-
-                    <div class="flex flex-col justify-start items-start">
-                    <!------------------- 
-                        Normal Menu items
-                    --------------------->
-                    <div id="menu" class="pt-10 w-full">
-                        <ul class="w-full flex flex-col list-none text-center gap-[15px]">
-                            <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                                <a href="admin_dashboard.html" class="link flex">
-                                    <span class="text-slate-600 font-normal">Dashboard</span>
-                                </a>
-                            </li>
-                            <li class="group">
-                                <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                    <span class="">Applications</span>
-                                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                                </a>
-                                <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
-                                    <li class="mb-3">
-                                        <a href="admin_all_applications.html" class="menu_item flex items-center hover:text-slate-400">All Applications</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_pending_review.html" class="menu_item flex items-center hover:text-slate-400">Pending Review</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_approved.html" class="menu_item flex items-center hover:text-slate-400">Approved</a>
-                                    </li>  
-                                    <li class="mb-3">
-                                        <a href="admin_error_applications.html" class="menu_item flex items-center hover:text-slate-400">Errors</a>
-                                    </li> 
-                                </ul>
-                            </li>
-                            <li class="group">
-                                <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                    <span class="">Disbursement</span>
-                                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                                </a>
-                                <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
-                                    <li class="mb-3">
-                                        <a href="admin_disbursement_request.html" class="menu_item flex items-center hover:text-slate-400">New Request</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_completely_disbursed.html" class="menu_item flex items-center hover:text-slate-400">Completely Disbursed</a>
-                                    </li> 
-                                </ul>
-                            </li>
-                            <li class="group">
-                                <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                    <span class="">Reports</span>
-                                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                                </a>
-                                <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
-                                    <li class="mb-3">
-                                        <a href="admin_generate_report.html" class="menu_item flex items-center hover:text-slate-400">Generate Report</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_view_reports.html" class="menu_item flex items-center hover:text-slate-400">View Reports</a>
-                                    </li> 
-                                </ul>
-                            </li>
-                            <li class="group">
-                                <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                    <span class="">Repayment</span>
-                                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                                </a>
-                                <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
-                                    <li class="mb-3">
-                                        <a href="admin_new_payments.html" class="menu_item flex items-center hover:text-slate-400">New Payments</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_completed_payments.html" class="menu_item flex items-center hover:text-slate-400">Completed Payments</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="admin_due_payments.html" class="menu_item flex items-center hover:text-slate-400">Due Payments</a>
-                                    </li> 
-                                </ul>
-                            </li>
-                            <li class="group">
-                                <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
-                                    <span class="">User Managment</span>
-                                    <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
-                                </a>
-                                <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
-                                    <li class="mb-3">
-                                        <a href="#" class="menu_item flex items-center hover:text-slate-400">Administrators</a>
-                                    </li> 
-                                    <li class="mb-3">
-                                        <a href="#" class="menu_item flex items-center hover:text-slate-400">Student profiles</a>
-                                    </li> 
-                                </ul>
-                            </li>
-                            <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                                <a href="#" class="menu_item link flex">
-                                <span class="text-slate-600 font-normal"
-                                >Settings</span>
-                                </a>
-                            </li>
-                            <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
-                                <a href="#" class="menu_item link flex">
-                                    <span class="text-slate-600 font-normal"
-                                    >Help and Support</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!----------------------- 
-                        End Normal Menu items
-                    -------------------------->
-
-                    </div>
-                </div>
-            </nav>
-            <!--End Sidebar menu list (Dashboard, Applications, Report etc) -->
-            
         </div>
-        <div class="fixed top-0 left-0 w-full h-full bg-black/10 z-40 hidden sidebar-overlay"></div>
-        <!------------
-            END SIDEBAR 
-        --------------->
-  
-        <!------------------------------------------------------------
-            System App, SideBar, Main top navbar, Components & Footer
-        ------------------------------------------------------------->
-        <main class="min-h-screen mx-auto flex flex-col justify-start w-full md:pl-[300px]">
 
-            <!---------------------------
-            Main top navigation bar 
-            ---------------------------->
-            <nav class="bg-white sticky w-full">
-                <div class="w-full py-4 px-4 flex justify-between items-center">
-                    <div class="w-full flex justify-between items-center">
-                        <h1
-                            class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500">
-                            Dashboard
-                        </h1>
-
-                        <div class="flex items-center gap-3">
-                            <!-- Notification Box and Drodown Notification List -->
-                            <div class="notification-box relative">
-                            <div
-                                id="notification-box "
-                                class="h-8 w-8 bg-slate-100 rounded-full flex justify-center cursor-pointer"
-                            >
-                                <!-- Active notification here -->
-                                <span class="absolute -top-2 -right-1 text-red-600">
-                                <i class="ri-circle-fill text-[10px]"></i>
-                                </span>
-                                <!-- Active notification here -->
-                                <!-- Notification Bel icon -->
-                                <a href="#" class="link">
-                                <i
-                                    class="ri-notification-4-line text-blue-700 font-medium text-[1.5rem]"
-                                ></i>
-                                </a>
-                                <!-- End Notification Bel icon -->
-                            </div>
-                            <!-- Notification Dropdown -->
-                            <div
-                                id="notificationDropdown"
-                                class="notificationDropdown hidden absolute top-14 -right-36 overflow-hidden">
-                                <div
-                                class="w-[300px] overflow-hidden p-4 bg-white border border-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
-                                >
-                                <div
-                                    class="flex flex-col justify-start items-start border-b mb-4">
-                                    <!-- Notification list here -->
-                                    <ul>
-                                    <li class="text-[12px] text-blue-700 font-normal py-1">
-                                        <a href="#">You have 1 new notification</a>
-                                    </li>
-                                    </ul>
-                                    <!-- End Notification list here -->
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <!-- End Notification Box and Drodown Notification List -->
-            
-                            <!-- Profile Box and Its Dropdown -->
-                            <div id="profile-box" class="flex items-center gap-3">
-                            <div class="profile-box relative">
-                                <a href="#" class="flex items-center gap-3">
-                                <div
-                                    class="h-8 w-8 bg-slate-100 rounded-full flex justify-center items-center"
-                                >
-                                    <i
-                                    class="ri-user-3-fill text-blue-700 font-medium text-[1.3rem]"
-                                    ></i>
-                                </div>
-                                <h1 class="text-[1.1rem] font-normal text-slate-400">
-                                    Admin
-                                </h1>
-                                <i class="ri-arrow-down-s-fill text-slate-400 text-xl"></i>
-                                </a>
-                                <!-- Dropdown Profile -->
-                                <div
-                                id="profileDropdown"
-                                class="profileDropdown hidden absolute top-14 right-0 overflow-hidden"
-                                >
-                                <div
-                                    class="w-[200px] overflow-hidden p-4 bg-white border border-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
-                                >
-                                    <div
-                                    class="flex flex-col justify-start items-start border-b mb-4"
-                                    >
-                                    <!-- Name -->
-                                    <p class="text-[1.1rem] text-blue-700 font-normal">
-                                        John Doe
-                                    </p>
-                                    <!-- End Name -->
-                                    <span
-                                        class="text-[1.1rem] text-slate-400 font-normal py-1"
-                                    >
-                                        <a href="#">Reset Password</a>
-                                    </span>
-                                    </div>
-                                    <!-- Logout of your account -->
-                                    <span class="text-[1.1rem] text-slate-400 font-normal">
-                                    <a href="admin_login.html">Logout</a>
-                                    </span>
-                                    <!-- End Logout of your account -->
-                                </div>
-                                </div>
-                            </div>
-                            </div>
-                            <!-- End Profile Box and Its Dropdown -->
-            
+        
+        <div class="min-h-screen mx-auto flex flex-col justify-start w-full p-4 md:pl-[315px]">
+            <div id="dashboard" class=" flex flex-col gap-6">
+                <!-- Summary widgets showing key metrics -->
+                <div class="">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+                    <!-----------------------
+                        Total Disbursed Amount
+                    ------------------------>
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
+                            <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
+                                345
+                            </h3>
+                            <h3 class="text-slate-400 font-medium text-center">
+                                Total Number of Loan Applications
+                            </h3>
+                            <i class="ri-more-fill text-slate-400 text-xl"></i>
                         </div>
+                    </div>
+                    <!-----------------------------
+                        End Total Disbursed Amount
+                    -------------------------------->
+                    <!-----------------------
+                        Number of Approved Loans
+                    ------------------------>
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
+                            <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
+                                136
+                            </h3>
+                            <h3 class="text-slate-400 font-medium text-center">
+                                Approved Loans
+                            </h3>
+                            <i class="ri-more-fill text-slate-400 text-xl"></i>
+                        </div>
+                    </div>
+                    <!-----------------------------
+                        End Number of approved loans
+                    -------------------------------->
+                    <!-----------------------
+                        Number of pending applications
+                    ------------------------>
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
+                            <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
+                                56
+                            </h3>
+                            <h3 class="text-slate-400 font-medium text-center">
+                                Pending Applications
+                            </h3>
+                            <i class="ri-more-fill text-slate-400 text-xl"></i>
+                        </div>
+                    </div>
+                    <!---------------------------------
+                        End Number of pending applicatons
+                    -------------------------------->
+                    <!--------------------------------
+                        Number of Error applications
+                    ---------------------------------->
+                    <div class="item w-full bg-red-600 rounded-3xl">
+                        <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
+                            <h3 class="text-white text-center font-semibold text-[2rem]">
+                                24
+                            </h3>
+                            <h3 class="text-white font-medium text-center">
+                                Number of Error Applications
+                            </h3>
+                            <i class="ri-more-fill text-white text-xl"></i>
+                        </div>
+                    </div>
+                    <!---------------------------------
+                        End Number of Error applicatons
+                    -------------------------------->
+                    <!--------------------------------
+                        Total Loan Amount Disbursed
+                    ------------------------------=-->
+                    <div class="item w-full bg-white rounded-3xl">
+                        <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
+                            <div class="flex items-center gap-1">
+                                <h3 class="text-emerald-500 text-center font-semibold text-[1.6rem]">
+                                    GH₵
+                                </h3>
+                                <h3 class="text-blue-700 text-center font-semibold text-[1.6rem]">
+                                    56,323.00
+                                </h3>
+                            </div>
+                            <h3 class="text-slate-400 font-medium text-center">
+                                Total Loan Amount Disbursed
+                            </h3>
+                            <i class="ri-more-fill text-slate-400 text-xl"></i>
+                        </div>
+                    </div>
+                    <!-----------------------------------
+                        End Total Loan Amount Disbursed
+                    ------------------------------------->
+
                     </div>
                 </div>
-            </nav>
-            <!----------------------------
-            End Main top navigation bar
-            ------------------------------->
-            
-            <!-- CONTENTS of Other Pages are loaded and display here in the id="content" -->
-            <div id="content" class="p-4 flex flex-col justify-center items-center">
-                <div id="dashboard" class=" flex flex-col gap-6">
-                    <!-- Summary widgets showing key metrics -->
-                    <div class="">
-                        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
-                        <!-----------------------
-                            Total Disbursed Amount
-                        ------------------------>
-                        <div class="item w-full bg-white rounded-3xl">
-                            <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
-                                <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
-                                    345
-                                </h3>
-                                <h3 class="text-slate-400 font-medium text-center">
-                                    Total Number of Loan Applications
-                                </h3>
-                                <i class="ri-more-fill text-slate-400 text-xl"></i>
-                            </div>
-                        </div>
-                        <!-----------------------------
-                            End Total Disbursed Amount
-                        -------------------------------->
-                        <!-----------------------
-                            Number of Approved Loans
-                        ------------------------>
-                        <div class="item w-full bg-white rounded-3xl">
-                            <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
-                                <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
-                                    136
-                                </h3>
-                                <h3 class="text-slate-400 font-medium text-center">
-                                    Approved Loans
-                                </h3>
-                                <i class="ri-more-fill text-slate-400 text-xl"></i>
-                            </div>
-                        </div>
-                        <!-----------------------------
-                            End Number of approved loans
-                        -------------------------------->
-                        <!-----------------------
-                            Number of pending applications
-                        ------------------------>
-                        <div class="item w-full bg-white rounded-3xl">
-                            <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
-                                <h3 class="text-blue-700 text-center font-semibold text-[2rem]">
-                                    56
-                                </h3>
-                                <h3 class="text-slate-400 font-medium text-center">
-                                    Pending Applications
-                                </h3>
-                                <i class="ri-more-fill text-slate-400 text-xl"></i>
-                            </div>
-                        </div>
-                        <!---------------------------------
-                            End Number of pending applicatons
-                        -------------------------------->
-                        <!--------------------------------
-                            Number of Error applications
-                        ---------------------------------->
-                        <div class="item w-full bg-red-600 rounded-3xl">
-                            <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
-                                <h3 class="text-white text-center font-semibold text-[2rem]">
-                                    24
-                                </h3>
-                                <h3 class="text-white font-medium text-center">
-                                    Number of Error Applications
-                                </h3>
-                                <i class="ri-more-fill text-white text-xl"></i>
-                            </div>
-                        </div>
-                        <!---------------------------------
-                            End Number of Error applicatons
-                        -------------------------------->
-                        <!--------------------------------
-                            Total Loan Amount Disbursed
-                        ------------------------------=-->
-                        <div class="item w-full bg-white rounded-3xl">
-                            <div class="p-5 flex flex-col items-center gap-2 overflow-hidden">
-                                <div class="flex items-center gap-1">
-                                    <h3 class="text-emerald-500 text-center font-semibold text-[1.6rem]">
-                                        GH₵
-                                    </h3>
-                                    <h3 class="text-blue-700 text-center font-semibold text-[1.6rem]">
-                                        56,323.00
-                                    </h3>
-                                </div>
-                                <h3 class="text-slate-400 font-medium text-center">
-                                    Total Loan Amount Disbursed
-                                </h3>
-                                <i class="ri-more-fill text-slate-400 text-xl"></i>
-                            </div>
-                        </div>
-                        <!-----------------------------------
-                            End Total Loan Amount Disbursed
-                        ------------------------------------->
+                <!-- End Summary widgets showing key metrics -->
 
-                        </div>
-                    </div>
-                    <!-- End Summary widgets showing key metrics -->
-
+                <!-- Manage All Applications -->
+                <div>
                     <!-- Manage All Applications -->
-                    <div>
-                        <!-- Manage All Applications -->
-                        <div class="bg-white p-6 rounded-3xl">
-                            <div class="flex justify-between items-center mb-4">
-                                <div class="flex justify-between items-start">
-                                    <div class="font-medium text-[1.2rem] text-slate-600">All Applications</div>
-                                </div>
-                                <!-- Search Bar and Filter -->
-                                <div class="flex justify-between items-center gap-3">
-                                    <div class="w-[300px]">
-                                        <form action="" class="w-full">
-                                            <div class="relative w-full">
-                                                <input type="text" class="h-10 py-2 pr-4 pl-10 bg-gray-50 text-slate-400 w-full outline-none focus:border-1 focus:border-blue-700 border border-slate-200 px-7 rounded-3xl text-[1.1rem]" placeholder="Search...">
-                                                <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
-                                            </div>
-                                        </form>
-                                    </div>
-                                    <select class="text-[12px] text-slate-400 py-2 pl-4 h-10 bg-gray-50 rounded-3xl border border-slate-100 focus:border-blue-500 outline-none bg-select-arrow bg-no-repeat bg-[length:16px_16px] bg-[right_16px_center]">
-                                        <option value="">All</option>
-                                        <option value="">All Applications</option>
-                                        <option value="">Pending Review</option>
-                                        <option value="">Approved</option>
-                                        <option value="">Errors</option>
-                                    </select>
-                                </div>
-                                <!-- End Search Bar and Filter -->
+                    <div class="bg-white p-6 rounded-3xl">
+                        <div class="flex justify-between items-center mb-4">
+                            <div class="flex justify-between items-start">
+                                <div class="font-medium text-[1.2rem] text-slate-600">All Applications</div>
                             </div>
-                            <div class="overflow-x-auto">
-                                <!-- A little Number of All Applications are listed here -->
-                                <table class="w-full min-w-[540px]" data-tab-for="applications" data-page="active">
-                                    <thead>
-                                        <tr class="text-center capitalize">
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tl-3xl rounded-bl-3xl">#</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl No.</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl Date</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Student ID</th>
-                                            <th class="text-[12px] tracking-wide font-medium text-gray-400 bg-slate-100 py-2 px-4">Full Name</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Loan Amount</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Status</th>
-                                            <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tr-3xl rounded-br-3xl">Action</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="divide-y text-center">
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">1</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Pending Review</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
-                                                
-                                                </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">2</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Approved</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                                </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">3</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Error</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-red-600 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
-                                                </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">4</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Disbursed</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                               </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">5</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-green-600">Paid</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                               </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                        <tr>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">6</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">9642</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">20200404231</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
-                                            </td>
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <span class="text-[13px] font-medium text-red-600 ">Payment Due</span>
-                                            </td>
-                                            <!-- Action Buttons -->
-                                            <td class="py-2 px-4 border-b border-b-gray-50">
-                                                <div class="flex items-center justify-center gap-2 text-slate-600">
-                                                    <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
-                                               </div>
-                                            </td>
-                                            <!--End Action Buttons -->
-                                        </tr>
-                                    </tbody>
-                                </table>
-                                <!-- All Applications -->
+                            <!-- Search Bar and Filter -->
+                            <div class="flex justify-between items-center gap-3">
+                                <div class="w-[300px]">
+                                    <form action="" class="w-full">
+                                        <div class="relative w-full">
+                                            <input type="text" class="h-10 py-2 pr-4 pl-10 bg-gray-50 text-slate-400 w-full outline-none focus:border-1 focus:border-blue-700 border border-slate-200 px-7 rounded-3xl text-[1.1rem]" placeholder="Search...">
+                                            <i class="ri-search-line absolute top-1/2 left-4 -translate-y-1/2 text-gray-400 cursor-pointer"></i>
+                                        </div>
+                                    </form>
+                                </div>
+                                <select class="text-[12px] text-slate-400 py-2 pl-4 h-10 bg-gray-50 rounded-3xl border border-slate-100 focus:border-blue-500 outline-none bg-select-arrow bg-no-repeat bg-[length:16px_16px] bg-[right_16px_center]">
+                                    <option value="">All</option>
+                                    <option value="">All Applications</option>
+                                    <option value="">Pending Review</option>
+                                    <option value="">Approved</option>
+                                    <option value="">Errors</option>
+                                </select>
                             </div>
+                            <!-- End Search Bar and Filter -->
                         </div>
-                        <!-- End Manage All Applications -->
+                        <div class="overflow-x-auto">
+                            <!-- A little Number of All Applications are listed here -->
+                            <table class="w-full min-w-[540px]" data-tab-for="applications" data-page="active">
+                                <thead>
+                                    <tr class="text-center capitalize">
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tl-3xl rounded-bl-3xl">#</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl No.</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Appl Date</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Student ID</th>
+                                        <th class="text-[12px] tracking-wide font-medium text-gray-400 bg-slate-100 py-2 px-4">Full Name</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Loan Amount</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4">Status</th>
+                                        <th class="text-[12px] font-medium text-gray-400 bg-slate-100 py-2 px-4 rounded-tr-3xl rounded-br-3xl">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y text-center">
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">1</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Pending Review</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
+                                            
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">2</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Approved</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">3</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Error</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-red-600 hover:text-white"><i class="ri-error-warning-line text-[1.2rem]"></i></span>
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">4</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Disbursed</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">5</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-green-600">Paid</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                    <tr>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">6</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">9642</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">26-05-2024</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">20200404231</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400">Johnson Robertson Doe </span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-gray-400"><span class="font-semibold text-emerald-500 pr-1">GH₵</span>2,500</span>
+                                        </td>
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <span class="text-[13px] font-medium text-red-600 ">Payment Due</span>
+                                        </td>
+                                        <!-- Action Buttons -->
+                                        <td class="py-2 px-4 border-b border-b-gray-50">
+                                            <div class="flex items-center justify-center gap-2 text-slate-600">
+                                                <span class="bg-slate-100 px-2 rounded-lg cursor-pointer hover:bg-blue-700 text-slate-400 hover:text-white"><i class="ri-eye-line text-[1.2rem]"></i></span>                                    
+                                            </div>
+                                        </td>
+                                        <!--End Action Buttons -->
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <!-- All Applications -->
+                        </div>
                     </div>
-                    <!-- End Manage Applications -->        
+                    <!-- End Manage All Applications -->
                 </div>
+                <!-- End Manage Applications -->        
             </div>
-            <!-- End CONTENTS of Other Pages are loaded and display here in the id="content" -->
-        </main>
-        <!---------------------------------------------------------------
-            End System App, SideBar, Main top navbar, Components & Footer
-        ----------------------------------------------------------------->
+        </div>
 
         <footer class="bg-white">
             <div
@@ -734,8 +398,15 @@
             </h3>
             </div>
         </footer>
+
         <!--SCRIPTS-->
-        <script src="js/admin_dashboard.js"></script>
+        <script src="js/script.js"></script>
+        <script src="js/jquery.min.js"></script>
+        <script>
+        $(function(){
+            $("#nav-placeholder").load("admin_navbar.html");
+        });
+        </script>
         <script>
             //Website Pre-loader
                 const preloader = document.querySelector(".preloader");

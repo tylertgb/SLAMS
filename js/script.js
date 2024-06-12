@@ -1,3 +1,4 @@
+// Sidebar and Top Navigation dropdowns************************
 document.addEventListener('DOMContentLoaded', function() {
   // Function to set up the event listeners
   function setupEventListeners() {
@@ -46,6 +47,49 @@ document.addEventListener('DOMContentLoaded', function() {
   // Configure the observer to watch for changes in the document
   observer.observe(document.body, { childList: true, subtree: true });
 });
+// End Sidebar and Top Navigation dropdowns************************
+
+// start: Admin Sidebar Dropdown************************************************
+document.querySelectorAll('.sidebar-dropdown-toggle').forEach(function (item) {
+  item.addEventListener('click', function (e) {
+      e.preventDefault()
+      console.log('slected');
+      const parent = item.closest('.group')
+      if (parent.classList.contains('selected')) {
+          parent.classList.remove('selected')
+      } else {
+          document.querySelectorAll('.sidebar-dropdown-toggle').forEach(function (i) {
+              i.closest('.group').classList.remove('selected')
+          })
+          parent.classList.add('selected')
+      }
+  })
+})
+// end: Sidebar*******************************************************************88
+
+
+// PRELOADERS*************************************************************
+const preloader = document.querySelector(".preloader");
+const buttons = document.querySelector("#btn-load");
+loadLogin = document.querySelector(".loadLogin");
+
+loadLogin.classList.add("hidden");
+
+document.addEventListener("DOMContentLoaded", function () {
+  preloader.classList.add("active");
+  setTimeout(function () {
+    loadLogin.classList.remove("hidden");
+    preloader.classList.remove("active");
+  }, 3000); // Simulate content loading delay
+});
+
+buttons.addEventListener("click", () => {
+  preloader.classList.add("active");
+  setTimeout(function () {
+    preloader.classList.remove("active");
+  }, 3000); // Simulate content loading delay
+});
+
 
 //Website Pre-loader
 document.addEventListener('DOMContentLoaded', function() {
@@ -69,3 +113,4 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 });
 
+// END PRELOADERS*********************************************************

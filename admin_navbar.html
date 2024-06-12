@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SLMS Admin Navbar</title>
+
+    <!--Google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"/>
+
+    <!--Icons-->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.1/fonts/remixicon.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="css/main.css" />
+    <script src="js/jquery.min.js"></script>
+  </head>
+  <body class="bg-slate-100">
+
+    <!----------
+        SIDEBAR 
+    ------------>
+    <div class="sidebar z-[100] fixed top-0 left-0 h-full flex justify-start items-start transition-all duration-500 ease">
+        <!-- Sidebar Icons bar -->
+        <nav
+        class="siderbar bg-white h-full top-0 left-0 w-[40px] md:w-[60px] transition-all duration-500 ease"
+        >
+        <div class="flex flex-col items-center px-4 pt-4">
+            <div
+            class="bugger md:pointer-events-none group h-8 w-8 md:h-10 md:w-10 bg-slate-100 rounded-full flex justify-center items-center cursor-pointer transition-all duration-500 ease"
+            >
+            <i class="bugger ri-menu-line text-[1.5rem] text-blue-700"></i>
+            </div>
+
+
+            <div class="flex flex-col justify-center items-center">
+                <div class="menu-icon flex flex-col gap-[18.5px] pt-10">
+                    <ul class="list-none">
+                        <li class="item">
+                            <a href="#" class="link">
+                            <i class="ri-home-8-line text-blue-700 font-medium text-[1.5rem]"></i></a>
+                        </li>
+                    </ul>           
+                    <ul class="list-none">
+                        <li class="item">
+                            <a href="#" class="link">
+                            <i class="ri-instance-line text-blue-700 font-medium text-[1.5rem]"></i>
+                            </a>
+                        </li>
+                    </ul>           
+                    <ul class="list-none">
+                        <li class="item">
+                            <a href="#" class="link">
+                            <i class="ri-secure-payment-line text-blue-700 font-medium text-[1.5rem]"></i>
+                            </a>
+                        </li>
+                    </ul>           
+                    <ul class="list-none">
+                        <li class="item">
+                        <a href="#" class="link">
+                            <i class="ri-account-circle-line text-blue-700 font-medium text-[1.5rem]"></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <ul class="list-none">
+                        <li class="item">
+                        <a href="#" class="link">
+                            <i
+                            class="ri-wallet-3-line text-blue-700 font-medium text-[1.5rem]"
+                            ></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <ul class="list-none">
+                        <li class="item">
+                        <a href="#" class="link">
+                            <i
+                            class="ri-user-settings-line text-blue-700 font-medium text-[1.5rem]"
+                            ></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <ul class="list-none">
+                        <li class="item">
+                        <a href="#" class="link">
+                            <i class="ri-settings-5-line text-blue-700 font-medium text-[1.5rem]"></i>
+                        </a>
+                        </li>
+                    </ul>
+                    <ul class="list-none">
+                        <li class="item">
+                        <a href="#" class="link">
+                            <i
+                            class="ri-question-line text-blue-700 font-medium text-[1.5rem]"
+                            ></i>
+                        </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        </nav>
+        <!--End Sidebar Icons bar -->
+
+        <!-- Sidebar menu list (Dashboard, Applications, Report etc) -->
+        <nav class="menu bg-white h-full hidden md:flex w-[240px] transition-all duration-500 ease">
+            <div
+                class="menu-list pt-4 transition-all duration-700 ease w-full pr-10">
+                <!-- Logo -->
+                <div class="flex items-center gap-4 w-full">
+                    <div
+                        class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1">
+                        <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+                    </div>
+                    <h1
+                        class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500">
+                        SLMS
+                    </h1>
+                </div>
+                <!-- Logo -->
+
+                <div class="flex flex-col justify-start items-start">
+                <!------------------- 
+                    Normal Menu items
+                --------------------->
+                <div id="menu" class="pt-10 w-full">
+                    <ul class="w-full flex flex-col list-none text-center gap-[15px]">
+                        <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                            <a href="admin_dashboard.html" class="link flex">
+                                <span class="text-slate-600 font-normal">Dashboard</span>
+                            </a>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <span class="">Applications</span>
+                                <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                            </a>
+                            <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
+                                <li class="mb-3">
+                                    <a href="admin_all_applications.html" class="menu_item flex items-center hover:text-slate-400">All Applications</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_pending_review.html" class="menu_item flex items-center hover:text-slate-400">Pending Review</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_approved.html" class="menu_item flex items-center hover:text-slate-400">Approved</a>
+                                </li>  
+                                <li class="mb-3">
+                                    <a href="admin_error_applications.html" class="menu_item flex items-center hover:text-slate-400">Errors</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <span class="">Disbursement</span>
+                                <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                            </a>
+                            <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
+                                <li class="mb-3">
+                                    <a href="admin_disbursement_request.html" class="menu_item flex items-center hover:text-slate-400">New Request</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_completely_disbursed.html" class="menu_item flex items-center hover:text-slate-400">Completely Disbursed</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <span class="">Reports</span>
+                                <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                            </a>
+                            <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
+                                <li class="mb-3">
+                                    <a href="admin_generate_report.html" class="menu_item flex items-center hover:text-slate-400">Generate Report</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_view_reports.html" class="menu_item flex items-center hover:text-slate-400">View Reports</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <span class="">Repayment</span>
+                                <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                            </a>
+                            <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
+                                <li class="mb-3">
+                                    <a href="admin_new_payments.html" class="menu_item flex items-center hover:text-slate-400">New Payments</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_completed_payments.html" class="menu_item flex items-center hover:text-slate-400">Completed Payments</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="admin_due_payments.html" class="menu_item flex items-center hover:text-slate-400">Due Payments</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="group">
+                            <a href="#" class="flex items-center p-2 bg-slate-100 text-slate-600 rounded-tr-3xl rounded-br-3xl hover:bg-slate-300 duration-500 ease group-[.active]:bg-blue-700 group-[.active]:text-white group-[.selected]:bg-blue-700 group-[.selected]:text-gray-100 sidebar-dropdown-toggle">
+                                <span class="">User Managment</span>
+                                <i class="ri-arrow-right-s-line ml-auto group-[.selected]:rotate-90"></i>
+                            </a>
+                            <ul class="pl-7 mt-2 hidden group-[.selected]:block text-slate-600">
+                                <li class="mb-3">
+                                    <a href="#" class="menu_item flex items-center hover:text-slate-400">Administrators</a>
+                                </li> 
+                                <li class="mb-3">
+                                    <a href="#" class="menu_item flex items-center hover:text-slate-400">Student profiles</a>
+                                </li> 
+                            </ul>
+                        </li>
+                        <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                            <a href="#" class="menu_item link flex">
+                            <span class="text-slate-600 font-normal"
+                            >Settings</span>
+                            </a>
+                        </li>
+                        <li class="group bg-slate-100 rounded-tr-3xl rounded-br-3xl p-2 hover:bg-slate-300 duration-500 ease">
+                            <a href="#" class="menu_item link flex">
+                                <span class="text-slate-600 font-normal"
+                                >Help and Support</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!----------------------- 
+                    End Normal Menu items
+                -------------------------->
+
+                </div>
+            </div>
+        </nav>
+        <!--End Sidebar menu list (Dashboard, Applications, Report etc) -->
+        
+    </div>
+    <div class="fixed top-0 left-0 w-full h-full bg-black/10 z-40 hidden sidebar-overlay"></div>
+    <!------------
+        END SIDEBAR 
+    --------------->
+
+    <!---------------------------
+    Main top navigation bar 
+    ---------------------------->
+    <nav class="bg-white sticky w-full">
+        <div class="w-full py-4 px-4 flex justify-between items-center">
+            <div class="w-full flex justify-between items-center">
+                <div class="flex justify-between items-center gap-[300px]">
+                    <div class="h-10 w-10 bg-slate-100 border-blue-700 rounded-full flex items-center p-1" >
+                        <i class="ri-bubble-chart-fill text-blue-700 text-[2rem]"></i>
+                    </div>
+                    <h1
+                        class="text-[1.5rem] md:text-[1.5rem] font-medium text-slate-500">
+                        Dashboard
+                    </h1>
+                </div>
+
+                <div class="flex items-center gap-3">
+                    <!-- Notification Box and Drodown Notification List -->
+                    <div class="notification-box relative">
+                    <div
+                        id="notification-box "
+                        class="h-8 w-8 bg-slate-100 rounded-full flex justify-center cursor-pointer"
+                    >
+                        <!-- Active notification here -->
+                        <span class="absolute -top-2 -right-1 text-red-600">
+                        <i class="ri-circle-fill text-[10px]"></i>
+                        </span>
+                        <!-- Active notification here -->
+                        <!-- Notification Bel icon -->
+                        <a href="#" class="link">
+                        <i
+                            class="ri-notification-4-line text-blue-700 font-medium text-[1.5rem]"
+                        ></i>
+                        </a>
+                        <!-- End Notification Bel icon -->
+                    </div>
+                    <!-- Notification Dropdown -->
+                    <div
+                        id="notificationDropdown"
+                        class="notificationDropdown hidden absolute top-14 -right-36 overflow-hidden">
+                        <div
+                        class="w-[300px] overflow-hidden p-4 bg-white border border-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
+                        >
+                        <div
+                            class="flex flex-col justify-start items-start border-b mb-4">
+                            <!-- Notification list here -->
+                            <ul>
+                            <li class="text-[12px] text-blue-700 font-normal py-1">
+                                <a href="#">You have 1 new notification</a>
+                            </li>
+                            </ul>
+                            <!-- End Notification list here -->
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Notification Box and Drodown Notification List -->
+    
+                    <!-- Profile Box and Its Dropdown -->
+                    <div id="profile-box" class="flex items-center gap-3">
+                    <div class="profile-box relative">
+                        <a href="#" class="flex items-center gap-3">
+                        <div
+                            class="h-8 w-8 bg-slate-100 rounded-full flex justify-center items-center"
+                        >
+                            <i
+                            class="ri-user-3-fill text-blue-700 font-medium text-[1.3rem]"
+                            ></i>
+                        </div>
+                        <h1 class="text-[1.1rem] font-normal text-slate-400">
+                            Admin
+                        </h1>
+                        <i class="ri-arrow-down-s-fill text-slate-400 text-xl"></i>
+                        </a>
+                        <!-- Dropdown Profile -->
+                        <div
+                        id="profileDropdown"
+                        class="profileDropdown hidden absolute top-14 right-0 overflow-hidden"
+                        >
+                        <div
+                            class="w-[200px] overflow-hidden p-4 bg-white border border-slate-100 rounded-tl-0 rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
+                        >
+                            <div
+                            class="flex flex-col justify-start items-start border-b mb-4"
+                            >
+                            <!-- Name -->
+                            <p class="text-[1.1rem] text-blue-700 font-normal">
+                                John Doe
+                            </p>
+                            <!-- End Name -->
+                            <span
+                                class="text-[1.1rem] text-slate-400 font-normal py-1"
+                            >
+                                <a href="#">Reset Password</a>
+                            </span>
+                            </div>
+                            <!-- Logout of your account -->
+                            <span class="text-[1.1rem] text-slate-400 font-normal">
+                            <a href="admin_login.html">Logout</a>
+                            </span>
+                            <!-- End Logout of your account -->
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <!-- End Profile Box and Its Dropdown -->
+    
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!----------------------------
+    End Main top navigation bar
+    ------------------------------->
+
+
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+  </body>
+</html>

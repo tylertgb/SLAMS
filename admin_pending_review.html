@@ -30,9 +30,13 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body class="bg-slate-100">
+    <!--Navigation bar-->
+    <div id="nav-placeholder">
+
+    </div>
 
 
-    <main class="w-full">
+    <main class="min-h-screen mx-auto flex flex-col justify-start w-full p-4 md:pl-[315px]">
       <div id="pendingReview" class="pendingReview w-full">
         <!-- Manage Pending Review Applications -->
         <div class="bg-white p-6 rounded-3xl">
@@ -159,6 +163,12 @@
     </main>
 
     <!--SCRIPTS-->
-    <script src="js/admindashboard.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script>
+      $(function(){
+        $("#nav-placeholder").load("admin_navbar.html");
+      });
+    </script>
   </body>
 </html>
