@@ -29,10 +29,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function name():Attribute
-    {
-        return Attribute::make(get: fn($val, $attr)=>$attr['firstname']);
-    }
+ 
     /**
      * Get the attributes that should be cast.
      *
