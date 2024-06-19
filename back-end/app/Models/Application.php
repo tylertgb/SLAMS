@@ -11,4 +11,7 @@ class Application extends Model
 
     protected $guarded = [];
     CONST IS_PENDING = 'PENDING';
+    CONST IS_REVIEWED = 'REVIEWED';
+    CONST IS_ACCEPTED = 'ACCEPTED';
+    CONST IS_REJECTED = 'REJECTED';
 }
