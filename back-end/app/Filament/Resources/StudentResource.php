@@ -3,54 +3,70 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\StudentResource\Pages;
-use App\Filament\Resources\StudentResource\RelationManagers;
 use App\Models\Student;
 use Filament\Forms;
+use Filament\Forms\Components\Section;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class StudentResource extends Resource
 {
     protected static ?string $model = Student::class;
 
-    protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
+    protected static ?string $navigationIcon = 'heroicon-o-user';
 
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
-                Forms\Components\TextInput::make('student_id')
-                    ->required(),
-                Forms\Components\TextInput::make('program'),
-                Forms\Components\TextInput::make('entry_year'),
-                Forms\Components\TextInput::make('level'),
-                Forms\Components\TextInput::make('exit_year'),
-                Forms\Components\TextInput::make('fullname')
-                    ->required(),
-                Forms\Components\TextInput::make('gender'),
-                Forms\Components\TextInput::make('contact_address'),
-                Forms\Components\TextInput::make('contact_email')
-                    ->email(),
-                Forms\Components\TextInput::make('contact_phone')
-                    ->tel(),
-                Forms\Components\TextInput::make('annual_income')
-                    ->numeric(),
-                Forms\Components\TextInput::make('tin'),
-                Forms\Components\TextInput::make('guardian_fullname'),
-                Forms\Components\TextInput::make('guardian_phone_number')
-                    ->tel(),
-                Forms\Components\TextInput::make('guardian_email')
-                    ->email(),
-                Forms\Components\TextInput::make('guardian_income')
-                    ->numeric(),
-                Forms\Components\TextInput::make('transcript'),
-                Forms\Components\TextInput::make('proof_of_enrolment'),
-                Forms\Components\TextInput::make('ezwitch_card'),
-                Forms\Components\TextInput::make('profile_picture'),
+                Section::make('Personal Info')
+                ->columns(2)
+                ->schema([
+                    Forms\Components\TextInput::make('student_id')
+                        ->required(),
+                    Forms\Components\TextInput::make('program'),
+                    Forms\Components\TextInput::make('entry_year'),
+                    Forms\Components\TextInput::make('level'),
+                    Forms\Components\TextInput::make('exit_year'),
+                    Forms\Components\TextInput::make('fullname')
+                        ->required(),
+                    Forms\Components\TextInput::make('gender'),
+                    Forms\Components\TextInput::make('contact_address'),
+                    Forms\Components\TextInput::make('contact_email')
+                        ->email(),
+                    Forms\Components\TextInput::make('contact_phone')
+                        ->tel(),
+                    Forms\Components\TextInput::make('annual_income')
+                        ->numeric(),
+                    Forms\Components\TextInput::make('tin'),
+                ]),
+
+                Section::make('Guardian Info')
+                ->columns(2)
+                ->schema([
+                    Forms\Components\TextInput::make('guardian_fullname')
+                    ->label('Full Name'),
+                    Forms\Components\TextInput::make('guardian_phone_number')
+                    ->label('Phone Number'),
+                    Forms\Components\TextInput::make('guardian_email')
+                    ->label('Email Address')
+                        ->email(),
+                    Forms\Components\TextInput::make('guardian_income')
+                    ->label('Income(GHc)')
+                        ->numeric(),
+                ]),
+                Section::make('Documents')
+                ->columns(2)
+                ->schema([
+                    Forms\Components\TextInput::make('transcript'),
+                    Forms\Components\TextInput::make('proof_of_enrolment'),
+                    Forms\Components\TextInput::make('ezwitch_card'),
+                    Forms\Components\TextInput::make('profile_picture'),
+                ])
+
+
             ]);
     }
 
@@ -102,16 +118,7 @@ class StudentResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('deleted_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->sortable(),
             ])
             ->filters([
                 //
@@ -137,8 +144,8 @@ class StudentResource extends Resource
     {
         return [
             'index' => Pages\ListStudents::route('/'),
-            'create' => Pages\CreateStudent::route('/create'),
-            'edit' => Pages\EditStudent::route('/{record}/edit'),
+            // 'create' => Pages\CreateStudent::route('/create'),
+            // 'edit' => Pages\EditStudent::route('/{record}/edit'),
         ];
     }
 }
