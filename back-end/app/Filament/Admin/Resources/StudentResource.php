@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Filament\Resources;
+namespace App\Filament\Admin\Resources;
 
-use App\Filament\Resources\StudentResource\Pages;
+use App\Filament\Admin\Resources\StudentResource\Pages;
 use App\Models\Student;
 use Filament\Forms;
 use Filament\Forms\Components\Section;
