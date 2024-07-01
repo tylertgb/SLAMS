@@ -76,7 +76,7 @@ class StudentResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('student_id')
                     ->searchable(),
-                Tables\Columns\TextColumn::make('program')
+                Tables\Columns\TextColumn::make('program.name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('entry_year')
                     ->searchable(),

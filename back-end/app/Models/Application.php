@@ -14,4 +14,9 @@ class Application extends Model
     CONST IS_REVIEWED = 'REVIEWED';
     CONST IS_ACCEPTED = 'ACCEPTED';
     CONST IS_REJECTED = 'REJECTED';
+
+    public function student(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    {
+        return $this->belongsTo(Student::class);
+    }
 }
