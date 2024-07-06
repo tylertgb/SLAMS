@@ -2,13 +2,13 @@
 
 namespace App\Filament\Admin\Resources;
 
-use App\Filament\Admin\Resources\DisbursementResource\Pages; 
+use App\Filament\Admin\Resources\DisbursementResource\Pages;
 use App\Models\Disbursement;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
-use Filament\Tables\Table; 
+use Filament\Tables\Table;
 
 class DisbursementResource extends Resource
 {
@@ -21,7 +21,7 @@ class DisbursementResource extends Resource
         return $form
             ->schema([
                 Forms\Components\Select::make('student_id')
-                ->relationship('student', 'student_id')
+                    ->relationship('student', 'student_id')
                     ->required(),
                 Forms\Components\TextInput::make('amount')
                     ->required()
@@ -29,7 +29,7 @@ class DisbursementResource extends Resource
                 Forms\Components\DatePicker::make('disbursed_at')
                     ->format('d M, Y')
                     ->default(now())
-                    ->required(), 
+                    ->required(),
             ]);
     }
 

@@ -2,7 +2,6 @@
 
 namespace App\Filament\Student\Pages;
 
-use App\Models\Program;
 use App\Models\Student;
 use Filament\Actions\Action;
 use Filament\Forms\Components\FileUpload;
@@ -36,26 +35,26 @@ class Profile extends Page
 
                         TextInput::make('fullname')
                             ->label('Full Name'),
-//                            ->required(),
+                        //                            ->required(),
 
                         Select::make('program_id')
                             ->label('Program')
                             ->relationship('program', 'name'),
-//                            ->required(),
+                        //                            ->required(),
 
                         TextInput::make('entry_year')
                             ->numeric()
                             ->required(),
 
                         Select::make('level'),
-//                            ->required(),
+                        //                            ->required(),
 
                         Select::make('gender')
                             ->options([
                                 'M' => 'M',
-                                'F' => 'F'
+                                'F' => 'F',
                             ]),
-//                            ->required(),
+                        //                            ->required(),
 
                     ]),
 
@@ -64,16 +63,16 @@ class Profile extends Page
                     ->schema([
                         TextInput::make('contact_address')
                             ->label('Address'),
-//                            ->required(),
+                        //                            ->required(),
 
                         TextInput::make('contact_email')
                             ->label('Email'),
-//                            ->email()
-//                            ->required(),
+                        //                            ->email()
+                        //                            ->required(),
 
                         TextInput::make('contact_phone')
-                            ->label('Phone Number')
-//                            ->required()
+                            ->label('Phone Number'),
+                        //                            ->required()
 
                     ]),
 
@@ -82,11 +81,11 @@ class Profile extends Page
                     ->schema([
                         TextInput::make('annual_income')
                             ->numeric(),
-//                            ->required(),
+                        //                            ->required(),
 
                         TextInput::make('tin')
                             ->label('TIN'),
-//                            ->required(),
+                        //                            ->required(),
 
                     ]),
 
@@ -95,18 +94,18 @@ class Profile extends Page
                     ->schema([
                         TextInput::make('guardian_fullname')
                             ->label('Full Name'),
-//                            ->required(),
+                        //                            ->required(),
 
                         TextInput::make('guardian_phone_number')
                             ->label('Phone Number'),
-//                            ->required(),
+                        //                            ->required(),
 
                         TextInput::make('guardian_email'),
-//                            ->label('Email'),
+                        //                            ->label('Email'),
 
                         TextInput::make('guardian_income')
-                            ->label('Income')
-//                            ->required(),
+                            ->label('Income'),
+                        //                            ->required(),
 
                     ]),
 
@@ -114,21 +113,19 @@ class Profile extends Page
                     ->columns()
                     ->schema([
                         FileUpload::make('transcript'),
-//                            ->required(),
+                        //                            ->required(),
 
                         FileUpload::make('proof_of_enrolment')
                             ->label('Admission Letter'),
-//                            ->required(),
-
+                        //                            ->required(),
 
                         FileUpload::make('ezwitch_card'),
-//                            ->required(),
+                        //                            ->required(),
 
-                        FileUpload::make('profile_picture')
-//                            ->required(),
+                        FileUpload::make('profile_picture'),
+                        //                            ->required(),
 
-
-                    ])
+                    ]),
 
             ])
             ->statePath('data')

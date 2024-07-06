@@ -14,10 +14,11 @@ class ListApplications extends ListRecords
     {
         return [
             Actions\CreateAction::make()
-                ->mutateFormDataUsing(function(?array $data){
-                $data['student_id'] = auth()->user()->student->id;
-                return $data;
-            })
+                ->mutateFormDataUsing(function (?array $data) {
+                    $data['student_id'] = auth()->user()->student->id;
+
+                    return $data;
+                }),
         ];
     }
 }

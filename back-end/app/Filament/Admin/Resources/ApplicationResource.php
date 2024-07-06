@@ -3,17 +3,13 @@
 namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\ApplicationResource\Pages;
-use App\Filament\Admin\Resources\ApplicationResource\RelationManagers;
 use App\Models\Application;
 use Filament\Forms;
 use Filament\Forms\Form;
-use Filament\Resources\Components\Tab;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ApplicationResource extends Resource
 {
@@ -44,27 +40,36 @@ class ApplicationResource extends Resource
         return $table
             ->columns([
                 Tables\Columns\TextColumn::make('student.student_id')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('student.fullname')
+                    ->label('Full Name')
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('student.student_id')
                     ->numeric()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('created_at')
+                    ->label('Date')
+                    ->date('d M, Y')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('amount')
                     ->numeric()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('status')
-                    ->searchable(),
-                Tables\Columns\TextColumn::make('created_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
-                Tables\Columns\TextColumn::make('updated_at')
-                    ->dateTime()
-                    ->sortable()
-                    ->toggleable(isToggledHiddenByDefault: true),
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'PENDING' => 'grey',
+                        'REVIEWED' => 'warning',
+                        'ACCEPTED' => 'success',
+                        'REJECTED' => 'danger',
+                    }),
             ])
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filters([
                 //
             ])
             ->actions([
+                self::toggleStatusAction(),
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
@@ -73,8 +78,6 @@ class ApplicationResource extends Resource
                 ]),
             ]);
     }
-
-
 
     public static function getRelations(): array
     {
@@ -90,5 +93,28 @@ class ApplicationResource extends Resource
             'create' => Pages\CreateApplication::route('/create'),
             'edit' => Pages\EditApplication::route('/{record}/edit'),
         ];
+    }
+
+    private static function toggleStatusAction()
+    {
+        return Tables\Actions\Action::make('toggle')
+            ->icon('heroicon-o-arrow-path')
+            ->fillForm(function (Application $record) {
+                return ['status' => $record->status];
+            })
+            ->form([
+                Forms\Components\Select::make('status')
+                    ->options(fn () => [
+                        Application::IS_PENDING => Application::IS_PENDING,
+                        Application::IS_REVIEWED => Application::IS_REVIEWED,
+                        Application::IS_ACCEPTED => Application::IS_ACCEPTED,
+                        Application::IS_REJECTED => Application::IS_REJECTED,
+                    ])
+                    ->required(),
+            ])
+            ->action(function (array $data, Application $record) {
+                $record->status = $data['status'];
+                $record->save();
+            });
     }
 }

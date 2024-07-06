@@ -3,15 +3,12 @@
 namespace App\Filament\Student\Resources;
 
 use App\Filament\Student\Resources\ApplicationResource\Pages;
-use App\Filament\Student\Resources\ApplicationResource\RelationManagers;
 use App\Models\Application;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
-use Illuminate\Database\Eloquent\Builder;
-use Illuminate\Database\Eloquent\SoftDeletingScope;
 
 class ApplicationResource extends Resource
 {
@@ -26,31 +23,37 @@ class ApplicationResource extends Resource
             ->schema([
                 Forms\Components\TextInput::make('amount'),
                 Forms\Components\Textarea::make('reason'),
-                Forms\Components\TextInput::make('student_id')
-                    ->default(auth()->user()->student->id)->hidden(),
             ]);
     }
-
-
 
     public static function table(Table $table): Table
     {
         return $table
+            ->recordUrl(null)
             ->query(Application::query()->where('student_id', auth()->user()->student->id))
             ->columns([
                 Tables\Columns\TextColumn::make('amount')->numeric(2),
                 Tables\Columns\TextColumn::make('reason'),
+                Tables\Columns\TextColumn::make('status')
+                    ->badge()
+                    ->color(fn (string $state): string => match ($state) {
+                        'PENDING' => 'grey',
+                        'REVIEWED' => 'warning',
+                        'PROCESSED' => 'success',
+                        'REJECTED' => 'danger',
+                    }),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                //                Tables\Actions\BulkActionGroup::make([
+                //                    Tables\Actions\DeleteBulkAction::make(),
+                //                ]),
             ]);
     }
 
@@ -66,7 +69,7 @@ class ApplicationResource extends Resource
         return [
             'index' => Pages\ListApplications::route('/'),
             'create' => Pages\CreateApplication::route('/create'),
-//            'edit' => Pages\EditApplication::route('/{record}/edit'),
+            //            'edit' => Pages\EditApplication::route('/{record}/edit'),
         ];
     }
 }

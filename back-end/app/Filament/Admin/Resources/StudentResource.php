@@ -22,50 +22,49 @@ class StudentResource extends Resource
         return $form
             ->schema([
                 Section::make('Personal Info')
-                ->columns(2)
-                ->schema([
-                    Forms\Components\TextInput::make('student_id')
-                        ->required(),
-                    Forms\Components\TextInput::make('program'),
-                    Forms\Components\TextInput::make('entry_year'),
-                    Forms\Components\TextInput::make('level'),
-                    Forms\Components\TextInput::make('exit_year'),
-                    Forms\Components\TextInput::make('fullname')
-                        ->required(),
-                    Forms\Components\TextInput::make('gender'),
-                    Forms\Components\TextInput::make('contact_address'),
-                    Forms\Components\TextInput::make('contact_email')
-                        ->email(),
-                    Forms\Components\TextInput::make('contact_phone')
-                        ->tel(),
-                    Forms\Components\TextInput::make('annual_income')
-                        ->numeric(),
-                    Forms\Components\TextInput::make('tin'),
-                ]),
+                    ->columns(2)
+                    ->schema([
+                        Forms\Components\TextInput::make('student_id')
+                            ->required(),
+                        Forms\Components\TextInput::make('program'),
+                        Forms\Components\TextInput::make('entry_year'),
+                        Forms\Components\TextInput::make('level'),
+                        Forms\Components\TextInput::make('exit_year'),
+                        Forms\Components\TextInput::make('fullname')
+                            ->required(),
+                        Forms\Components\TextInput::make('gender'),
+                        Forms\Components\TextInput::make('contact_address'),
+                        Forms\Components\TextInput::make('contact_email')
+                            ->email(),
+                        Forms\Components\TextInput::make('contact_phone')
+                            ->tel(),
+                        Forms\Components\TextInput::make('annual_income')
+                            ->numeric(),
+                        Forms\Components\TextInput::make('tin'),
+                    ]),
 
                 Section::make('Guardian Info')
-                ->columns(2)
-                ->schema([
-                    Forms\Components\TextInput::make('guardian_fullname')
-                    ->label('Full Name'),
-                    Forms\Components\TextInput::make('guardian_phone_number')
-                    ->label('Phone Number'),
-                    Forms\Components\TextInput::make('guardian_email')
-                    ->label('Email Address')
-                        ->email(),
-                    Forms\Components\TextInput::make('guardian_income')
-                    ->label('Income(GHc)')
-                        ->numeric(),
-                ]),
+                    ->columns(2)
+                    ->schema([
+                        Forms\Components\TextInput::make('guardian_fullname')
+                            ->label('Full Name'),
+                        Forms\Components\TextInput::make('guardian_phone_number')
+                            ->label('Phone Number'),
+                        Forms\Components\TextInput::make('guardian_email')
+                            ->label('Email Address')
+                            ->email(),
+                        Forms\Components\TextInput::make('guardian_income')
+                            ->label('Income(GHc)')
+                            ->numeric(),
+                    ]),
                 Section::make('Documents')
-                ->columns(2)
-                ->schema([
-                    Forms\Components\TextInput::make('transcript'),
-                    Forms\Components\TextInput::make('proof_of_enrolment'),
-                    Forms\Components\TextInput::make('ezwitch_card'),
-                    Forms\Components\TextInput::make('profile_picture'),
-                ])
-
+                    ->columns(2)
+                    ->schema([
+                        Forms\Components\TextInput::make('transcript'),
+                        Forms\Components\TextInput::make('proof_of_enrolment'),
+                        Forms\Components\TextInput::make('ezwitch_card'),
+                        Forms\Components\TextInput::make('profile_picture'),
+                    ]),
 
             ]);
     }

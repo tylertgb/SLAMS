@@ -10,10 +10,14 @@ class Application extends Model
     use HasFactory;
 
     protected $guarded = [];
-    CONST IS_PENDING = 'PENDING';
-    CONST IS_REVIEWED = 'REVIEWED';
-    CONST IS_ACCEPTED = 'ACCEPTED';
-    CONST IS_REJECTED = 'REJECTED';
+
+    const IS_PENDING = 'PENDING';
+
+    const IS_REVIEWED = 'REVIEWED';
+
+    const IS_ACCEPTED = 'ACCEPTED';
+
+    const IS_REJECTED = 'REJECTED';
 
     public function student(): \Illuminate\Database\Eloquent\Relations\BelongsTo
     {

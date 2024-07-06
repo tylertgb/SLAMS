@@ -26,13 +26,13 @@ class ListApplications extends ListRecords
         return [
             null => Tab::make('All'),
             'pending' => Tab::make()
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', Application::IS_PENDING)),
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_PENDING)),
             'reviewed' => Tab::make()
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', Application::IS_REVIEWED)),
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_REVIEWED)),
             'accepted' => Tab::make()
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', Application::IS_ACCEPTED)),
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_ACCEPTED)),
             'rejected' => Tab::make()
-                ->modifyQueryUsing(fn(Builder $query) => $query->where('status', Application::IS_REJECTED)),
+                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_REJECTED)),
         ];
     }
 }

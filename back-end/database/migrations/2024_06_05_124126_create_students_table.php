@@ -24,22 +24,20 @@ return new class extends Migration
             $table->string('contact_address')->nullable();
             $table->string('contact_email')->nullable();
             $table->string('contact_phone')->nullable();
-            
+
             $table->decimal('annual_income')->nullable();
             $table->string('tin')->nullable();
 
-            
             $table->string('guardian_fullname')->nullable();
             $table->string('guardian_phone_number')->nullable();
             $table->string('guardian_email')->nullable();
-            $table->decimal('guardian_income')->nullable(); 
+            $table->decimal('guardian_income')->nullable();
 
             $table->string('transcript')->nullable();
             $table->string('proof_of_enrolment')->nullable();
             $table->string('ezwitch_card')->nullable();
             $table->string('profile_picture')->nullable();
 
- 
             $table->timestamps();
             $table->softDeletes();
         });
