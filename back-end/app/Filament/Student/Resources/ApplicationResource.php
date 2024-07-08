@@ -29,19 +29,16 @@ class ApplicationResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
-            ->recordUrl(null)
-            ->query(Application::query()->where('student_id', auth()->user()->student->id))
+            ->recordAction(null)
+            ->query(Application::query()
+                ->where('student_id', auth()->user()->student->id))
             ->columns([
+                Tables\Columns\TextColumn::make('code'),
                 Tables\Columns\TextColumn::make('amount')->numeric(2),
                 Tables\Columns\TextColumn::make('reason'),
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
-                    ->color(fn (string $state): string => match ($state) {
-                        'PENDING' => 'grey',
-                        'REVIEWED' => 'warning',
-                        'PROCESSED' => 'success',
-                        'REJECTED' => 'danger',
-                    }),
+                    ->color(fn(string $state): string =>Application::getStatusColor($state)),
             ])
             ->filters([
                 //
@@ -68,7 +65,7 @@ class ApplicationResource extends Resource
     {
         return [
             'index' => Pages\ListApplications::route('/'),
-            'create' => Pages\CreateApplication::route('/create'),
+//            'create' => Pages\CreateApplication::route('/create'),
             //            'edit' => Pages\EditApplication::route('/{record}/edit'),
         ];
     }

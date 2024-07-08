@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\DisbursementResource\Pages;
+use App\Models\Application;
 use App\Models\Disbursement;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -20,8 +21,9 @@ class DisbursementResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('student_id')
-                    ->relationship('student', 'student_id')
+                Forms\Components\Select::make('application_code')
+                    ->options(fn() => Application::isAccepted()->pluck('code', 'code'))
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('amount')
                     ->required()
@@ -37,31 +39,36 @@ class DisbursementResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('student_id')
+                Tables\Columns\TextColumn::make('application_code')
                     ->numeric()
-                    ->sortable(),
+                    ->sortable()->searchable(),
+                Tables\Columns\TextColumn::make('application.student.student_id')
+                    ->label('Index Number')
+                    ->numeric()
+                    ->sortable()->searchable(),
+
+                Tables\Columns\TextColumn::make('application.student.fullname')
+                    ->label('Full Name')
+
+                    ->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('amount')
-                    ->numeric()
-                    ->sortable(),
+                    ->numeric(2)
+                    ->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('disbursed_at')
-                    ->dateTime()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('disbursed_by')
-                    ->numeric()
-                    ->sortable(),
-                Tables\Columns\TextColumn::make('is_active')
-                    ->numeric()
-                    ->sortable(),
+                    ->label('Date disbursed')
+                    ->date('d M, Y')
+                    ->sortable()->searchable(),
             ])
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make(),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+//                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }

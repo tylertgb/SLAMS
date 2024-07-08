@@ -3,6 +3,7 @@
 namespace App\Filament\Student\Resources\ApplicationResource\Pages;
 
 use App\Filament\Student\Resources\ApplicationResource;
+use App\Models\Application;
 use Filament\Actions;
 use Filament\Resources\Pages\ListRecords;
 
@@ -14,11 +15,10 @@ class ListApplications extends ListRecords
     {
         return [
             Actions\CreateAction::make()
-                ->mutateFormDataUsing(function (?array $data) {
-                    $data['student_id'] = auth()->user()->student->id;
-
-                    return $data;
-                }),
+                ->visible(fn() => auth()->user()
+                        ->student->applications()
+                        ->isNotAccepted()
+                        ->count() >= 0),
         ];
     }
 }

@@ -10,13 +10,29 @@ class Disbursement extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'disbursed_by');
     }
 
-    public function student(): BelongsTo
+    public function application(): BelongsTo
     {
-        return $this->belongsTo(Student::class);
+        return $this->belongsTo(Application::class, 'application_code', 'code');
+    }
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function (Model $model) {
+            $model->disbursed_by = auth()->id();
+        });
+
+        static::created(function (Model $model) {
+            Application::isAccepted()
+                ->where('code', $model->application_code)
+                ->update(['status' => Application::IS_DISBURSED]);
+        });
     }
 }

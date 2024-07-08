@@ -3,7 +3,6 @@
 namespace App\Filament\Admin\Resources\ApplicationResource\Pages;
 
 use App\Filament\Admin\Resources\ApplicationResource;
-use App\Models\Application;
 use Filament\Actions;
 use Filament\Resources\Components\Tab;
 use Filament\Resources\Pages\ListRecords;
@@ -22,17 +21,23 @@ class ListApplications extends ListRecords
 
     public function getTabs(): array
     {
-
         return [
             null => Tab::make('All'),
+
             'pending' => Tab::make()
-                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_PENDING)),
+                ->modifyQueryUsing(fn(Builder $query) => $query->isPending()),
+
             'reviewed' => Tab::make()
-                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_REVIEWED)),
+                ->modifyQueryUsing(fn(Builder $query) => $query->isReviewed()),
+
             'accepted' => Tab::make()
-                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_ACCEPTED)),
+                ->modifyQueryUsing(fn(Builder $query) => $query->isAccepted()),
+
             'rejected' => Tab::make()
-                ->modifyQueryUsing(fn (Builder $query) => $query->where('status', Application::IS_REJECTED)),
+                ->modifyQueryUsing(fn(Builder $query) => $query->isRejected()),
+
+            'disbursed' => Tab::make()
+                ->modifyQueryUsing(fn(Builder $query) => $query->isDisbursed()),
         ];
     }
 }

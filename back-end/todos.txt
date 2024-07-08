@@ -1,2 +1,3 @@
-- setup registration
-    - form only students
+- disbursement
+    - can disburse more than what the student requested?
+    -

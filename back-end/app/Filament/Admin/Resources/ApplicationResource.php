@@ -39,30 +39,30 @@ class ApplicationResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('code')
+                    ->searchable(),
+
                 Tables\Columns\TextColumn::make('student.student_id')
+                    ->searchable()
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('student.fullname')
+                    ->searchable()
                     ->label('Full Name')
                     ->sortable(),
-                Tables\Columns\TextColumn::make('student.student_id')
-                    ->numeric()
-                    ->sortable(),
+
                 Tables\Columns\TextColumn::make('created_at')
                     ->label('Date')
                     ->date('d M, Y')
                     ->sortable(),
+
                 Tables\Columns\TextColumn::make('amount')
-                    ->numeric()
+                    ->numeric(2)
                     ->sortable(),
 
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
-                    ->color(fn (string $state): string => match ($state) {
-                        'PENDING' => 'grey',
-                        'REVIEWED' => 'warning',
-                        'ACCEPTED' => 'success',
-                        'REJECTED' => 'danger',
-                    }),
+                    ->color(fn(string $state): string => Application::getStatusColor($state)),
             ])
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filters([
@@ -74,7 +74,7 @@ class ApplicationResource extends Resource
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
+//                    Tables\Actions\DeleteBulkAction::make(),
                 ]),
             ]);
     }
@@ -90,21 +90,23 @@ class ApplicationResource extends Resource
     {
         return [
             'index' => Pages\ListApplications::route('/'),
-            'create' => Pages\CreateApplication::route('/create'),
-            'edit' => Pages\EditApplication::route('/{record}/edit'),
+//            'create' => Pages\CreateApplication::route('/create'),
+//            'edit' => Pages\EditApplication::route('/{record}/edit'),
         ];
     }
 
     private static function toggleStatusAction()
     {
         return Tables\Actions\Action::make('toggle')
+            ->visible(fn(Application $record) => $record->status != Application::IS_ACCEPTED &&
+                $record->status != Application::IS_DISBURSED)
             ->icon('heroicon-o-arrow-path')
             ->fillForm(function (Application $record) {
                 return ['status' => $record->status];
             })
             ->form([
                 Forms\Components\Select::make('status')
-                    ->options(fn () => [
+                    ->options(fn() => [
                         Application::IS_PENDING => Application::IS_PENDING,
                         Application::IS_REVIEWED => Application::IS_REVIEWED,
                         Application::IS_ACCEPTED => Application::IS_ACCEPTED,
