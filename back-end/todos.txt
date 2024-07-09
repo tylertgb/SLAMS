@@ -5,3 +5,8 @@
         [ ] can disburse more than what the student requested?
         [ ] once a fund is disbursed it cannot be deleted again.
 
+
+
+        
+        [x] add paid status when repayment is complete
+

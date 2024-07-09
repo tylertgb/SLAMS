@@ -17,10 +17,10 @@ class DisbursementObserver
     {
         $amountDisbursedSoFar = Disbursement::where('application_id', $disbursement->application_id)
             ->sum('amount');
-//
+
         $application = Application::isAccepted()->where('id', $disbursement->application_id)->first();
         $amountRequested = $application->amount;
-//        dd($amountDisbursedSoFar, $amountRequested);
+
         if ($amountDisbursedSoFar >= $amountRequested) {
             $application->status = Application::IS_DISBURSED;
             $application->save();

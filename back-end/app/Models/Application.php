@@ -22,6 +22,7 @@ class Application extends Model
 
     const IS_REJECTED = 'REJECTED';
     const IS_DISBURSED = 'DISBURSED';
+    const IS_REPAID = 'REPAID';
 
     public function student(): BelongsTo
     {
