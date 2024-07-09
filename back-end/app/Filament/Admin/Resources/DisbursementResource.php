@@ -21,8 +21,9 @@ class DisbursementResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('application_code')
-                    ->options(fn() => Application::isAccepted()->pluck('code', 'code'))
+                Forms\Components\Select::make('application_id')
+                    ->label('Application code')
+                    ->options(fn() => Application::isAccepted()->pluck('code', 'id'))
                     ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('amount')
@@ -38,18 +39,19 @@ class DisbursementResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->recordAction(null)
+            ->recordUrl(null)
             ->columns([
-                Tables\Columns\TextColumn::make('application_code')
+                Tables\Columns\TextColumn::make('application.code')
                     ->numeric()
                     ->sortable()->searchable(),
-                Tables\Columns\TextColumn::make('application.student.student_id')
-                    ->label('Index Number')
+                Tables\Columns\TextColumn::make('application.student.index_number')
+                    ->label('Student')
                     ->numeric()
                     ->sortable()->searchable(),
 
                 Tables\Columns\TextColumn::make('application.student.fullname')
                     ->label('Full Name')
-
                     ->sortable()->searchable(),
                 Tables\Columns\TextColumn::make('amount')
                     ->numeric(2)

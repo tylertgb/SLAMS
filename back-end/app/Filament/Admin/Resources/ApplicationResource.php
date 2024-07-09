@@ -38,11 +38,13 @@ class ApplicationResource extends Resource
     public static function table(Table $table): Table
     {
         return $table
+            ->recordUrl(null)
+            ->recordAction(null)
             ->columns([
                 Tables\Columns\TextColumn::make('code')
                     ->searchable(),
 
-                Tables\Columns\TextColumn::make('student.student_id')
+                Tables\Columns\TextColumn::make('student.index_number')
                     ->searchable()
                     ->sortable(),
 

@@ -2,22 +2,25 @@
 
 namespace Database\Factories;
 
+use App\Models\Application;
+use App\Models\Student;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Carbon;
 
-/**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Application>
- */
 class ApplicationFactory extends Factory
 {
-    /**
-     * Define the model's default state.
-     *
-     * @return array<string, mixed>
-     */
+    protected $model = Application::class;
+
     public function definition(): array
     {
         return [
-            //
+            'amount' => $this->faker->randomFloat(),
+            'reason' => $this->faker->word(),
+            'status' => $this->faker->word(),
+            'created_at' => Carbon::now(),
+            'updated_at' => Carbon::now(),
+            'code' => $this->faker->word(),
+            'student_id' => Student::factory(),
         ];
     }
 }

@@ -2,15 +2,19 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\ObservedBy;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use App\Observers\DisbursementObserver;
 
+#[ObservedBy(DisbursementObserver::class)]
 class Disbursement extends Model
 {
     use HasFactory;
-
     protected $guarded = [];
+
     public function user(): BelongsTo
     {
         return $this->belongsTo(User::class, 'disbursed_by');
@@ -18,21 +22,12 @@ class Disbursement extends Model
 
     public function application(): BelongsTo
     {
-        return $this->belongsTo(Application::class, 'application_code', 'code');
+        return $this->belongsTo(Application::class);
     }
 
-    protected static function boot(): void
+    public function repayments(): HasMany
     {
-        parent::boot();
-
-        static::creating(function (Model $model) {
-            $model->disbursed_by = auth()->id();
-        });
-
-        static::created(function (Model $model) {
-            Application::isAccepted()
-                ->where('code', $model->application_code)
-                ->update(['status' => Application::IS_DISBURSED]);
-        });
+        return $this->hasMany(Repayment::class);
     }
+
 }

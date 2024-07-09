@@ -1,3 +1,7 @@
 - disbursement
-    - can disburse more than what the student requested?
-    -
+    - Student
+        - the student is allowed to delete a loan application as long as it has 0 disbursements
+    - Admin
+        [ ] can disburse more than what the student requested?
+        [ ] once a fund is disbursed it cannot be deleted again.
+
