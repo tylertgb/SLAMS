@@ -4,6 +4,8 @@ namespace App\Filament\Student\Resources;
 
 use App\Filament\Student\Resources\ApplicationResource\Pages;
 use App\Models\Application;
+use App\Rules\GtZero;
+use Closure;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -21,8 +23,18 @@ class ApplicationResource extends Resource
         return $form
             ->columns(1)
             ->schema([
-                Forms\Components\TextInput::make('amount'),
-                Forms\Components\Textarea::make('reason'),
+                Forms\Components\TextInput::make('amount')
+                    ->required()
+                    ->rules([
+                        function () {
+                            return function (string $attribute, $value, Closure $fail) {
+                                if ($value <= 0) {
+                                    $fail('The :attribute must be greater than 0.');
+                                }
+                            };
+                        },]),
+                Forms\Components\Textarea::make('reason')
+                    ->required(),
             ]);
     }
 

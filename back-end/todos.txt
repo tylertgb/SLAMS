@@ -4,15 +4,15 @@
         [ ] sort application in descending order
         [ ] disable delete and edit for loan [accepted, disbursed, and repaid]
     - Admin
-        [ ] add middleware to separate student login from admin login
-        [ ] can disburse more than what the student requested?
-            add validation to make sure the disbursed amount doesn't exceed the requested amount
-        [ ] once a fund is disbursed it cannot be deleted again.
-        [ ] fix application create form
-        [ ] if a loan is repaid or disbursed hide toggle
         [ ] add viewing of application
+        [ ] add middleware to separate student login from admin login
         [ ] send sms/email after status change for application
-        [ ] make accessor for gender
+        [ ] ***can disburse more than what the student requested?
+            add validation to make sure the disbursed amount doesn't exceed the requested amount
+        [ ] ***once a fund is disbursed it cannot be deleted again.
+        [x] fix application create form
+        [x] make accessor for gender
+        [x] if a loan is repaid or disbursed hide toggle
 
 
 
