@@ -24,7 +24,7 @@ class StudentResource extends Resource
                 Section::make('Personal Info')
                     ->columns(2)
                     ->schema([
-                        Forms\Components\TextInput::make('student_id')
+                        Forms\Components\TextInput::make('index_number')
                             ->required(),
                         Forms\Components\TextInput::make('program'),
                         Forms\Components\TextInput::make('entry_year'),

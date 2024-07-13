@@ -1,12 +1,19 @@
 - disbursement
     - Student
         - the student is allowed to delete a loan application as long as it has 0 disbursements
+        [ ] sort application in descending order
+        [ ] disable delete and edit for loan [accepted, disbursed, and repaid]
     - Admin
         [ ] can disburse more than what the student requested?
         [ ] once a fund is disbursed it cannot be deleted again.
+        [ ] fix application create form
+        [ ] if a loan is repaid or disbursed hide toggle
+        [ ] add viewing of application
+        [ ] send sms/email after status change for application
+        [ ] make accessor for gender
 
 
 
-        
+
         [x] add paid status when repayment is complete
 

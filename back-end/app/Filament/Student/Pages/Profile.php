@@ -30,7 +30,7 @@ class Profile extends Page
                 Section::make('Personal Info')
                     ->columns()
                     ->schema([
-                        TextInput::make('student_id')
+                        TextInput::make('index_number')
                             ->required(),
 
                         TextInput::make('fullname')
