@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Models\Scopes\ApplicationScope;
+use Illuminate\Database\Eloquent\Casts\Attribute;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -23,6 +24,15 @@ class Application extends Model
     const IS_REJECTED = 'REJECTED';
     const IS_DISBURSED = 'DISBURSED';
     const IS_REPAID = 'REPAID';
+
+
+    public function canBeToggled(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value, array $attributes) => !in_array($this->status ?? '', [self::IS_ACCEPTED, self::IS_DISBURSED, self::IS_REPAID]),
+            set: fn($value) => $value,
+        );
+    }
 
     public function student(): BelongsTo
     {

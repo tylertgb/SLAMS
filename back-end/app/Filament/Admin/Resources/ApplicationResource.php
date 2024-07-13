@@ -100,8 +100,7 @@ class ApplicationResource extends Resource
     private static function toggleStatusAction()
     {
         return Tables\Actions\Action::make('toggle')
-            ->visible(fn(Application $record) => $record->status != Application::IS_ACCEPTED &&
-                $record->status != Application::IS_DISBURSED)
+            ->visible(fn(Application $record) => $record->canBeToggled)
             ->icon('heroicon-o-arrow-path')
             ->fillForm(function (Application $record) {
                 return ['status' => $record->status];

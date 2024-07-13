@@ -38,14 +38,16 @@ class ApplicationResource extends Resource
                 Tables\Columns\TextColumn::make('reason'),
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
-                    ->color(fn(string $state): string =>Application::getStatusColor($state)),
+                    ->color(fn(string $state): string => Application::getStatusColor($state)),
             ])
             ->filters([
                 //
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\EditAction::make()
+                    ->visible(fn(Application $record) => $record->status == Application::IS_PENDING),
+                Tables\Actions\DeleteAction::make()
+                    ->visible(fn(Application $record) => $record->status == Application::IS_PENDING),
             ])
             ->bulkActions([
                 //                Tables\Actions\BulkActionGroup::make([

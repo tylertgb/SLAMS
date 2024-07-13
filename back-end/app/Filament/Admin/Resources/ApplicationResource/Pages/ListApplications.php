@@ -38,6 +38,9 @@ class ListApplications extends ListRecords
 
             'disbursed' => Tab::make()
                 ->modifyQueryUsing(fn(Builder $query) => $query->isDisbursed()),
+
+            'repaid' => Tab::make()
+                ->modifyQueryUsing(fn(Builder $query) => $query->isRepaid()),
         ];
     }
 }

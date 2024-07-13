@@ -12,22 +12,29 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
 class Student extends Model
 {
     use HasFactory;
+
     protected $guarded = [];
 
+
+    protected function gender(): Attribute
+    {
+        return Attribute::make(
+            get: fn($value, array $attributes) => strtoupper($value),
+        );
+    }
 
     protected function fullname(): Attribute
     {
         return Attribute::make(
-            get: fn ($value, array $attributes) => strtoupper($value),
-            set: fn ($value) => $value,
+            get: fn($value, array $attributes) => strtoupper($value),
         );
     }
 
     protected function studentId(): Attribute
     {
         return Attribute::make(
-            get: fn ($value, array $attributes) => strtoupper($value),
-            set: fn ($value) => $value,
+            get: fn($value, array $attributes) => strtoupper($value),
+            set: fn($value) => $value,
         );
     }
 

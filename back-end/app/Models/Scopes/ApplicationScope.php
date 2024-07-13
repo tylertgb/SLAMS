@@ -57,6 +57,15 @@ class ApplicationScope implements Scope
         $builder->macro('isNotDisbursed', function (Builder $builder) {
             return $builder->whereNot('status', Application::IS_DISBURSED);
         });
+
+        $builder->macro('isRepaid', function (Builder $builder) {
+            return $builder->where('status', Application::IS_REPAID);
+        });
+
+        $builder->macro('isNotRepaid', function (Builder $builder) {
+            return $builder->whereNot('status', Application::IS_REPAID);
+        });
+
     }
 
 }
