@@ -1,8 +1,8 @@
 - disbursement
     - Student
         - the student is allowed to delete a loan application as long as it has 0 disbursements
-        [ ] sort application in descending order
-        [ ] disable delete and edit for loan [accepted, disbursed, and repaid]
+            [ ] sort application in descending order
+            [ ] disable delete and edit for loan [accepted, disbursed, and repaid]
     - Admin
         [ ] add viewing of application
         [ ] add middleware to separate student login from admin login

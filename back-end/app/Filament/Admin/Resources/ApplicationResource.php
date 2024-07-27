@@ -5,7 +5,6 @@ namespace App\Filament\Admin\Resources;
 use App\Filament\Admin\Resources\ApplicationResource\Pages;
 use App\Models\Application;
 use App\Models\Student;
-use App\Rules\GtZero;
 use Closure;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -13,6 +12,7 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Enums\FiltersLayout;
 use Filament\Tables\Table;
+use Illuminate\Database\Eloquent\Builder;
 
 class ApplicationResource extends Resource
 {
@@ -73,6 +73,7 @@ class ApplicationResource extends Resource
                 Tables\Columns\TextColumn::make('status')
                     ->badge()
                     ->color(fn(string $state): string => Application::getStatusColor($state)),
+
             ])
             ->filtersLayout(FiltersLayout::AboveContent)
             ->filters([
@@ -83,10 +84,15 @@ class ApplicationResource extends Resource
                 Tables\Actions\EditAction::make(),
             ])
             ->bulkActions([
-                Tables\Actions\BulkActionGroup::make([
+//                Tables\Actions\BulkActionGroup::make([
 //                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+//                ]),
             ]);
+    }
+
+    public static function getEloquentQuery(): Builder
+    {
+        return parent::getEloquentQuery()->orderBy('created_at', 'desc');
     }
 
     public static function getRelations(): array
@@ -108,7 +114,7 @@ class ApplicationResource extends Resource
     private static function toggleStatusAction()
     {
         return Tables\Actions\Action::make('toggle')
-            ->visible(fn(Application $record) => $record->canBeToggled)
+            ->visible(fn(Application $record) => $record->can_be_toggled)
             ->icon('heroicon-o-arrow-path')
             ->fillForm(function (Application $record) {
                 return ['status' => $record->status];
