@@ -11,10 +11,17 @@ use Filament\Forms\Components\TextInput;
 use Filament\Http\Responses\Auth\Contracts\RegistrationResponse;
 use Filament\Notifications\Notification;
 use Filament\Pages\Auth\Register;
+use Illuminate\Contracts\Support\Htmlable;
 use Illuminate\Support\Facades\DB;
 
 class StudentRegister extends Register
 {
+
+    public function getTitle(): string|Htmlable
+    {
+        return  "Student Login";
+    }
+
     public function register(): ?RegistrationResponse
     {
         try {
