@@ -17,9 +17,9 @@ use Illuminate\Support\Facades\DB;
 class StudentRegister extends Register
 {
 
-    public function getTitle(): string|Htmlable
+    public function getHeading(): string|Htmlable
     {
-        return  "Student Login";
+        return  "Student Register";
     }
 
     public function register(): ?RegistrationResponse
