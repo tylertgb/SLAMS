@@ -2,6 +2,7 @@
 
 namespace App\Providers\Filament;
 
+use App\Filament\Auth\StudentLogin;
 use App\Filament\Auth\StudentRegister;
 use Exception;
 use Filament\Http\Middleware\Authenticate;
@@ -30,7 +31,7 @@ class StudentPanelProvider extends PanelProvider
         return $panel
             ->id('student')
             ->path('student')
-            ->login()
+            ->login(StudentLogin::class)
             ->registration(StudentRegister::class)
             ->colors([
                 'primary' => Color::Amber,
