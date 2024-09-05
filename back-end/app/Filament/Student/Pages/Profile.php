@@ -46,7 +46,13 @@ class Profile extends Page
                             ->numeric()
                             ->required(),
 
-                        Select::make('level'),
+                        Select::make('level')
+                        ->options([
+                            100 => "100",
+                            200 => "200",
+                            300 => "300",
+                            400 => "400",
+                        ]),
                         //                            ->required(),
 
                         Select::make('gender')
