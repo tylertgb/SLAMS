@@ -15,7 +15,12 @@ class Student extends Model
 
     protected $guarded = [];
 
-
+    protected function casts(): array
+    {
+        return [
+            'profile_completed' => 'bool'
+        ];
+    }
     protected function gender(): Attribute
     {
         return Attribute::make(

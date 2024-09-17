@@ -12,15 +12,12 @@ use Illuminate\Database\Eloquent\Builder;
 class ListApplications extends ListRecords
 {
     protected static string $resource = ApplicationResource::class;
-
     protected function getHeaderActions(): array
     {
         return [
             Actions\CreateAction::make()
-                ->visible(fn() => auth()->user()
-                        ->student->applications()
-                        ->isNotAccepted()
-                        ->count() >= 0),
+                ->hidden(fn() => !auth()->user()
+                        ->student->profile_completed),
         ];
     }
 

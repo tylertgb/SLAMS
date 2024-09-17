@@ -34,33 +34,32 @@ class Profile extends Page
                             ->required(),
 
                         TextInput::make('fullname')
-                            ->label('Full Name'),
-                        //                            ->required(),
+                            ->label('Full Name')
+                            ->required(),
 
                         Select::make('program_id')
                             ->label('Program')
-                            ->relationship('program', 'name'),
-                        //                            ->required(),
+                            ->relationship('program', 'name')
+                            ->required(),
 
                         TextInput::make('entry_year')
                             ->numeric()
                             ->required(),
 
                         Select::make('level')
-                        ->options([
-                            100 => "100",
-                            200 => "200",
-                            300 => "300",
-                            400 => "400",
-                        ]),
-                        //                            ->required(),
+                            ->options([
+                                100 => "100",
+                                200 => "200",
+                                300 => "300",
+                                400 => "400",
+                            ])
+                            ->required(),
 
                         Select::make('gender')
                             ->options([
                                 'M' => 'M',
                                 'F' => 'F',
-                            ]),
-                        //                            ->required(),
+                            ])->required(),
 
                     ]),
 
@@ -68,17 +67,17 @@ class Profile extends Page
                     ->columns()
                     ->schema([
                         TextInput::make('contact_address')
-                            ->label('Address'),
-                        //                            ->required(),
+                            ->label('Address')
+                            ->required(),
 
                         TextInput::make('contact_email')
-                            ->label('Email'),
-                        //                            ->email()
-                        //                            ->required(),
+                            ->label('Email')
+                            ->email()
+                            ->required(),
 
                         TextInput::make('contact_phone')
-                            ->label('Phone Number'),
-                        //                            ->required()
+                            ->label('Phone Number')
+                            ->required()
 
                     ]),
 
@@ -86,12 +85,12 @@ class Profile extends Page
                     ->columns()
                     ->schema([
                         TextInput::make('annual_income')
-                            ->numeric(),
-                        //                            ->required(),
+                            ->numeric()
+                            ->required(),
 
                         TextInput::make('tin')
-                            ->label('TIN'),
-                        //                            ->required(),
+                            ->label('TIN')
+                            ->required(),
 
                     ]),
 
@@ -99,37 +98,37 @@ class Profile extends Page
                     ->columns()
                     ->schema([
                         TextInput::make('guardian_fullname')
-                            ->label('Full Name'),
-                        //                            ->required(),
+                            ->label('Full Name')
+                            ->required(),
 
                         TextInput::make('guardian_phone_number')
-                            ->label('Phone Number'),
-                        //                            ->required(),
+                            ->label('Phone Number')
+                            ->required(),
 
-                        TextInput::make('guardian_email'),
-                        //                            ->label('Email'),
+                        TextInput::make('guardian_email')
+                            ->label('Email'),
 
                         TextInput::make('guardian_income')
-                            ->label('Income'),
-                        //                            ->required(),
+                            ->label('Income')
+                            ->required(),
 
                     ]),
 
                 Section::make('Documents')
                     ->columns()
                     ->schema([
-                        FileUpload::make('transcript'),
-                        //                            ->required(),
+                        FileUpload::make('transcript')
+                            ->required(),
 
                         FileUpload::make('proof_of_enrolment')
-                            ->label('Admission Letter'),
-                        //                            ->required(),
+                            ->label('Admission Letter')
+                            ->required(),
 
-                        FileUpload::make('ezwitch_card'),
-                        //                            ->required(),
+                        FileUpload::make('ezwitch_card')
+                            ->required(),
 
-                        FileUpload::make('profile_picture'),
-                        //                            ->required(),
+                        FileUpload::make('profile_picture')
+                            ->required(),
 
                     ]),
 
@@ -138,9 +137,12 @@ class Profile extends Page
             ->model($this->student);
     }
 
-    public function create()
+    public function create(): void
     {
-        $this->student->update($this->form->getState());
+        $this->student->update([
+            ...$this->form->getState(),
+            'profile_completed'=> true
+        ]);
         Notification::make('created')
             ->body('Profile updated successfully')
             ->success()
